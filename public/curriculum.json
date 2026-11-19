@@ -1,0 +1,2844 @@
+{
+  "schemaVersion": 1,
+  "counts": {
+    "topics": 141,
+    "stages": 4
+  },
+  "stages": [
+    {
+      "id": "小学",
+      "title": "小学",
+      "count": 35
+    },
+    {
+      "id": "初中",
+      "title": "初中",
+      "count": 34
+    },
+    {
+      "id": "高中",
+      "title": "高中",
+      "count": 43
+    },
+    {
+      "id": "基础微积分",
+      "title": "基础微积分",
+      "count": 29
+    }
+  ],
+  "topics": [
+    {
+      "id": "E-N01",
+      "stage": "小学",
+      "domain": "数与运算",
+      "title": "计数及数的比较",
+      "examples": [
+        {
+          "id": "E-N01-transfer",
+          "variant": "transfer",
+          "problem": "有 84 张卡片，送出 29 张后又买来 17 张。现在有多少张？"
+        },
+        {
+          "id": "E-N01-edge",
+          "variant": "edge",
+          "problem": "A number is an integer from 20 through 40. It is greater than 31 and less than 36. List every possible number."
+        }
+      ]
+    },
+    {
+      "id": "E-N02",
+      "stage": "小学",
+      "domain": "数与运算",
+      "title": "十进制位值与数的分解",
+      "examples": [
+        {
+          "id": "E-N02-basic",
+          "variant": "basic",
+          "problem": "在数 5,307 中，数字 3 的数位和数值分别是什么？"
+        },
+        {
+          "id": "E-N02-edge",
+          "variant": "edge",
+          "problem": "用数字 6、0、4、2 各一次组成最大的四位数和最小的四位数（首位不能为 0），并求两数之差。"
+        }
+      ]
+    },
+    {
+      "id": "E-N03",
+      "stage": "小学",
+      "domain": "数与运算",
+      "title": "加减法及进退位",
+      "examples": [
+        {
+          "id": "E-N03-basic",
+          "variant": "basic",
+          "problem": "Compute 468+257, showing the regrouping result."
+        },
+        {
+          "id": "E-N03-transfer",
+          "variant": "transfer",
+          "problem": "一条绳长 1,000 厘米，剪去 386 厘米，还剩多少厘米？"
+        }
+      ]
+    },
+    {
+      "id": "E-N04",
+      "stage": "小学",
+      "domain": "数与运算",
+      "title": "乘法与等量分组",
+      "examples": [
+        {
+          "id": "E-N04-basic",
+          "variant": "basic",
+          "problem": "每盒有 8 支铅笔，6 盒共有多少支？"
+        },
+        {
+          "id": "E-N04-transfer",
+          "variant": "transfer",
+          "problem": "A theater has 12 rows with 9 seats each. If 7 seats are blocked, how many seats can be used?"
+        },
+        {
+          "id": "E-N04-edge",
+          "variant": "edge",
+          "problem": "Let a and b be real numbers with a×0=0 and b×1=9. Which values are determined? Give all possible pairs (a,b) and the value of a×0."
+        }
+      ]
+    },
+    {
+      "id": "E-N05",
+      "stage": "小学",
+      "domain": "数与运算",
+      "title": "除法与余数",
+      "examples": [
+        {
+          "id": "E-N05-basic",
+          "variant": "basic",
+          "problem": "Share 56 stickers equally among 7 children. How many stickers does each child get?"
+        },
+        {
+          "id": "E-N05-transfer",
+          "variant": "transfer",
+          "problem": "把 53 颗糖平均装进每袋 6 颗的袋子。能装满几袋，还剩几颗？"
+        },
+        {
+          "id": "E-N05-edge",
+          "variant": "edge",
+          "problem": "A 97 cm ribbon is cut into pieces of exactly 8 cm. Can it be used with no leftover? If not, give the leftover."
+        }
+      ]
+    },
+    {
+      "id": "E-N06",
+      "stage": "小学",
+      "domain": "数与运算",
+      "title": "运算顺序与括号",
+      "examples": [
+        {
+          "id": "E-N06-basic",
+          "variant": "basic",
+          "problem": "计算 18−3×4，并说明先做哪一步。"
+        },
+        {
+          "id": "E-N06-transfer",
+          "variant": "transfer",
+          "problem": "Evaluate (24−8)÷4+3."
+        }
+      ]
+    },
+    {
+      "id": "E-N07",
+      "stage": "小学",
+      "domain": "数与运算",
+      "title": "估算及四舍五入",
+      "examples": [
+        {
+          "id": "E-N07-transfer",
+          "variant": "transfer",
+          "problem": "估算 198×31；先把每个因数四舍五入到最接近的十。"
+        },
+        {
+          "id": "E-N07-edge",
+          "variant": "edge",
+          "problem": "A 2,947 m route is reported to the nearest kilometer. Give the reported value and the possible actual-distance interval (m), using ordinary nearest-km rounding."
+        }
+      ]
+    },
+    {
+      "id": "E-N08",
+      "stage": "小学",
+      "domain": "数与运算",
+      "title": "因数倍数与质数",
+      "examples": [
+        {
+          "id": "E-N08-basic",
+          "variant": "basic",
+          "problem": "列出 18 的所有正因数。"
+        },
+        {
+          "id": "E-N08-edge",
+          "variant": "edge",
+          "problem": "判断 48 是否为 6 的倍数，并指出 48 与 6 的最大公因数。"
+        }
+      ]
+    },
+    {
+      "id": "E-N09",
+      "stage": "小学",
+      "domain": "数与运算",
+      "title": "最大公因数与最小公倍数",
+      "examples": [
+        {
+          "id": "E-N09-basic",
+          "variant": "basic",
+          "problem": "Find gcd(18,30) by listing or factor pairs."
+        },
+        {
+          "id": "E-N09-transfer",
+          "variant": "transfer",
+          "problem": "两盏灯分别每 8 秒和 12 秒闪一次，现在同时闪。最少多少秒后再次同时闪？"
+        },
+        {
+          "id": "E-N09-edge",
+          "variant": "edge",
+          "problem": "Two ribbons of 42 cm and 56 cm are cut into equal longest whole-centimeter pieces with no waste. What is each piece length and how many pieces result in total?"
+        }
+      ]
+    },
+    {
+      "id": "E-F01",
+      "stage": "小学",
+      "domain": "分数小数百分数",
+      "title": "分数意义与同一个整体",
+      "examples": [
+        {
+          "id": "E-F01-basic",
+          "variant": "basic",
+          "problem": "一张纸平均分成 8 份，涂色 3 份。涂色部分占整张纸的几分之几？"
+        },
+        {
+          "id": "E-F01-transfer",
+          "variant": "transfer",
+          "problem": "A pan is cut into 12 equal slices; 5 are eaten. What fraction of the original pan remains?"
+        },
+        {
+          "id": "E-F01-edge",
+          "variant": "edge",
+          "problem": "甲饼的 1/2 和乙饼的 1/2 分别给小明；哪一个“一半”一定更多？"
+        }
+      ]
+    },
+    {
+      "id": "E-F02",
+      "stage": "小学",
+      "domain": "分数小数百分数",
+      "title": "等值分数约分与通分",
+      "examples": [
+        {
+          "id": "E-F02-basic",
+          "variant": "basic",
+          "problem": "Write 6/9 in lowest terms and give an equivalent fraction with denominator 12."
+        },
+        {
+          "id": "E-F02-edge",
+          "variant": "edge",
+          "problem": "A student claims 14/21 is already simplest because 14 and 21 are different. Reduce it and explain."
+        }
+      ]
+    },
+    {
+      "id": "E-F03",
+      "stage": "小学",
+      "domain": "分数小数百分数",
+      "title": "分数比较及数轴",
+      "examples": [
+        {
+          "id": "E-F03-basic",
+          "variant": "basic",
+          "problem": "比较 3/7 和 4/7，并在 0 到 1 的数轴上说明位置顺序。"
+        },
+        {
+          "id": "E-F03-transfer",
+          "variant": "transfer",
+          "problem": "Which is larger, 5/8 or 2/3? Show an exact comparison."
+        }
+      ]
+    },
+    {
+      "id": "E-F04",
+      "stage": "小学",
+      "domain": "分数小数百分数",
+      "title": "分数加减",
+      "examples": [
+        {
+          "id": "E-F04-transfer",
+          "variant": "transfer",
+          "problem": "计算 5/6−1/4，答案用最简分数表示。"
+        },
+        {
+          "id": "E-F04-edge",
+          "variant": "edge",
+          "problem": "A tank is 7/10 full. After 3/8 of the tank’s capacity is drained, what fraction remains?"
+        }
+      ]
+    },
+    {
+      "id": "E-F05",
+      "stage": "小学",
+      "domain": "分数小数百分数",
+      "title": "分数乘除",
+      "examples": [
+        {
+          "id": "E-F05-basic",
+          "variant": "basic",
+          "problem": "求 2/3 的 3/5。"
+        },
+        {
+          "id": "E-F05-transfer",
+          "variant": "transfer",
+          "problem": "A recipe uses 3/4 cup per batch. How much is needed for 2 1/2 batches?"
+        },
+        {
+          "id": "E-F05-edge",
+          "variant": "edge",
+          "problem": "有 3/4 米绳，每段长 1/8 米，最多能剪几段？"
+        }
+      ]
+    },
+    {
+      "id": "E-F06",
+      "stage": "小学",
+      "domain": "分数小数百分数",
+      "title": "小数位值及四则运算",
+      "examples": [
+        {
+          "id": "E-F06-basic",
+          "variant": "basic",
+          "problem": "In 3.407, what is the value of the digit 4?"
+        },
+        {
+          "id": "E-F06-transfer",
+          "variant": "transfer",
+          "problem": "计算 2.4+0.35 和 2.4−0.35。"
+        },
+        {
+          "id": "E-F06-edge",
+          "variant": "edge",
+          "problem": "Compute 2.4×0.35."
+        },
+        {
+          "id": "E-F06-transfer-division",
+          "variant": "transfer",
+          "problem": "Compute 4.2÷0.6 and explain the equivalent whole-number division."
+        }
+      ]
+    },
+    {
+      "id": "E-F07",
+      "stage": "小学",
+      "domain": "分数小数百分数",
+      "title": "分数小数百分数互化",
+      "examples": [
+        {
+          "id": "E-F07-transfer",
+          "variant": "transfer",
+          "problem": "Convert 3/5 to a decimal and percent."
+        },
+        {
+          "id": "E-F07-edge",
+          "variant": "edge",
+          "problem": "某数的 40% 是 18。求这个数，并把 18 用该数的分数表示。"
+        }
+      ]
+    },
+    {
+      "id": "E-F08",
+      "stage": "小学",
+      "domain": "分数小数百分数",
+      "title": "百分数及增减率",
+      "examples": [
+        {
+          "id": "E-F08-basic",
+          "variant": "basic",
+          "problem": "What is 15% of 80?"
+        },
+        {
+          "id": "E-F08-edge",
+          "variant": "edge",
+          "problem": "A town’s population rises from 400 to 460. Give the percent increase and the new population after a 10% decrease from 460."
+        }
+      ]
+    },
+    {
+      "id": "E-F09",
+      "stage": "小学",
+      "domain": "分数小数百分数",
+      "title": "假分数带分数与整体数量",
+      "examples": [
+        {
+          "id": "E-F09-basic",
+          "variant": "basic",
+          "problem": "把 11/4 写成带分数。"
+        },
+        {
+          "id": "E-F09-transfer",
+          "variant": "transfer",
+          "problem": "A 5-liter jug is filled to 7/5 of its capacity. How many liters is that, and is the amount possible in this jug?"
+        }
+      ]
+    },
+    {
+      "id": "E-M01",
+      "stage": "小学",
+      "domain": "应用与测量",
+      "title": "比与比例及分配",
+      "examples": [
+        {
+          "id": "E-M01-basic",
+          "variant": "basic",
+          "problem": "The ratio of red to blue beads is 2:3. If there are 10 red beads, how many blue beads are there?"
+        },
+        {
+          "id": "E-M01-transfer",
+          "variant": "transfer",
+          "problem": "把 84 元按 3:4 分给甲乙两人，乙得多少元？"
+        },
+        {
+          "id": "E-M01-edge",
+          "variant": "edge",
+          "problem": "A map scale is 1:50,000. Two towns are 7.2 cm apart on the map. What is their straight-line distance in km?"
+        }
+      ]
+    },
+    {
+      "id": "E-M02",
+      "stage": "小学",
+      "domain": "应用与测量",
+      "title": "单位率与单价",
+      "examples": [
+        {
+          "id": "E-M02-basic",
+          "variant": "basic",
+          "problem": "5 千克苹果共 30 元，平均每千克多少钱？"
+        },
+        {
+          "id": "E-M02-transfer",
+          "variant": "transfer",
+          "problem": "A printer makes 84 pages in 6 minutes at a constant rate. How many pages in 15 minutes?"
+        },
+        {
+          "id": "E-M02-edge",
+          "variant": "edge",
+          "problem": "12 支笔卖 30 元，8 支同价笔卖多少钱？"
+        }
+      ]
+    },
+    {
+      "id": "E-M03",
+      "stage": "小学",
+      "domain": "应用与测量",
+      "title": "速度时间路程",
+      "examples": [
+        {
+          "id": "E-M03-basic",
+          "variant": "basic",
+          "problem": "A car travels 150 km in 3 hours at constant speed. Find its speed."
+        },
+        {
+          "id": "E-M03-transfer",
+          "variant": "transfer",
+          "problem": "骑车速度为 12 千米/小时，行驶 2.5 小时，路程多少千米？"
+        }
+      ]
+    },
+    {
+      "id": "E-M04",
+      "stage": "小学",
+      "domain": "应用与测量",
+      "title": "长度质量容积单位换算",
+      "examples": [
+        {
+          "id": "E-M04-transfer",
+          "variant": "transfer",
+          "problem": "Convert 2.4 L to milliliters and 750 g to kilograms."
+        },
+        {
+          "id": "E-M04-edge",
+          "variant": "edge",
+          "problem": "一个容器装 1.2 升水，倒出 350 毫升后还剩多少毫升？"
+        }
+      ]
+    },
+    {
+      "id": "E-M05",
+      "stage": "小学",
+      "domain": "应用与测量",
+      "title": "时间日期与经过时间",
+      "examples": [
+        {
+          "id": "E-M05-basic",
+          "variant": "basic",
+          "problem": "A class starts at 9:20 a.m. and lasts 45 minutes. When does it end?"
+        },
+        {
+          "id": "E-M05-edge",
+          "variant": "edge",
+          "problem": "A deadline is 3 days after March 29 in a non-leap year. What date is it?"
+        }
+      ]
+    },
+    {
+      "id": "E-M06",
+      "stage": "小学",
+      "domain": "应用与测量",
+      "title": "货币找零与购物",
+      "examples": [
+        {
+          "id": "E-M06-basic",
+          "variant": "basic",
+          "problem": "买一个 18 元的本子，付 20 元，应找回多少元？"
+        },
+        {
+          "id": "E-M06-transfer",
+          "variant": "transfer",
+          "problem": "Three notebooks cost $2.40 each and one pen costs $1.75. What is the total and the change from $10?"
+        },
+        {
+          "id": "E-M06-edge",
+          "variant": "edge",
+          "problem": "每支笔 3 元，买 4 支；每本本子 7 元，买 2 本。付 30 元够吗？差额多少？"
+        }
+      ]
+    },
+    {
+      "id": "E-M07",
+      "stage": "小学",
+      "domain": "应用与测量",
+      "title": "多步应用题与数量关系",
+      "examples": [
+        {
+          "id": "E-M07-basic",
+          "variant": "basic",
+          "problem": "A farmer packs 4 baskets with 8 apples each and then sells 9 apples. How many remain?"
+        },
+        {
+          "id": "E-M07-transfer",
+          "variant": "transfer",
+          "problem": "每张桌子坐 6 人，来了 41 人。至少需要几张桌子？"
+        },
+        {
+          "id": "E-M07-edge",
+          "variant": "edge",
+          "problem": "A club has 24 members; 3/8 are beginners. Of the remaining members, 2/3 attend Saturday. How many attend Saturday?"
+        }
+      ]
+    },
+    {
+      "id": "E-M08",
+      "stage": "小学",
+      "domain": "应用与测量",
+      "title": "数形规律与简单未知数",
+      "examples": [
+        {
+          "id": "E-M08-basic",
+          "variant": "basic",
+          "problem": "The sequence starts 4, 7, 10, 13 and is defined by adding 3 at every step. What is the next term?"
+        },
+        {
+          "id": "E-M08-edge",
+          "variant": "edge",
+          "problem": "若 3x+5=26，求 x，并验证。"
+        }
+      ]
+    },
+    {
+      "id": "E-G01",
+      "stage": "小学",
+      "domain": "图形与数据",
+      "title": "平面图形分类与属性",
+      "examples": [
+        {
+          "id": "E-G01-basic",
+          "variant": "basic",
+          "problem": "Classify a quadrilateral with exactly one pair of parallel sides as a trapezoid; may it also have a right angle?"
+        },
+        {
+          "id": "E-G01-transfer",
+          "variant": "transfer",
+          "problem": "一个三角形中 AB=AC，按边分类；另一个三角形的三个角是 100°、40°、40°，按角分类。"
+        }
+      ]
+    },
+    {
+      "id": "E-G02",
+      "stage": "小学",
+      "domain": "图形与数据",
+      "title": "角的分类与测量",
+      "examples": [
+        {
+          "id": "E-G02-transfer",
+          "variant": "transfer",
+          "problem": "An angle measures 137°. Classify it and find its supplement."
+        },
+        {
+          "id": "E-G02-edge",
+          "variant": "edge",
+          "problem": "两条直线相交，其中一个角是 62°。其余三个角分别是多少？"
+        }
+      ]
+    },
+    {
+      "id": "E-G03",
+      "stage": "小学",
+      "domain": "图形与数据",
+      "title": "周长及面积单位",
+      "examples": [
+        {
+          "id": "E-G03-basic",
+          "variant": "basic",
+          "problem": "Find the perimeter of a rectangle with length 8 cm and width 3 cm."
+        },
+        {
+          "id": "E-G03-transfer",
+          "variant": "transfer",
+          "problem": "正方形边长 5 米，面积是多少平方米？"
+        },
+        {
+          "id": "E-G03-edge",
+          "variant": "edge",
+          "problem": "A 6 m by 4 m rectangular garden has a 1 m wide gate in its fence. How many meters of fencing are needed?"
+        }
+      ]
+    },
+    {
+      "id": "E-G04",
+      "stage": "小学",
+      "domain": "图形与数据",
+      "title": "长方形三角形与组合图形面积",
+      "examples": [
+        {
+          "id": "E-G04-basic",
+          "variant": "basic",
+          "problem": "长方形长 9 厘米、宽 4 厘米，面积是多少？"
+        },
+        {
+          "id": "E-G04-transfer",
+          "variant": "transfer",
+          "problem": "A right triangle has perpendicular legs 6 cm and 10 cm. Find its area."
+        },
+        {
+          "id": "E-G04-edge",
+          "variant": "edge",
+          "problem": "一个 10×6 的长方形去掉角上的 2×3 小长方形（边与原边平行），求剩余面积。"
+        }
+      ]
+    },
+    {
+      "id": "E-G05",
+      "stage": "小学",
+      "domain": "图形与数据",
+      "title": "立体图形展开图与体积",
+      "examples": [
+        {
+          "id": "E-G05-transfer",
+          "variant": "transfer",
+          "problem": "一个长方体尺寸为 2 厘米、3 厘米、5 厘米，体积是多少？"
+        },
+        {
+          "id": "E-G05-edge",
+          "variant": "edge",
+          "problem": "Each square has side 2 cm. Layout A has four squares in one horizontal row, with one square attached above the second square and one below the second square. Layout B has six squares in one horizontal row. Which layout folds to a cube? Give that cube’s volume."
+        }
+      ]
+    },
+    {
+      "id": "E-G06",
+      "stage": "小学",
+      "domain": "图形与数据",
+      "title": "对称平移旋转",
+      "examples": [
+        {
+          "id": "E-G06-basic",
+          "variant": "basic",
+          "problem": "点 A(2,1) 关于 y 轴对称后的坐标是什么？"
+        },
+        {
+          "id": "E-G06-edge",
+          "variant": "edge",
+          "problem": "点 (1,0) 绕原点逆时针旋转 90° 后在哪里？"
+        }
+      ]
+    },
+    {
+      "id": "E-G07",
+      "stage": "小学",
+      "domain": "图形与数据",
+      "title": "坐标与网格路线",
+      "examples": [
+        {
+          "id": "E-G07-basic",
+          "variant": "basic",
+          "problem": "Starting at (0,0), move 3 units right and 2 units up. What coordinate do you reach?"
+        },
+        {
+          "id": "E-G07-transfer",
+          "variant": "transfer",
+          "problem": "从 (−2,1) 沿网格先向右 5 格、再向下 3 格，终点坐标是什么？"
+        }
+      ]
+    },
+    {
+      "id": "E-G08",
+      "stage": "小学",
+      "domain": "图形与数据",
+      "title": "表格条形图折线图与平均数",
+      "examples": [
+        {
+          "id": "E-G08-basic",
+          "variant": "basic",
+          "problem": "数据表记录 2, 4, 6 三天的读书页数，平均每天读多少页？"
+        },
+        {
+          "id": "E-G08-transfer",
+          "variant": "transfer",
+          "problem": "A bar chart has values 3, 5, and 8 for three categories. Which is largest and what is the total?"
+        },
+        {
+          "id": "E-G08-edge",
+          "variant": "edge",
+          "problem": "折线图连续四天的气温为 10、12、9、13°C。最高值、最低值和平均值是多少？"
+        }
+      ]
+    },
+    {
+      "id": "E-G09",
+      "stage": "小学",
+      "domain": "图形与数据",
+      "title": "圆周长圆面积与圆周率",
+      "examples": [
+        {
+          "id": "E-G09-basic",
+          "variant": "basic",
+          "problem": "A circle has radius 3 cm. Give its circumference exactly in terms of π and approximately to the nearest hundredth."
+        },
+        {
+          "id": "E-G09-transfer",
+          "variant": "transfer",
+          "problem": "圆的直径为 10 米，取 π=3.14，求周长。"
+        },
+        {
+          "id": "E-G09-edge",
+          "variant": "edge",
+          "problem": "A circular pond has radius 4 m. Find its area and the area of a 1 m-wide circular path outside it, in terms of π."
+        }
+      ]
+    },
+    {
+      "id": "M-N01",
+      "stage": "初中",
+      "domain": "实数与整式",
+      "title": "负数有理数及绝对值",
+      "examples": [
+        {
+          "id": "M-N01-transfer",
+          "variant": "transfer",
+          "problem": "把 −3、−1/2、0、2 从小到大排列，并求最大数与最小数之差。"
+        },
+        {
+          "id": "M-N01-edge",
+          "variant": "edge",
+          "problem": "Solve |x−2|=5 over the reals and verify both solutions."
+        }
+      ]
+    },
+    {
+      "id": "M-N02",
+      "stage": "初中",
+      "domain": "实数与整式",
+      "title": "有理数混合运算",
+      "examples": [
+        {
+          "id": "M-N02-basic",
+          "variant": "basic",
+          "problem": "计算 −8+3×(−2)。"
+        },
+        {
+          "id": "M-N02-edge",
+          "variant": "edge",
+          "problem": "计算 −2² 和 (−2)²，并解释为什么不同。"
+        }
+      ]
+    },
+    {
+      "id": "M-N03",
+      "stage": "初中",
+      "domain": "实数与整式",
+      "title": "幂指数规则与科学记数法",
+      "examples": [
+        {
+          "id": "M-N03-basic",
+          "variant": "basic",
+          "problem": "Simplify 2³·2⁴ and state the result."
+        },
+        {
+          "id": "M-N03-transfer",
+          "variant": "transfer",
+          "problem": "化简 (3×10⁵)(2×10⁻²)，用科学记数法表示。"
+        }
+      ]
+    },
+    {
+      "id": "M-N04",
+      "stage": "初中",
+      "domain": "实数与整式",
+      "title": "平方根立方根与无理数",
+      "examples": [
+        {
+          "id": "M-N04-basic",
+          "variant": "basic",
+          "problem": "求 √81 和 ∛(−27)。"
+        },
+        {
+          "id": "M-N04-transfer",
+          "variant": "transfer",
+          "problem": "Simplify √50 and classify √50 as rational or irrational."
+        },
+        {
+          "id": "M-N04-edge",
+          "variant": "edge",
+          "problem": "方程 x²=12 的实数解是什么？说明根号结果是否有理数。"
+        }
+      ]
+    },
+    {
+      "id": "M-N05",
+      "stage": "初中",
+      "domain": "实数与整式",
+      "title": "代数式代入与单位",
+      "examples": [
+        {
+          "id": "M-N05-basic",
+          "variant": "basic",
+          "problem": "Evaluate 3a+2b for a=4 m and b=5 m; include units."
+        },
+        {
+          "id": "M-N05-transfer",
+          "variant": "transfer",
+          "problem": "长方形长为 x+2 米，宽为 x 米，x=3 时面积是多少？"
+        },
+        {
+          "id": "M-N05-edge",
+          "variant": "edge",
+          "problem": "For C=2πr, solve for r and evaluate when C=31.4 cm and π=3.14."
+        }
+      ]
+    },
+    {
+      "id": "M-N06",
+      "stage": "初中",
+      "domain": "实数与整式",
+      "title": "分配律与合并同类项",
+      "examples": [
+        {
+          "id": "M-N06-basic",
+          "variant": "basic",
+          "problem": "展开并合并 3(x+4)+2x。"
+        },
+        {
+          "id": "M-N06-transfer",
+          "variant": "transfer",
+          "problem": "Simplify 4(2y−3)−(y+5)."
+        }
+      ]
+    },
+    {
+      "id": "M-N07",
+      "stage": "初中",
+      "domain": "实数与整式",
+      "title": "整式乘法与乘法公式",
+      "examples": [
+        {
+          "id": "M-N07-transfer",
+          "variant": "transfer",
+          "problem": "展开 (2x−5)²。"
+        },
+        {
+          "id": "M-N07-edge",
+          "variant": "edge",
+          "problem": "Simplify (x²−9)/(x−3) and state its domain in the original expression."
+        }
+      ]
+    },
+    {
+      "id": "M-N08",
+      "stage": "初中",
+      "domain": "实数与整式",
+      "title": "因式分解",
+      "examples": [
+        {
+          "id": "M-N08-basic",
+          "variant": "basic",
+          "problem": "分解 6x+12。"
+        },
+        {
+          "id": "M-N08-edge",
+          "variant": "edge",
+          "problem": "因式分解 x²+7x+12，并用乘积形式求零点。"
+        }
+      ]
+    },
+    {
+      "id": "M-A01",
+      "stage": "初中",
+      "domain": "方程与不等式",
+      "title": "一元一次方程",
+      "examples": [
+        {
+          "id": "M-A01-basic",
+          "variant": "basic",
+          "problem": "Solve 5x−7=18."
+        },
+        {
+          "id": "M-A01-transfer",
+          "variant": "transfer",
+          "problem": "解方程 3(x−2)=2x+5。"
+        },
+        {
+          "id": "M-A01-edge",
+          "variant": "edge",
+          "problem": "Solve 2(x+1)=2x+5 and classify the solution set."
+        }
+      ]
+    },
+    {
+      "id": "M-A02",
+      "stage": "初中",
+      "domain": "方程与不等式",
+      "title": "二元一次方程组",
+      "examples": [
+        {
+          "id": "M-A02-basic",
+          "variant": "basic",
+          "problem": "解方程组 x+y=7，x−y=1。"
+        },
+        {
+          "id": "M-A02-transfer",
+          "variant": "transfer",
+          "problem": "Solve 2x+y=8 and x−y=1."
+        },
+        {
+          "id": "M-A02-edge",
+          "variant": "edge",
+          "problem": "判断方程组 2x+2y=6 与 x+y=3 的解有几个，并给出解集描述。"
+        }
+      ]
+    },
+    {
+      "id": "M-A03",
+      "stage": "初中",
+      "domain": "方程与不等式",
+      "title": "一次不等式与数轴",
+      "examples": [
+        {
+          "id": "M-A03-basic",
+          "variant": "basic",
+          "problem": "Solve 3x−4<8 and describe the solution interval."
+        },
+        {
+          "id": "M-A03-edge",
+          "variant": "edge",
+          "problem": "Which integers satisfy −1≤2x+1<7?"
+        }
+      ]
+    },
+    {
+      "id": "M-A04",
+      "stage": "初中",
+      "domain": "方程与不等式",
+      "title": "不等式组及边界",
+      "examples": [
+        {
+          "id": "M-A04-basic",
+          "variant": "basic",
+          "problem": "解不等式组 x>2 且 x≤5。"
+        },
+        {
+          "id": "M-A04-transfer",
+          "variant": "transfer",
+          "problem": "Solve x≥4 and x<1 over the reals."
+        }
+      ]
+    },
+    {
+      "id": "M-A05",
+      "stage": "初中",
+      "domain": "方程与不等式",
+      "title": "公式变形与参数",
+      "examples": [
+        {
+          "id": "M-A05-transfer",
+          "variant": "transfer",
+          "problem": "公式 v=u+at 中，a≠0。解出 t，并求 u=4、v=19、a=3 时的 t。"
+        },
+        {
+          "id": "M-A05-edge",
+          "variant": "edge",
+          "problem": "For P=2l+2w with P=30 and l=2w, solve for l and w."
+        }
+      ]
+    },
+    {
+      "id": "M-A06",
+      "stage": "初中",
+      "domain": "方程与不等式",
+      "title": "分式运算及定义域",
+      "examples": [
+        {
+          "id": "M-A06-basic",
+          "variant": "basic",
+          "problem": "化简 (x²−4)/(x−2)，并写原式定义域。"
+        },
+        {
+          "id": "M-A06-transfer",
+          "variant": "transfer",
+          "problem": "Simplify 1/x+1/(x+1) and state all real domain exclusions."
+        },
+        {
+          "id": "M-A06-edge",
+          "variant": "edge",
+          "problem": "计算 (x²−9)/(x²−3x)，并注明定义域。"
+        }
+      ]
+    },
+    {
+      "id": "M-A07",
+      "stage": "初中",
+      "domain": "方程与不等式",
+      "title": "分式方程及增根",
+      "examples": [
+        {
+          "id": "M-A07-basic",
+          "variant": "basic",
+          "problem": "Solve 1/x=1/3 over the reals and check restrictions."
+        },
+        {
+          "id": "M-A07-transfer",
+          "variant": "transfer",
+          "problem": "解 1/(x−1)=2/(x²−1)，并检查增根。"
+        },
+        {
+          "id": "M-A07-edge",
+          "variant": "edge",
+          "problem": "Solve x/(x−2)=2/(x−2)."
+        }
+      ]
+    },
+    {
+      "id": "M-A08",
+      "stage": "初中",
+      "domain": "方程与不等式",
+      "title": "方程建模及实际约束",
+      "examples": [
+        {
+          "id": "M-A08-transfer",
+          "variant": "transfer",
+          "problem": "A taxi charges $4 plus $2 per mile. If the fare is $18, how many miles were traveled?"
+        },
+        {
+          "id": "M-A08-edge",
+          "variant": "edge",
+          "problem": "每箱装 6 瓶，现有 53 瓶，至少买几个箱子才能装下？箱子按整箱购买。"
+        }
+      ]
+    },
+    {
+      "id": "M-G01",
+      "stage": "初中",
+      "domain": "几何",
+      "title": "平行线与角关系",
+      "examples": [
+        {
+          "id": "M-G01-basic",
+          "variant": "basic",
+          "problem": "Two parallel lines are cut by a transversal. One interior angle is 68°. Find its alternate interior angle and the adjacent interior angle on the same side of the transversal."
+        },
+        {
+          "id": "M-G01-edge",
+          "variant": "edge",
+          "problem": "A transversal meets two lines. Same-side interior angles are 74° and 106°. What can be concluded about the two lines?"
+        }
+      ]
+    },
+    {
+      "id": "M-G02",
+      "stage": "初中",
+      "domain": "几何",
+      "title": "三角形角边关系",
+      "examples": [
+        {
+          "id": "M-G02-basic",
+          "variant": "basic",
+          "problem": "三角形两个内角为 48° 和 67°，求第三角。"
+        },
+        {
+          "id": "M-G02-transfer",
+          "variant": "transfer",
+          "problem": "Can side lengths 4, 7, 12 make a triangle? Also identify the possible range for the third side when the other two sides are 5 and 9."
+        }
+      ]
+    },
+    {
+      "id": "M-G03",
+      "stage": "初中",
+      "domain": "几何",
+      "title": "全等及论证",
+      "examples": [
+        {
+          "id": "M-G03-basic",
+          "variant": "basic",
+          "problem": "Triangles ABC and DEF have AB=DE, AC=DF, and ∠A=∠D, with each angle included between the stated sides. Which congruence criterion applies?"
+        },
+        {
+          "id": "M-G03-transfer",
+          "variant": "transfer",
+          "problem": "已知 AB=AC，D 是 BC 中点。证明 △ABD≅△ACD，并指出结论 BD 与 DC。"
+        },
+        {
+          "id": "M-G03-edge",
+          "variant": "edge",
+          "problem": "Two right triangles have hypotenuse 10 and one corresponding leg 6. Is this enough to prove congruence? State the criterion and what follows."
+        }
+      ]
+    },
+    {
+      "id": "M-G04",
+      "stage": "初中",
+      "domain": "几何",
+      "title": "相似与比例尺",
+      "examples": [
+        {
+          "id": "M-G04-basic",
+          "variant": "basic",
+          "problem": "相似三角形对应边比为 2:5。小三角形一边长 6 厘米，对应大三角形边长多少？"
+        },
+        {
+          "id": "M-G04-transfer",
+          "variant": "transfer",
+          "problem": "A 1.5 m person casts a 2 m shadow while a tree casts a 12 m shadow at the same time on level ground. Estimate tree height."
+        },
+        {
+          "id": "M-G04-edge",
+          "variant": "edge",
+          "problem": "比例尺 1:25,000 的地图上两点相距 4.8 厘米，实地距离多少千米？"
+        }
+      ]
+    },
+    {
+      "id": "M-G05",
+      "stage": "初中",
+      "domain": "几何",
+      "title": "勾股定理及逆定理",
+      "examples": [
+        {
+          "id": "M-G05-basic",
+          "variant": "basic",
+          "problem": "A right triangle has legs 5 and 12. Find its hypotenuse."
+        },
+        {
+          "id": "M-G05-transfer",
+          "variant": "transfer",
+          "problem": "直角三角形斜边 10，直角边 6，另一条直角边是多少？"
+        }
+      ]
+    },
+    {
+      "id": "M-G06",
+      "stage": "初中",
+      "domain": "几何",
+      "title": "四边形与多边形",
+      "examples": [
+        {
+          "id": "M-G06-transfer",
+          "variant": "transfer",
+          "problem": "A regular hexagon has what measure for each interior angle?"
+        },
+        {
+          "id": "M-G06-edge",
+          "variant": "edge",
+          "problem": "菱形对角线长 10 和 24，求面积及边长。"
+        }
+      ]
+    },
+    {
+      "id": "M-G07",
+      "stage": "初中",
+      "domain": "几何",
+      "title": "圆弧角与切线",
+      "examples": [
+        {
+          "id": "M-G07-basic",
+          "variant": "basic",
+          "problem": "A circle has radius 5 cm. What is the radius length from the center to a point of tangency, and how does it meet the tangent?"
+        },
+        {
+          "id": "M-G07-edge",
+          "variant": "edge",
+          "problem": "A tangent-chord angle intercepts a minor arc of 110°. Find the angle; also find the inscribed angle subtending that same minor arc from a point on the major arc."
+        }
+      ]
+    },
+    {
+      "id": "M-G08",
+      "stage": "初中",
+      "domain": "几何",
+      "title": "几何作图及证明",
+      "examples": [
+        {
+          "id": "M-G08-basic",
+          "variant": "basic",
+          "problem": "用直尺圆规作线段 AB 的垂直平分线。描述作图步骤并说明为何所得直线经过 AB 中点且垂直 AB。"
+        },
+        {
+          "id": "M-G08-transfer",
+          "variant": "transfer",
+          "problem": "For a nondegenerate angle 0°<∠ABC<180°, construct its angle bisector with compass and straightedge. State the equal-distance fact proving it bisects the angle; name P as the non-B intersection of the equal-radius arcs that lies inside the angle."
+        },
+        {
+          "id": "M-G08-edge",
+          "variant": "edge",
+          "problem": "在△ABC中，AB=AC。用已知与公共边证明底角相等，写出关键全等理由。"
+        }
+      ]
+    },
+    {
+      "id": "M-G09",
+      "stage": "初中",
+      "domain": "几何",
+      "title": "直角三角形的三角比",
+      "examples": [
+        {
+          "id": "M-G09-basic",
+          "variant": "basic",
+          "problem": "In a right triangle, the side opposite θ is 3 and the hypotenuse is 5. Find sin θ."
+        },
+        {
+          "id": "M-G09-transfer",
+          "variant": "transfer",
+          "problem": "直角三角形中 θ 的邻边为 8，斜边为 10，求 cos θ。"
+        },
+        {
+          "id": "M-G09-edge",
+          "variant": "edge",
+          "problem": "For an acute θ, tan θ=3/4. Find sin θ and cos θ."
+        }
+      ]
+    },
+    {
+      "id": "M-G10",
+      "stage": "初中",
+      "domain": "几何",
+      "title": "弧长扇形面积及组合图形",
+      "examples": [
+        {
+          "id": "M-G10-basic",
+          "variant": "basic",
+          "problem": "半径 6 厘米的圆中，60°圆心角对应弧长是多少？"
+        },
+        {
+          "id": "M-G10-edge",
+          "variant": "edge",
+          "problem": "The semicircle is the region x²+y²≤9 with y≥0, so its radius is 3 and diameter lies on the x-axis. A 3-by-2 rectangle occupies −1.5≤x≤1.5 and 0≤y≤2; it is fully inside the semicircle, centered on the diameter, with its 2-unit height toward the arc. Find the area of the semicircle left after removing the rectangle."
+        }
+      ]
+    },
+    {
+      "id": "M-F01",
+      "stage": "初中",
+      "domain": "函数与坐标",
+      "title": "函数关系及表式图互转",
+      "examples": [
+        {
+          "id": "M-F01-basic",
+          "variant": "basic",
+          "problem": "A relation maps each input 1,2,3 to outputs 4,5,6 respectively. Is it a function? Give ordered pairs."
+        },
+        {
+          "id": "M-F01-transfer",
+          "variant": "transfer",
+          "problem": "函数 y=2x−1。求 x=0,2 时的函数值，并写出表中对应点。"
+        }
+      ]
+    },
+    {
+      "id": "M-F02",
+      "stage": "初中",
+      "domain": "函数与坐标",
+      "title": "一次函数斜率与截距",
+      "examples": [
+        {
+          "id": "M-F02-transfer",
+          "variant": "transfer",
+          "problem": "Find the slope through (2,1) and (6,9), then write the line equation."
+        },
+        {
+          "id": "M-F02-edge",
+          "variant": "edge",
+          "problem": "一条直线经过 (0,4) 和 (2,4)。求斜率和截距；按约定“一次函数”指 y=kx+b 且 k≠0，判断该图像是否为一次函数图像。"
+        }
+      ]
+    },
+    {
+      "id": "M-F03",
+      "stage": "初中",
+      "domain": "函数与坐标",
+      "title": "正比例与反比例",
+      "examples": [
+        {
+          "id": "M-F03-basic",
+          "variant": "basic",
+          "problem": "If y is directly proportional to x and y=12 when x=3, find y when x=5."
+        },
+        {
+          "id": "M-F03-transfer",
+          "variant": "transfer",
+          "problem": "反比例关系 y=k/x 经过点 (4,6)，求 k 和 x=8 时的 y。"
+        },
+        {
+          "id": "M-F03-edge",
+          "variant": "edge",
+          "problem": "For y=−6/x, what happens to y as x approaches 0 from the right and from the left?"
+        }
+      ]
+    },
+    {
+      "id": "M-F04",
+      "stage": "初中",
+      "domain": "函数与坐标",
+      "title": "二次方程与解集",
+      "examples": [
+        {
+          "id": "M-F04-basic",
+          "variant": "basic",
+          "problem": "解 x²−5x+6=0。"
+        },
+        {
+          "id": "M-F04-transfer",
+          "variant": "transfer",
+          "problem": "Solve x²=9 over the reals and give the solution set."
+        },
+        {
+          "id": "M-F04-edge",
+          "variant": "edge",
+          "problem": "方程 x²+4=0 在实数范围内有解吗？"
+        }
+      ]
+    },
+    {
+      "id": "M-F05",
+      "stage": "初中",
+      "domain": "函数与坐标",
+      "title": "二次函数顶点与零点",
+      "examples": [
+        {
+          "id": "M-F05-transfer",
+          "variant": "transfer",
+          "problem": "抛物线 y=x²−4x+3 的顶点和零点是什么？"
+        },
+        {
+          "id": "M-F05-edge",
+          "variant": "edge",
+          "problem": "For y=−(x+1)²+4, state the vertex, opening direction, and x-intercepts."
+        }
+      ]
+    },
+    {
+      "id": "M-F06",
+      "stage": "初中",
+      "domain": "函数与坐标",
+      "title": "图像交点及方程组",
+      "examples": [
+        {
+          "id": "M-F06-basic",
+          "variant": "basic",
+          "problem": "直线 y=x+1 与 y=5−x 的交点是什么？"
+        },
+        {
+          "id": "M-F06-edge",
+          "variant": "edge",
+          "problem": "直线 y=2x+1 与 y=2x−3 是否相交？"
+        }
+      ]
+    },
+    {
+      "id": "M-F07",
+      "stage": "初中",
+      "domain": "函数与坐标",
+      "title": "坐标距离中点及图形变换",
+      "examples": [
+        {
+          "id": "M-F07-basic",
+          "variant": "basic",
+          "problem": "Find the distance and midpoint between A(1,2) and B(5,5)."
+        },
+        {
+          "id": "M-F07-transfer",
+          "variant": "transfer",
+          "problem": "点 P(−2,4) 关于原点对称的点是什么？原点到 P 的距离是多少？"
+        }
+      ]
+    },
+    {
+      "id": "M-F08",
+      "stage": "初中",
+      "domain": "函数与坐标",
+      "title": "分段关系及实际建模",
+      "examples": [
+        {
+          "id": "M-F08-basic",
+          "variant": "basic",
+          "problem": "出租车收费：起步 10 元，另每千米 2 元。行驶 4 千米总价多少？"
+        },
+        {
+          "id": "M-F08-transfer",
+          "variant": "transfer",
+          "problem": "A phone plan costs $20 for up to 2 GB, then $5 per additional GB. Give the charge for 1 GB and 4 GB."
+        },
+        {
+          "id": "M-F08-edge",
+          "variant": "edge",
+          "problem": "水费分段计价：前 10 立方米每立方米 3 元，超出部分每立方米 5 元。用水 12 立方米的费用是多少？"
+        }
+      ]
+    },
+    {
+      "id": "H-A01",
+      "stage": "高中",
+      "domain": "代数与函数",
+      "title": "函数定义域值域与性质",
+      "examples": [
+        {
+          "id": "H-A01-transfer",
+          "variant": "transfer",
+          "problem": "函数 f(x)=x²−4 的定义域限制为 −1≤x≤3。求值域。"
+        },
+        {
+          "id": "H-A01-edge",
+          "variant": "edge",
+          "problem": "For f(x)=1/(x²−1), give the real domain and determine whether f is even or odd."
+        }
+      ]
+    },
+    {
+      "id": "H-A02",
+      "stage": "高中",
+      "domain": "代数与函数",
+      "title": "复合函数与反函数",
+      "examples": [
+        {
+          "id": "H-A02-basic",
+          "variant": "basic",
+          "problem": "f(x)=x²+1，g(x)=2x。求 f(g(−2))。"
+        },
+        {
+          "id": "H-A02-edge",
+          "variant": "edge",
+          "problem": "函数 f(x)=x² 限定定义域 x≥0。求反函数；若定义域改为全体实数，能否仍有反函数？"
+        }
+      ]
+    },
+    {
+      "id": "H-A03",
+      "stage": "高中",
+      "domain": "代数与函数",
+      "title": "多项式运算余式及因式定理",
+      "examples": [
+        {
+          "id": "H-A03-basic",
+          "variant": "basic",
+          "problem": "For p(x)=x³−2x+5, find the remainder when divided by x−2."
+        },
+        {
+          "id": "H-A03-transfer",
+          "variant": "transfer",
+          "problem": "将 (x+1)(x−2)(x−3) 展开，并用因式定理说明 x−2 是否为因式。"
+        }
+      ]
+    },
+    {
+      "id": "H-A04",
+      "stage": "高中",
+      "domain": "代数与函数",
+      "title": "有理函数孔洞与渐近线",
+      "examples": [
+        {
+          "id": "H-A04-basic",
+          "variant": "basic",
+          "problem": "研究 f(x)=(x²−1)/(x−1)：指出定义域、孔洞坐标和垂直渐近线。"
+        },
+        {
+          "id": "H-A04-transfer",
+          "variant": "transfer",
+          "problem": "For f(x)=(x+2)/(x−1), find the vertical and horizontal asymptotes."
+        },
+        {
+          "id": "H-A04-edge",
+          "variant": "edge",
+          "problem": "函数 f(x)=(x²−4)/(x²−4x+4)，求孔洞或垂直渐近线以及水平渐近线。"
+        }
+      ]
+    },
+    {
+      "id": "H-A05",
+      "stage": "高中",
+      "domain": "代数与函数",
+      "title": "根式方程与绝对值方程不等式",
+      "examples": [
+        {
+          "id": "H-A05-basic",
+          "variant": "basic",
+          "problem": "Solve √(x+1)=3 over the reals."
+        },
+        {
+          "id": "H-A05-transfer",
+          "variant": "transfer",
+          "problem": "解 |2x−1|=5。"
+        },
+        {
+          "id": "H-A05-edge",
+          "variant": "edge",
+          "problem": "Solve both equations/inequalities over the reals: (i) √(x+4)=x, (ii) |2x−1|≤3. State the radical domain and give the full solution set for each."
+        }
+      ]
+    },
+    {
+      "id": "H-A06",
+      "stage": "高中",
+      "domain": "代数与函数",
+      "title": "指数函数方程及增长衰减",
+      "examples": [
+        {
+          "id": "H-A06-basic",
+          "variant": "basic",
+          "problem": "解 2^(x+1)=16。"
+        },
+        {
+          "id": "H-A06-transfer",
+          "variant": "transfer",
+          "problem": "A population of 1,000 grows by 5% each year. Under annual compounding, what is the population after 3 years?"
+        }
+      ]
+    },
+    {
+      "id": "H-A07",
+      "stage": "高中",
+      "domain": "代数与函数",
+      "title": "对数函数方程及定义域",
+      "examples": [
+        {
+          "id": "H-A07-transfer",
+          "variant": "transfer",
+          "problem": "解 log₂(x−1)+log₂(x+1)=3，并保留定义域。"
+        },
+        {
+          "id": "H-A07-edge",
+          "variant": "edge",
+          "problem": "Solve log₂(x)=log₂(x−2)+1 over the reals."
+        }
+      ]
+    },
+    {
+      "id": "H-A08",
+      "stage": "高中",
+      "domain": "代数与函数",
+      "title": "复数运算模及复平面",
+      "examples": [
+        {
+          "id": "H-A08-basic",
+          "variant": "basic",
+          "problem": "计算 (3+2i)+(1−5i)。"
+        },
+        {
+          "id": "H-A08-edge",
+          "variant": "edge",
+          "problem": "计算 (1+i)/(1−i)，并给出复平面坐标。"
+        }
+      ]
+    },
+    {
+      "id": "H-A09",
+      "stage": "高中",
+      "domain": "代数与函数",
+      "title": "二次多项式及分式不等式",
+      "examples": [
+        {
+          "id": "H-A09-basic",
+          "variant": "basic",
+          "problem": "Solve x²−5x+6≤0 over the reals."
+        },
+        {
+          "id": "H-A09-transfer",
+          "variant": "transfer",
+          "problem": "解不等式 (x−1)/(x+2)>0。"
+        },
+        {
+          "id": "H-A09-edge",
+          "variant": "edge",
+          "problem": "Solve (x²−4)/(x−1)≤0 over the reals."
+        }
+      ]
+    },
+    {
+      "id": "H-A10",
+      "stage": "高中",
+      "domain": "代数与函数",
+      "title": "含参数方程及解的分类讨论",
+      "examples": [
+        {
+          "id": "H-A10-basic",
+          "variant": "basic",
+          "problem": "按参数 a 分类求解 (a−1)x=2。"
+        },
+        {
+          "id": "H-A10-transfer",
+          "variant": "transfer",
+          "problem": "Classify the number of real roots of x²−2ax+a=0 by parameter a."
+        },
+        {
+          "id": "H-A10-edge",
+          "variant": "edge",
+          "problem": "方程 (a−2)x=a−2 有多少个实数解？按 a 分类并给出解。"
+        }
+      ]
+    },
+    {
+      "id": "H-A11",
+      "stage": "高中",
+      "domain": "代数与函数",
+      "title": "基本不等式及等号条件",
+      "examples": [
+        {
+          "id": "H-A11-basic",
+          "variant": "basic",
+          "problem": "For positive x,y with xy=16, find the minimum of x+y and when equality occurs."
+        },
+        {
+          "id": "H-A11-edge",
+          "variant": "edge",
+          "problem": "For positive a,b, justify (a+b)/2≥√(ab) and state exactly when equality holds."
+        }
+      ]
+    },
+    {
+      "id": "H-T01",
+      "stage": "高中",
+      "domain": "三角",
+      "title": "弧度角度与弧长",
+      "examples": [
+        {
+          "id": "H-T01-basic",
+          "variant": "basic",
+          "problem": "把 π/3 弧度换成角度。"
+        },
+        {
+          "id": "H-T01-transfer",
+          "variant": "transfer",
+          "problem": "A circle has radius 6 cm and central angle 5π/6 radians. Find the intercepted arc length."
+        }
+      ]
+    },
+    {
+      "id": "H-T02",
+      "stage": "高中",
+      "domain": "三角",
+      "title": "单位圆与三角函数值",
+      "examples": [
+        {
+          "id": "H-T02-transfer",
+          "variant": "transfer",
+          "problem": "单位圆上角 −π/3 对应的点坐标是什么？"
+        },
+        {
+          "id": "H-T02-edge",
+          "variant": "edge",
+          "problem": "For θ=7π/4, give the unit-circle point and tan θ."
+        }
+      ]
+    },
+    {
+      "id": "H-T03",
+      "stage": "高中",
+      "domain": "三角",
+      "title": "三角函数图像周期与相位",
+      "examples": [
+        {
+          "id": "H-T03-basic",
+          "variant": "basic",
+          "problem": "对 y=2sin(3x−π/2)+1，求振幅、周期、向右平移量和值域。"
+        },
+        {
+          "id": "H-T03-transfer",
+          "variant": "transfer",
+          "problem": "For y=−cos(2x+π/3), state the period, phase shift, and maximum and minimum values."
+        },
+        {
+          "id": "H-T03-edge",
+          "variant": "edge",
+          "problem": "For y=tan x, state the period, real domain, and all vertical asymptote locations."
+        }
+      ]
+    },
+    {
+      "id": "H-T04",
+      "stage": "高中",
+      "domain": "三角",
+      "title": "三角恒等式及变形依据",
+      "examples": [
+        {
+          "id": "H-T04-basic",
+          "variant": "basic",
+          "problem": "Justify the identity sin²x+cos²x=1 for every real x using the unit circle."
+        },
+        {
+          "id": "H-T04-transfer",
+          "variant": "transfer",
+          "problem": "在 sin x≠0 时化简 (1−cos²x)/sin x，并说明依据。"
+        },
+        {
+          "id": "H-T04-edge",
+          "variant": "edge",
+          "problem": "For sin x≠0 and cos x≠0, simplify tan x+cot x and justify each step."
+        }
+      ]
+    },
+    {
+      "id": "H-T05",
+      "stage": "高中",
+      "domain": "三角",
+      "title": "三角方程区间及全部解",
+      "examples": [
+        {
+          "id": "H-T05-transfer",
+          "variant": "transfer",
+          "problem": "Solve cos(2x)=0 for x∈[−π,π]."
+        },
+        {
+          "id": "H-T05-edge",
+          "variant": "edge",
+          "problem": "求 sin x=0 在闭区间 [0,2π] 内的所有解。"
+        }
+      ]
+    },
+    {
+      "id": "H-T06",
+      "stage": "高中",
+      "domain": "三角",
+      "title": "反三角函数及主值",
+      "examples": [
+        {
+          "id": "H-T06-basic",
+          "variant": "basic",
+          "problem": "Evaluate arcsin(1/2) using the principal-value convention."
+        },
+        {
+          "id": "H-T06-edge",
+          "variant": "edge",
+          "problem": "Evaluate arctan(tan(5π/6)) using arctan values in (−π/2,π/2)."
+        }
+      ]
+    },
+    {
+      "id": "H-T07",
+      "stage": "高中",
+      "domain": "三角",
+      "title": "正弦余弦定理及多解",
+      "examples": [
+        {
+          "id": "H-T07-basic",
+          "variant": "basic",
+          "problem": "三角形中 A=30°、B=60°、c=10（边 c 对角 C），求 C 和边 a。"
+        },
+        {
+          "id": "H-T07-transfer",
+          "variant": "transfer",
+          "problem": "An SSA case has A=30°, opposite side a=5, and side b=6 opposite B. Find all possible B and corresponding C values."
+        }
+      ]
+    },
+    {
+      "id": "H-T08",
+      "stage": "高中",
+      "domain": "三角",
+      "title": "解三角形与测量应用",
+      "examples": [
+        {
+          "id": "H-T08-basic",
+          "variant": "basic",
+          "problem": "From a point on level ground, the angle of elevation to a building top is 30°. The horizontal distance to the building base is 40 m and eye height is negligible. Find building height exactly."
+        },
+        {
+          "id": "H-T08-transfer",
+          "variant": "transfer",
+          "problem": "三角形中 A=45°、B=60°、边 c=10 米（对角 C）。用正弦定理求边 a 的精确值。"
+        },
+        {
+          "id": "H-T08-edge",
+          "variant": "edge",
+          "problem": "Two observation points are 100 m apart on a straight level line toward a tower. The nearer point’s angle of elevation is 45°, the farther point’s is 30°. Find the tower height exactly, with eye height zero."
+        }
+      ]
+    },
+    {
+      "id": "H-G01",
+      "stage": "高中",
+      "domain": "向量解析与空间几何",
+      "title": "向量加减数乘及坐标",
+      "examples": [
+        {
+          "id": "H-G01-basic",
+          "variant": "basic",
+          "problem": "向量 u=(1,2)、v=(3,−1)，求 u+v 和 u−v。"
+        },
+        {
+          "id": "H-G01-transfer",
+          "variant": "transfer",
+          "problem": "A hiker walks 4 km east, then 3 km north. Give the displacement vector and its magnitude."
+        },
+        {
+          "id": "H-G01-edge",
+          "variant": "edge",
+          "problem": "若 u=(2,−3)、v=(−1,4)，求 2u−3v。"
+        }
+      ]
+    },
+    {
+      "id": "H-G02",
+      "stage": "高中",
+      "domain": "向量解析与空间几何",
+      "title": "点积夹角垂直与投影",
+      "examples": [
+        {
+          "id": "H-G02-basic",
+          "variant": "basic",
+          "problem": "For u=(1,2) and v=(3,4), find the dot product and cos of their angle."
+        },
+        {
+          "id": "H-G02-transfer",
+          "variant": "transfer",
+          "problem": "求 u=(3,4) 在 v=(0,2) 上的向量投影。"
+        }
+      ]
+    },
+    {
+      "id": "H-G03",
+      "stage": "高中",
+      "domain": "向量解析与空间几何",
+      "title": "直线圆及位置关系",
+      "examples": [
+        {
+          "id": "H-G03-transfer",
+          "variant": "transfer",
+          "problem": "Find where the line x=2 meets the circle centered at (2,−1) with radius 3."
+        },
+        {
+          "id": "H-G03-edge",
+          "variant": "edge",
+          "problem": "判断直线 y=4 与圆 x²+y²=9 的位置关系。"
+        }
+      ]
+    },
+    {
+      "id": "H-G04",
+      "stage": "高中",
+      "domain": "向量解析与空间几何",
+      "title": "抛物线椭圆双曲线",
+      "examples": [
+        {
+          "id": "H-G04-basic",
+          "variant": "basic",
+          "problem": "For parabola y²=8x, give its vertex, focus, and directrix."
+        },
+        {
+          "id": "H-G04-edge",
+          "variant": "edge",
+          "problem": "For hyperbola x²/9−y²/16=1, give both asymptote equations."
+        }
+      ]
+    },
+    {
+      "id": "H-G05",
+      "stage": "高中",
+      "domain": "向量解析与空间几何",
+      "title": "解析几何轨迹与参数约束",
+      "examples": [
+        {
+          "id": "H-G05-basic",
+          "variant": "basic",
+          "problem": "点 P=(t,2t+1)，参数 t∈[0,2]。写出轨迹方程并说明轨迹范围。"
+        },
+        {
+          "id": "H-G05-transfer",
+          "variant": "transfer",
+          "problem": "Describe the locus of points at distance 3 from (1,2)."
+        },
+        {
+          "id": "H-G05-edge",
+          "variant": "edge",
+          "problem": "点 P=(t,1−t)，参数 0≤t≤1。说明它是否始终位于闭第一象限，并求轨迹长度。"
+        }
+      ]
+    },
+    {
+      "id": "H-G06",
+      "stage": "高中",
+      "domain": "向量解析与空间几何",
+      "title": "空间线面平行与垂直",
+      "examples": [
+        {
+          "id": "H-G06-basic",
+          "variant": "basic",
+          "problem": "In 3D, are planes z=0 and z=4 parallel, perpendicular, or intersecting?"
+        },
+        {
+          "id": "H-G06-transfer",
+          "variant": "transfer",
+          "problem": "直线 L(t)=(1,2,t) 与平面 z=0 的关系是什么？在哪点相交？"
+        },
+        {
+          "id": "H-G06-edge",
+          "variant": "edge",
+          "problem": "For plane z=0 and line L(t)=(t,0,2), state whether the line intersects the plane or is parallel to it, and justify."
+        }
+      ]
+    },
+    {
+      "id": "H-G07",
+      "stage": "高中",
+      "domain": "向量解析与空间几何",
+      "title": "立体表面积体积与截面",
+      "examples": [
+        {
+          "id": "H-G07-basic",
+          "variant": "basic",
+          "problem": "边长为 2 的正方体，求体积和总表面积。"
+        },
+        {
+          "id": "H-G07-edge",
+          "variant": "edge",
+          "problem": "A right circular cylinder has radius 2 and height 5. Before any cut, find its volume and total outer surface area. A plane parallel to the base cuts the cylinder at an interior height; find the area of the cross-section, without adding the new cut faces to the original outer surface area."
+        }
+      ]
+    },
+    {
+      "id": "H-G08",
+      "stage": "高中",
+      "domain": "向量解析与空间几何",
+      "title": "基础矩阵与平面线性变换",
+      "examples": [
+        {
+          "id": "H-G08-basic",
+          "variant": "basic",
+          "problem": "Apply matrix [[1,2],[0,−1]] to vector (3,4)."
+        },
+        {
+          "id": "H-G08-transfer",
+          "variant": "transfer",
+          "problem": "矩阵 A=[[0,−1],[1,0]] 表示平面线性变换。求点 (2,3) 的像，并说明变换类型。"
+        }
+      ]
+    },
+    {
+      "id": "H-P01",
+      "stage": "高中",
+      "domain": "集合逻辑与概率",
+      "title": "集合运算与区间",
+      "examples": [
+        {
+          "id": "H-P01-transfer",
+          "variant": "transfer",
+          "problem": "Find the complement in ℝ of interval (−2,1]."
+        },
+        {
+          "id": "H-P01-edge",
+          "variant": "edge",
+          "problem": "若 A=(−∞,2]、B=[0,5)，求 A\\B。"
+        }
+      ]
+    },
+    {
+      "id": "H-P02",
+      "stage": "高中",
+      "domain": "集合逻辑与概率",
+      "title": "命题量词充分必要条件与反例",
+      "examples": [
+        {
+          "id": "H-P02-basic",
+          "variant": "basic",
+          "problem": "Over integers, test “if n is divisible by 4, then n is even.” Is the implication true? Is its converse true?"
+        },
+        {
+          "id": "H-P02-transfer",
+          "variant": "transfer",
+          "problem": "命题“对所有实数 x，x²>0”是否为真？若为假，给出反例。"
+        },
+        {
+          "id": "H-P02-edge",
+          "variant": "edge",
+          "problem": "For integer n, prove n² is even if and only if n is even."
+        }
+      ]
+    },
+    {
+      "id": "H-P03",
+      "stage": "高中",
+      "domain": "集合逻辑与概率",
+      "title": "加法乘法计数原理",
+      "examples": [
+        {
+          "id": "H-P03-basic",
+          "variant": "basic",
+          "problem": "有 3 件上衣和 4 条裤子，每套各选一件，能组成多少套？"
+        },
+        {
+          "id": "H-P03-transfer",
+          "variant": "transfer",
+          "problem": "A traveler may take one of 3 buses or one of 2 trains; each chosen service has 5 departure times. How many service-and-time choices are there?"
+        },
+        {
+          "id": "H-P03-edge",
+          "variant": "edge",
+          "problem": "用数字 0,1,2,3,4 组成首位非零且数字不重复的两位数，共有多少个？"
+        }
+      ]
+    },
+    {
+      "id": "H-P04",
+      "stage": "高中",
+      "domain": "集合逻辑与概率",
+      "title": "排列组合与重复限制",
+      "examples": [
+        {
+          "id": "H-P04-transfer",
+          "variant": "transfer",
+          "problem": "从 8 名学生中选 3 名组成小组，不分职位，有多少种选法？"
+        },
+        {
+          "id": "H-P04-edge",
+          "variant": "edge",
+          "problem": "How many distinct arrangements are there of the letters in BALLOON?"
+        }
+      ]
+    },
+    {
+      "id": "H-P05",
+      "stage": "高中",
+      "domain": "集合逻辑与概率",
+      "title": "二项式定理",
+      "examples": [
+        {
+          "id": "H-P05-basic",
+          "variant": "basic",
+          "problem": "求 (2+x)^5 展开式中 x³ 的系数。"
+        },
+        {
+          "id": "H-P05-edge",
+          "variant": "edge",
+          "problem": "求 (1+2x)^4 中 x² 项的系数。"
+        }
+      ]
+    },
+    {
+      "id": "H-P06",
+      "stage": "高中",
+      "domain": "集合逻辑与概率",
+      "title": "样本空间及事件运算",
+      "examples": [
+        {
+          "id": "H-P06-basic",
+          "variant": "basic",
+          "problem": "Two fair six-sided dice are rolled. What is the probability their sum is 7?"
+        },
+        {
+          "id": "H-P06-transfer",
+          "variant": "transfer",
+          "problem": "从标准 52 张牌中随机抽 1 张，求抽到红牌或 A 的概率。"
+        }
+      ]
+    },
+    {
+      "id": "H-P07",
+      "stage": "高中",
+      "domain": "集合逻辑与概率",
+      "title": "条件概率独立性及不放回抽样",
+      "examples": [
+        {
+          "id": "H-P07-basic",
+          "variant": "basic",
+          "problem": "盒中有 4 红、6 蓝球，不放回连续抽两次。已知第一次抽到红球，求第二次为红球的条件概率。"
+        },
+        {
+          "id": "H-P07-transfer",
+          "variant": "transfer",
+          "problem": "An urn has 5 red and 3 blue balls. Two are drawn without replacement. Find the probability both are red."
+        },
+        {
+          "id": "H-P07-edge",
+          "variant": "edge",
+          "problem": "掷公平骰子。A={偶数}，B={大于 3}。判断 A、B 是否独立。"
+        }
+      ]
+    },
+    {
+      "id": "H-P08",
+      "stage": "高中",
+      "domain": "集合逻辑与概率",
+      "title": "离散分布期望与二项分布",
+      "examples": [
+        {
+          "id": "H-P08-basic",
+          "variant": "basic",
+          "problem": "A random variable X takes 0,1,2 with probabilities 0.2,0.5,0.3. Find E[X]."
+        },
+        {
+          "id": "H-P08-transfer",
+          "variant": "transfer",
+          "problem": "X~Binomial(n=4,p=1/4)。求期望和 P(X=0)。"
+        },
+        {
+          "id": "H-P08-edge",
+          "variant": "edge",
+          "problem": "Let X~Binomial(5,0). Find E[X] and P(X≥1)."
+        }
+      ]
+    },
+    {
+      "id": "H-S01",
+      "stage": "高中",
+      "domain": "统计与数列",
+      "title": "均值中位数众数分位数及异常值",
+      "examples": [
+        {
+          "id": "H-S01-basic",
+          "variant": "basic",
+          "problem": "数据 1,2,2,3,10。按四分位数规则“排序后排除整体中位数，再取上下半组中位数”求均值、中位数、众数、Q1、Q3。"
+        },
+        {
+          "id": "H-S01-transfer",
+          "variant": "transfer",
+          "problem": "Compare sets A={2,3,4,5,6} and B={2,3,4,5,26}. Find each mean and median, and explain the effect of the large value."
+        }
+      ]
+    },
+    {
+      "id": "H-S02",
+      "stage": "高中",
+      "domain": "统计与数列",
+      "title": "方差标准差及分布比较",
+      "examples": [
+        {
+          "id": "H-S02-transfer",
+          "variant": "transfer",
+          "problem": "样本数据 1,3,5，按样本方差定义分母 n−1，求均值、样本方差和样本标准差。"
+        },
+        {
+          "id": "H-S02-edge",
+          "variant": "edge",
+          "problem": "Compare populations A={0,2} and B={1,1} using their means and population variances."
+        }
+      ]
+    },
+    {
+      "id": "H-S03",
+      "stage": "高中",
+      "domain": "统计与数列",
+      "title": "抽样偏差及实验设计",
+      "examples": [
+        {
+          "id": "H-S03-basic",
+          "variant": "basic",
+          "problem": "A city wants to estimate weekly exercise frequency among all adult residents. Its staff survey 100 people who visit one gym on Monday afternoon. Identify the main sampling bias and propose a better sampling plan."
+        },
+        {
+          "id": "H-S03-edge",
+          "variant": "edge",
+          "problem": "观察性研究发现喝咖啡者更少迟到。能否据此断言咖啡导致迟到减少？说明一个混杂因素及更强的研究设计。"
+        }
+      ]
+    },
+    {
+      "id": "H-S04",
+      "stage": "高中",
+      "domain": "统计与数列",
+      "title": "散点图相关回归及残差",
+      "examples": [
+        {
+          "id": "H-S04-basic",
+          "variant": "basic",
+          "problem": "A fitted line is ŷ=2x+1. For x=3 and observed y=8, compute the prediction and residual, using residual=observed−predicted."
+        },
+        {
+          "id": "H-S04-transfer",
+          "variant": "transfer",
+          "problem": "数据点为 (0,1),(1,3),(2,5)。判断线性相关方向，给出精确直线模型和相关系数。"
+        },
+        {
+          "id": "H-S04-edge",
+          "variant": "edge",
+          "problem": "In a scatterplot, one point has an x-value far from the sample mean but lies exactly on the fitted regression line (vertical residual 0). Can such an extreme-x point have high leverage? Is it a vertical outlier by residual?"
+        }
+      ]
+    },
+    {
+      "id": "H-S05",
+      "stage": "高中",
+      "domain": "统计与数列",
+      "title": "正态分布及标准化",
+      "examples": [
+        {
+          "id": "H-S05-basic",
+          "variant": "basic",
+          "problem": "考试分数近似正态分布，均值 70、标准差 10。分数 85 的 z 分数是多少？"
+        },
+        {
+          "id": "H-S05-transfer",
+          "variant": "transfer",
+          "problem": "Exam scores are normal with mean 100 and standard deviation 15. What score corresponds to z=−2?"
+        },
+        {
+          "id": "H-S05-edge",
+          "variant": "edge",
+          "problem": "若 X 正态分布，μ=50、σ=5，求 P(X≤50)；并说明理由。"
+        }
+      ]
+    },
+    {
+      "id": "H-S06",
+      "stage": "高中",
+      "domain": "统计与数列",
+      "title": "等差数列及有限求和",
+      "examples": [
+        {
+          "id": "H-S06-basic",
+          "variant": "basic",
+          "problem": "An arithmetic sequence has a₁=5 and common difference 3. Find a₁₀ and S₁₀."
+        },
+        {
+          "id": "H-S06-edge",
+          "variant": "edge",
+          "problem": "An arithmetic sequence starts at 20 with common difference −2. Find the sum of its first 8 terms."
+        }
+      ]
+    },
+    {
+      "id": "H-S07",
+      "stage": "高中",
+      "domain": "统计与数列",
+      "title": "等比数列及有限求和",
+      "examples": [
+        {
+          "id": "H-S07-basic",
+          "variant": "basic",
+          "problem": "等比数列首项 3、公比 2，求第 6 项和前 6 项和。"
+        },
+        {
+          "id": "H-S07-transfer",
+          "variant": "transfer",
+          "problem": "A ball is dropped from 16 m. After each bounce it rises to 3/4 of the previous drop height. Find the total distance traveled from release until it first reaches the peak of its fourth rebound."
+        }
+      ]
+    },
+    {
+      "id": "H-S08",
+      "stage": "高中",
+      "domain": "统计与数列",
+      "title": "递推关系与数学归纳法",
+      "examples": [
+        {
+          "id": "H-S08-transfer",
+          "variant": "transfer",
+          "problem": "递推数列 a₁=1，aₙ₊₁=2aₙ+1，求 a₂、a₃、a₄。"
+        },
+        {
+          "id": "H-S08-edge",
+          "variant": "edge",
+          "problem": "Prove by induction that 1+3+5+…+(2n−1)=n² for every integer n≥1."
+        }
+      ]
+    },
+    {
+      "id": "C-L01",
+      "stage": "基础微积分",
+      "domain": "极限与连续",
+      "title": "数表图像与极限直觉",
+      "examples": [
+        {
+          "id": "C-L01-transfer",
+          "variant": "transfer",
+          "problem": "文字图像：曲线在 x 从左右趋近 1 时都趋近开圆点 (1,2)，但实心点是 (1,5)。求极限和 f(1)。"
+        },
+        {
+          "id": "C-L01-edge",
+          "variant": "edge",
+          "problem": "A finite table gives f(1/n)=0 for n=1,…,10. Can it establish lim x→0 f(x)=0? Give a counterexample consistent with the table."
+        }
+      ]
+    },
+    {
+      "id": "C-L02",
+      "stage": "基础微积分",
+      "domain": "极限与连续",
+      "title": "左右极限及极限不存在",
+      "examples": [
+        {
+          "id": "C-L02-basic",
+          "variant": "basic",
+          "problem": "求 1/x 在 x→0 左、右的极限，并判断双侧极限。"
+        },
+        {
+          "id": "C-L02-edge",
+          "variant": "edge",
+          "problem": "用两个数列证明 lim x→0 sin(1/x) 不存在。"
+        }
+      ]
+    },
+    {
+      "id": "C-L03",
+      "stage": "基础微积分",
+      "domain": "极限与连续",
+      "title": "极限运算及因式分解有理化",
+      "examples": [
+        {
+          "id": "C-L03-basic",
+          "variant": "basic",
+          "problem": "Evaluate lim x→1 (x²−1)/(x−1)."
+        },
+        {
+          "id": "C-L03-transfer",
+          "variant": "transfer",
+          "problem": "求 lim x→4 [√(x+5)−3]/(x−4)。"
+        }
+      ]
+    },
+    {
+      "id": "C-L04",
+      "stage": "基础微积分",
+      "domain": "极限与连续",
+      "title": "夹逼定理与基本三角极限",
+      "examples": [
+        {
+          "id": "C-L04-basic",
+          "variant": "basic",
+          "problem": "已知 |sin(1/x)|≤1。用夹逼定理求 lim x→0 x²sin(1/x)。"
+        },
+        {
+          "id": "C-L04-transfer",
+          "variant": "transfer",
+          "problem": "Using radians, evaluate lim x→0 sin(3x)/(5x)."
+        },
+        {
+          "id": "C-L04-edge",
+          "variant": "edge",
+          "problem": "Suppose −1≤f(x)≤1 for all 0<|x|<1. Do these bounds alone prove lim x→0 f(x)=0? Give a function satisfying the bounds whose limit does not exist."
+        }
+      ]
+    },
+    {
+      "id": "C-L05",
+      "stage": "基础微积分",
+      "domain": "极限与连续",
+      "title": "无穷极限及无穷远极限",
+      "examples": [
+        {
+          "id": "C-L05-basic",
+          "variant": "basic",
+          "problem": "Evaluate lim x→∞ (3x²−1)/(x²+4)."
+        },
+        {
+          "id": "C-L05-transfer",
+          "variant": "transfer",
+          "problem": "求 lim x→∞ (2x+1)/(x²+1)。"
+        },
+        {
+          "id": "C-L05-edge",
+          "variant": "edge",
+          "problem": "Find lim x→0⁺ ln x."
+        }
+      ]
+    },
+    {
+      "id": "C-L06",
+      "stage": "基础微积分",
+      "domain": "极限与连续",
+      "title": "连续性及间断类型",
+      "examples": [
+        {
+          "id": "C-L06-basic",
+          "variant": "basic",
+          "problem": "f(x)=(x²−1)/(x−1)（x≠1），f(1)=2。判断 x=1 处连续性。"
+        },
+        {
+          "id": "C-L06-transfer",
+          "variant": "transfer",
+          "problem": "Let f(x)=0 for x<0, f(0)=1, and f(x)=2 for x>0. Classify the discontinuity at 0."
+        }
+      ]
+    },
+    {
+      "id": "C-L07",
+      "stage": "基础微积分",
+      "domain": "极限与连续",
+      "title": "介值定理与假设检查",
+      "examples": [
+        {
+          "id": "C-L07-transfer",
+          "variant": "transfer",
+          "problem": "有人称 f(x)=1/x 在 [−1,1] 内有零点，因为端点异号。指出问题并判断区间内是否真有零点。"
+        },
+        {
+          "id": "C-L07-edge",
+          "variant": "edge",
+          "problem": "If f is continuous on [0,2] and f(0)=f(2)=1, does IVT guarantee a root? Give a matching counterexample."
+        }
+      ]
+    },
+    {
+      "id": "C-L08",
+      "stage": "基础微积分",
+      "domain": "极限与连续",
+      "title": "洛必达法则及适用条件",
+      "examples": [
+        {
+          "id": "C-L08-basic",
+          "variant": "basic",
+          "problem": "用洛必达求 lim x→0 (e^x−1)/x，并先说明适用形式。"
+        },
+        {
+          "id": "C-L08-edge",
+          "variant": "edge",
+          "problem": "求 lim x→0 (x²+1)/(x+1)，并判断能否用洛必达。"
+        }
+      ]
+    },
+    {
+      "id": "C-D01",
+      "stage": "基础微积分",
+      "domain": "导数及应用",
+      "title": "导数定义割线切线与差商",
+      "examples": [
+        {
+          "id": "C-D01-basic",
+          "variant": "basic",
+          "problem": "Use the difference quotient to find f′(3) for f(x)=x²."
+        },
+        {
+          "id": "C-D01-transfer",
+          "variant": "transfer",
+          "problem": "For f(x)=1/x, find the secant slope from x=1 to x=1+h (h≠0,−1), then find its limit as h→0, the tangent slope at x=1."
+        },
+        {
+          "id": "C-D01-edge",
+          "variant": "edge",
+          "problem": "For f(x)=|x| at 0, compare left and right derivative limits."
+        }
+      ]
+    },
+    {
+      "id": "C-D02",
+      "stage": "基础微积分",
+      "domain": "导数及应用",
+      "title": "幂乘积商及链式求导",
+      "examples": [
+        {
+          "id": "C-D02-basic",
+          "variant": "basic",
+          "problem": "求 f(x)=3x⁴−2x 的导数。"
+        },
+        {
+          "id": "C-D02-transfer",
+          "variant": "transfer",
+          "problem": "Differentiate f(x)=(x²+1)e^(x²)."
+        },
+        {
+          "id": "C-D02-edge",
+          "variant": "edge",
+          "problem": "对 x≠0，求 f(x)=(x²+1)/x 的导数并注明定义域。"
+        }
+      ]
+    },
+    {
+      "id": "C-D03",
+      "stage": "基础微积分",
+      "domain": "导数及应用",
+      "title": "三角指数对数与反函数求导",
+      "examples": [
+        {
+          "id": "C-D03-basic",
+          "variant": "basic",
+          "problem": "For x>0 differentiate sin x+e^x+ln x."
+        },
+        {
+          "id": "C-D03-edge",
+          "variant": "edge",
+          "problem": "For −1<x<1 differentiate arcsin x and state where the formula is valid."
+        }
+      ]
+    },
+    {
+      "id": "C-D04",
+      "stage": "基础微积分",
+      "domain": "导数及应用",
+      "title": "隐式求导及高阶导数",
+      "examples": [
+        {
+          "id": "C-D04-basic",
+          "variant": "basic",
+          "problem": "曲线 x²+y²=25 在 (3,4) 求 dy/dx。"
+        },
+        {
+          "id": "C-D04-transfer",
+          "variant": "transfer",
+          "problem": "Find the third derivative of x⁴."
+        }
+      ]
+    },
+    {
+      "id": "C-D05",
+      "stage": "基础微积分",
+      "domain": "导数及应用",
+      "title": "可导性及连续性的关系",
+      "examples": [
+        {
+          "id": "C-D05-transfer",
+          "variant": "transfer",
+          "problem": "Let f(0)=1 and f(x)=x for x≠0. Is f continuous or differentiable at 0? Use the difference quotient to support the differentiability conclusion."
+        },
+        {
+          "id": "C-D05-edge",
+          "variant": "edge",
+          "problem": "Let f(0)=0 and f(x)=x sin(1/x) otherwise. Test continuity and differentiability at 0."
+        }
+      ]
+    },
+    {
+      "id": "C-D06",
+      "stage": "基础微积分",
+      "domain": "导数及应用",
+      "title": "罗尔中值定理及假设检查",
+      "examples": [
+        {
+          "id": "C-D06-basic",
+          "variant": "basic",
+          "problem": "对 x²−1 在 [−1,1] 用罗尔定理，验证假设并求全部内部 c。"
+        },
+        {
+          "id": "C-D06-transfer",
+          "variant": "transfer",
+          "problem": "For f(x)=|x| on [−1,1], can Rolle’s theorem be applied? Separately apply the general Mean Value Theorem to g(x)=x² on [1,3] and find a guaranteed c."
+        },
+        {
+          "id": "C-D06-edge",
+          "variant": "edge",
+          "problem": "对 cos x 在 [0,2π] 检查罗尔条件并求区间内部 c。"
+        }
+      ]
+    },
+    {
+      "id": "C-D07",
+      "stage": "基础微积分",
+      "domain": "导数及应用",
+      "title": "单调极值凹凸拐点与图像",
+      "examples": [
+        {
+          "id": "C-D07-basic",
+          "variant": "basic",
+          "problem": "For f=x³−3x find increasing/decreasing intervals and local extrema."
+        },
+        {
+          "id": "C-D07-transfer",
+          "variant": "transfer",
+          "problem": "对 f=x³−3x 求凹凸区间和拐点。"
+        },
+        {
+          "id": "C-D07-edge",
+          "variant": "edge",
+          "problem": "For |x| on [−1,1], find its absolute minimum and explain why f′=0 misses it."
+        }
+      ]
+    },
+    {
+      "id": "C-D08",
+      "stage": "基础微积分",
+      "domain": "导数及应用",
+      "title": "约束最优化及端点",
+      "examples": [
+        {
+          "id": "C-D08-transfer",
+          "variant": "transfer",
+          "problem": "Find absolute max and min of f=x(6−x) on closed interval [0,6]."
+        },
+        {
+          "id": "C-D08-edge",
+          "variant": "edge",
+          "problem": "在 [0,5] 上求 x(4−x) 的绝对最大、最小值，比较端点。"
+        }
+      ]
+    },
+    {
+      "id": "C-D09",
+      "stage": "基础微积分",
+      "domain": "导数及应用",
+      "title": "相关变化率及单位",
+      "examples": [
+        {
+          "id": "C-D09-basic",
+          "variant": "basic",
+          "problem": "A circle radius grows at 2 cm/s. At r=3 cm, how fast is area changing?"
+        },
+        {
+          "id": "C-D09-edge",
+          "variant": "edge",
+          "problem": "A sphere radius increases at 0.5 m/min. At r=2 m find dV/dt."
+        }
+      ]
+    },
+    {
+      "id": "C-D10",
+      "stage": "基础微积分",
+      "domain": "导数及应用",
+      "title": "位置速度加速度及方向",
+      "examples": [
+        {
+          "id": "C-D10-basic",
+          "variant": "basic",
+          "problem": "粒子位置 s=t²−4t 米，t≥0。求速度、加速度，并判断 t=1 运动方向。"
+        },
+        {
+          "id": "C-D10-transfer",
+          "variant": "transfer",
+          "problem": "For s=t³−6t²+9t on 0≤t≤4, find v,a and forward-motion intervals."
+        }
+      ]
+    },
+    {
+      "id": "C-D11",
+      "stage": "基础微积分",
+      "domain": "导数及应用",
+      "title": "线性近似与微分",
+      "examples": [
+        {
+          "id": "C-D11-basic",
+          "variant": "basic",
+          "problem": "Use linearization at x=4 to approximate √4.1."
+        },
+        {
+          "id": "C-D11-transfer",
+          "variant": "transfer",
+          "problem": "用 x=0 处线性近似估算 e^0.05。"
+        },
+        {
+          "id": "C-D11-edge",
+          "variant": "edge",
+          "problem": "For f=x² at x=3 and dx=0.1, find dy and exact Δy."
+        }
+      ]
+    },
+    {
+      "id": "C-I01",
+      "stage": "基础微积分",
+      "domain": "积分及应用",
+      "title": "基本原函数与积分常数",
+      "examples": [
+        {
+          "id": "C-I01-basic",
+          "variant": "basic",
+          "problem": "求 ∫3x² dx。"
+        },
+        {
+          "id": "C-I01-transfer",
+          "variant": "transfer",
+          "problem": "Find the general antiderivative of 2x+1/x on its real domain."
+        },
+        {
+          "id": "C-I01-edge",
+          "variant": "edge",
+          "problem": "F′=2x 且 F(1)=5，求 F。"
+        }
+      ]
+    },
+    {
+      "id": "C-I02",
+      "stage": "基础微积分",
+      "domain": "积分及应用",
+      "title": "黎曼和与定积分",
+      "examples": [
+        {
+          "id": "C-I02-basic",
+          "variant": "basic",
+          "problem": "Evaluate lim n→∞ (1/n)Σ(k/n), k=1,…,n, and identify the integral."
+        },
+        {
+          "id": "C-I02-transfer",
+          "variant": "transfer",
+          "problem": "For f(x)=x² on [0,2], use 4 equal subintervals to compute the left and right Riemann-sum estimates. Compare them with the exact integral."
+        }
+      ]
+    },
+    {
+      "id": "C-I03",
+      "stage": "基础微积分",
+      "domain": "积分及应用",
+      "title": "微积分基本定理两个方向",
+      "examples": [
+        {
+          "id": "C-I03-transfer",
+          "variant": "transfer",
+          "problem": "Evaluate ∫₀²3x²dx using FTC."
+        },
+        {
+          "id": "C-I03-edge",
+          "variant": "edge",
+          "problem": "G(x)=∫ₓ¹ cos t dt，求 G′(x) 并解释符号。"
+        }
+      ]
+    },
+    {
+      "id": "C-I04",
+      "stage": "基础微积分",
+      "domain": "积分及应用",
+      "title": "累积函数及变上限求导",
+      "examples": [
+        {
+          "id": "C-I04-basic",
+          "variant": "basic",
+          "problem": "F(x)=∫₀^{x²}√(1+t²)dt. Find F′."
+        },
+        {
+          "id": "C-I04-edge",
+          "variant": "edge",
+          "problem": "For A(x)=∫₁ˣf(t)dt with continuous f, give A′(a), including if f(a)=0."
+        }
+      ]
+    },
+    {
+      "id": "C-I05",
+      "stage": "基础微积分",
+      "domain": "积分及应用",
+      "title": "基础换元及上下限变换",
+      "examples": [
+        {
+          "id": "C-I05-basic",
+          "variant": "basic",
+          "problem": "用 u=x² 计算 ∫₀¹2x cos(x²)dx。"
+        },
+        {
+          "id": "C-I05-transfer",
+          "variant": "transfer",
+          "problem": "Use u=2x to evaluate ∫₀^{π/2}sin(2x)dx with changed bounds."
+        },
+        {
+          "id": "C-I05-edge",
+          "variant": "edge",
+          "problem": "求 ∫₀¹ x/(1+x²)dx。"
+        }
+      ]
+    },
+    {
+      "id": "C-I06",
+      "stage": "基础微积分",
+      "domain": "积分及应用",
+      "title": "带符号积分与几何面积",
+      "examples": [
+        {
+          "id": "C-I06-basic",
+          "variant": "basic",
+          "problem": "Find signed integral ∫₋₁¹x dx and total geometric area between y=x and x-axis."
+        },
+        {
+          "id": "C-I06-transfer",
+          "variant": "transfer",
+          "problem": "求 ∫₀^πsin x dx，并判断是否等于几何面积。"
+        },
+        {
+          "id": "C-I06-edge",
+          "variant": "edge",
+          "problem": "For y=x−1 on [0,3], find the signed integral and the total geometric area between the graph and the x-axis."
+        }
+      ]
+    },
+    {
+      "id": "C-I07",
+      "stage": "基础微积分",
+      "domain": "积分及应用",
+      "title": "曲线间面积及交点",
+      "examples": [
+        {
+          "id": "C-I07-basic",
+          "variant": "basic",
+          "problem": "求 y=x 与 y=x² 在 [0,1] 围成的面积。"
+        },
+        {
+          "id": "C-I07-edge",
+          "variant": "edge",
+          "problem": "Find the total area enclosed between y=x and y=x³ from their intersections."
+        }
+      ]
+    },
+    {
+      "id": "C-I08",
+      "stage": "基础微积分",
+      "domain": "积分及应用",
+      "title": "净变化与总路程",
+      "examples": [
+        {
+          "id": "C-I08-basic",
+          "variant": "basic",
+          "problem": "A particle velocity is v=t−1 m/s on 0≤t≤2. Find displacement and total distance."
+        },
+        {
+          "id": "C-I08-transfer",
+          "variant": "transfer",
+          "problem": "速度 v=3t² 米/秒，0≤t≤2，求净位移和总路程。"
+        }
+      ]
+    },
+    {
+      "id": "C-I09",
+      "stage": "基础微积分",
+      "domain": "积分及应用",
+      "title": "函数平均值与积分中值",
+      "examples": [
+        {
+          "id": "C-I09-transfer",
+          "variant": "transfer",
+          "problem": "For f=2x+1 on [1,4], find average value and a point attaining it."
+        },
+        {
+          "id": "C-I09-edge",
+          "variant": "edge",
+          "problem": "f=0 on [−1,0), f=1 on [0,1]。求 [−1,1] 平均值，并说明连续版积分中值定理是否保证某点取到该值。"
+        }
+      ]
+    },
+    {
+      "id": "C-I10",
+      "stage": "基础微积分",
+      "domain": "积分及应用",
+      "title": "基础截面及旋转体体积",
+      "examples": [
+        {
+          "id": "C-I10-basic",
+          "variant": "basic",
+          "problem": "Square cross-sections perpendicular to x-axis fill 0≤x≤2; each square side is 2−x. Find volume."
+        },
+        {
+          "id": "C-I10-transfer",
+          "variant": "transfer",
+          "problem": "将 y=x、0≤x≤1 下方区域绕 x 轴旋转，求圆盘体积。"
+        },
+        {
+          "id": "C-I10-edge",
+          "variant": "edge",
+          "problem": "Rotate the region between y=2 and y=x, 0≤x≤2, about the x-axis. Find washer-method volume."
+        }
+      ]
+    }
+  ]
+}

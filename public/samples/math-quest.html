@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Math Quest · Three Playable Problems</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: "DM Sans", system-ui, sans-serif;
+      color: #132f3a;
+      background: #f4f3e9;
+      --ink: #132f3a;
+      --soft: #47616b;
+      --paper: #fffef8;
+      --border: #dce3d9;
+      --primary: #205e56;
+      --shadow: #dbe2d5;
+    }
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    body { margin: 0; }
+    button, input { font: inherit; }
+    button { cursor: pointer; }
+    button:disabled { cursor: default; opacity: .45; }
+    :focus-visible { outline: 3px solid #006872; outline-offset: 4px; }
+    main { width: min(1100px, calc(100% - 48px)); margin: 0 auto; padding: 40px 0; }
+    header h1, h2, h3 { font-family: "Bricolage Grotesque", system-ui, sans-serif; }
+    h1 { margin: 0; font-size: clamp(2.55rem, 6vw, 4.8rem); letter-spacing: -.075em; line-height: 1; }
+    header > p { margin: 10px 0 22px; color: var(--soft); font-size: 1.05rem; }
+    .tabs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 0 0 14px; }
+    .tab {
+      min-height: 49px;
+      padding: 7px 13px;
+      text-align: left;
+      color: var(--ink);
+      background: #e8ece3;
+      border: 1px solid #d8dfd1;
+      border-radius: 10px;
+      font-weight: 800;
+    }
+    .tab small { display: block; margin-bottom: 2px; font-size: .7rem; font-weight: 700; color: #49615b; }
+    .tab[aria-selected="true"] { background: #204a48; color: #fffef8; border-color: #204a48; }
+    .tab[aria-selected="true"] small { color: #d6eee1; }
+    .panel { background: var(--paper); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; box-shadow: 0 5px var(--shadow); }
+    .intro { display: grid; grid-template-columns: 1fr minmax(230px, .62fr); gap: 16px; align-items: start; padding: 23px 26px 20px; }
+    h2 { font-size: clamp(1.5rem, 3.7vw, 2.35rem); line-height: 1.03; margin: 0 0 7px; letter-spacing: -.055em; }
+    h3 { margin: 0 0 6px; font-size: .83rem; letter-spacing: .005em; }
+    .intro p { margin: 0; color: var(--soft); line-height: 1.45; }
+    .source { padding: 11px 13px; border-radius: 8px; background: #f2f0e4; border-left: 3px solid #b8a664; }
+    .source p { font-size: .84rem; }
+    .scene { position: relative; background: #d8ece7; border-block: 1px solid #cfe0da; }
+    .controls { padding: 17px 26px 20px; }
+    .controls p { margin: 0; }
+    .status { min-height: 46px; color: #36555d; line-height: 1.45; font-size: .91rem; }
+    .status strong { color: #235845; }
+    .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 9px; }
+    .action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 7px 13px;
+      border-radius: 8px;
+      border: 1px solid #bbccc1;
+      color: var(--ink);
+      background: #f2f6ed;
+      font-weight: 800;
+    }
+    .action:hover:not(:disabled) { background: #e5f0e4; }
+    .fraction-scene {
+      background: linear-gradient(#d8ebe4 0 15%, #b8e0d9 15% 100%);
+      padding: 15px 26px 18px;
+    }
+    .rail-row + .rail-row { margin-top: 9px; }
+    .rail-heading { display: flex; align-items: center; justify-content: space-between; gap: 7px; margin-bottom: 4px; }
+    .rail-heading button {
+      min-height: 35px;
+      padding: 3px 9px;
+      border: 1px solid #719894;
+      border-radius: 6px;
+      background: #e9f5e8;
+      color: #234b4d;
+      font-weight: 800;
+      font-size: .81rem;
+    }
+    .rail-heading button[aria-pressed="true"] { background: #24554f; border-color: #24554f; color: white; }
+    .rail-heading span { font-weight: 800; font-size: .82rem; }
+    .rail {
+      --position: 0%;
+      --goal: 75%;
+      position: relative;
+      isolation: isolate;
+      display: flex;
+      height: 36px;
+      border: 2px solid #386e72;
+      border-radius: 6px;
+      background: repeating-linear-gradient(90deg, #e5f6eb 0 calc(12.5% - 1px), #81adad calc(12.5% - 1px) 12.5%);
+    }
+    .rail::after { content: ""; position: absolute; z-index: 2; inset: -2px auto -2px var(--goal); width: 2px; background: #66490e; pointer-events: none; }
+    .rail.over::before { content: ""; position: absolute; z-index: 2; left: var(--goal); bottom: 0; width: calc(var(--position) - var(--goal)); height: 4px; background: #ac3d30; pointer-events: none; }
+    .piece { flex: 0 0 calc(var(--size) * 12.5%); min-width: 0; display: grid; place-items: center; padding: 0; border: 0; border-right: 1px solid #365e5959; border-radius: 3px; box-shadow: inset 0 -3px #365e593a; color: #193d3a; font-weight: 850; font-size: clamp(.68rem, 2.4vw, .86rem); }
+    .piece[data-size="1"], .tile[data-piece="1"] { background: #d8c5f1; }
+    .piece[data-size="2"], .tile[data-piece="2"] { background: #ffcf80; }
+    .piece[data-size="4"], .tile[data-piece="4"] { background: #8bd0bf; }
+    button.piece:hover { filter: brightness(1.07); }
+    .merged .rail::after { background: #e8922c; }
+    .joined { transform-origin: left; animation: build .4s ease-out both; }
+    @keyframes build { from { opacity: .6; transform: translateY(-5px); } }
+    .tray { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+    .tile { color: #193d3a; }
+    .tile:hover:not(:disabled) { filter: brightness(.97); }
+    .diagram { display: block; width: min(100%, 760px); height: auto; margin: auto; }
+    .angle-scene { background: #f6efd7; border-color: #eadfc0; }
+    .graph-scene { background: #dfeced; }
+    .adjustment { display: grid; grid-template-columns: 42px minmax(100px, 1fr) 42px; gap: 8px; margin-top: 10px; align-items: center; }
+    .adjustment .action { padding: 3px; font-size: 1.14rem; }
+    .adjustment input { width: 100%; accent-color: #286d65; min-height: 38px; }
+    .readout { font-weight: 850; font-variant-numeric: tabular-nums; }
+    footer { margin-top: 20px; color: var(--soft); font-size: .82rem; }
+    @media (max-width: 610px) {
+      main { width: calc(100% - 26px); padding-top: 25px; }
+      header > p { font-size: .93rem; }
+      .tabs { gap: 5px; }
+      .tab { padding-inline: 7px; font-size: .81rem; }
+      .tab small { font-size: .62rem; }
+      .intro { grid-template-columns: 1fr; gap: 10px; padding: 17px 14px 14px; }
+      .fraction-scene, .controls { padding-inline: 14px; }
+      .status { min-height: 55px; }
+      .source { padding-block: 7px; }
+    }
+    @media (prefers-reduced-motion: reduce) { .joined { animation: none; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Math Quest</h1>
+      <p>Three sample homework problems. Three ways to play with the math.</p>
+    </header>
+    <div class="tabs" role="tablist" aria-label="Choose a problem">
+      <button type="button" class="tab" role="tab" id="tab-fraction" aria-controls="fraction" aria-selected="true" data-world="fraction"><small>Elementary</small>Fraction Bridge</button>
+      <button type="button" class="tab" role="tab" id="tab-angle" aria-controls="angle" aria-selected="false" tabindex="-1" data-world="angle"><small>Middle school</small>Angle Workshop</button>
+      <button type="button" class="tab" role="tab" id="tab-quadratic" aria-controls="quadratic" aria-selected="false" tabindex="-1" data-world="quadratic"><small>High school</small>Parabola Pilot</button>
+    </div>
+
+    <section class="panel" id="fraction" role="tabpanel" aria-labelledby="tab-fraction">
+      <div class="intro">
+        <div><h2>Fraction Bridge</h2><p>Build both parts on equal-sized rails. When both fit, the parts join to show how much of one whole bridge they cover.</p></div>
+        <div class="source"><h3>Sample homework</h3><p>Add 3/4 + 1/8. Show your work with fraction strips.</p></div>
+      </div>
+      <div class="scene fraction-scene">
+        <div class="rail-row">
+          <div class="rail-heading"><button type="button" data-rail="0" aria-pressed="true">Build the first part</button><span id="built-first">0 of 3/4</span></div>
+          <div class="rail" id="rail-first" role="group" aria-label="First fraction strip"></div>
+        </div>
+        <div class="rail-row">
+          <div class="rail-heading"><button type="button" data-rail="1" aria-pressed="false">Build the second part</button><span id="built-second">0 of 1/8</span></div>
+          <div class="rail" id="rail-second" style="--goal: 12.5%" role="group" aria-label="Second fraction strip"></div>
+        </div>
+        <div class="rail-row merged" id="joined" hidden>
+          <div class="rail-heading"><strong>The parts joined</strong><span>7/8 of one whole</span></div>
+          <div class="rail joined" id="rail-joined" style="--goal: 87.5%" aria-label="Combined bridge length is seven eighths"></div>
+        </div>
+      </div>
+      <div class="controls">
+        <div class="status" id="fraction-status" role="status">Choose a piece to start the first part.</div>
+        <div class="tray" role="group" aria-label="Fraction pieces">
+          <button type="button" class="action tile" data-piece="4" aria-label="Add one half">+ 1/2</button>
+          <button type="button" class="action tile" data-piece="2" aria-label="Add one quarter">+ 1/4</button>
+          <button type="button" class="action tile" data-piece="1" aria-label="Add one eighth">+ 1/8</button>
+        </div>
+        <div class="actions"><button type="button" class="action" id="fraction-undo">Undo last piece on this rail</button><button type="button" class="action" id="fraction-reset">Clear both rails</button></div>
+      </div>
+    </section>
+
+    <section class="panel" id="angle" role="tabpanel" aria-labelledby="tab-angle" hidden>
+      <div class="intro">
+        <div><h2>Angle Workshop</h2><p>The two known angles are laid side by side. Rotate the adjustable wedge until all three fit on the straight line.</p></div>
+        <div class="source"><h3>Sample homework</h3><p>Two interior angles of a triangle are 48° and 67°. Find the third angle.</p></div>
+      </div>
+      <div class="scene angle-scene"><canvas class="diagram" id="angle-canvas" width="660" height="345" role="img" aria-label="Triangle and its three angles laid along a straight line"></canvas></div>
+      <div class="controls">
+        <div class="status" id="angle-status" role="status"></div>
+        <label class="readout" for="angle-range">Adjust the missing angle <output id="angle-value" for="angle-range">36°</output></label>
+        <div class="adjustment">
+          <button type="button" class="action" id="angle-down" aria-label="Decrease angle by one degree">−</button>
+          <input id="angle-range" type="range" min="1" max="120" step="1" value="36">
+          <button type="button" class="action" id="angle-up" aria-label="Increase angle by one degree">+</button>
+        </div>
+        <div class="actions"><button type="button" class="action" id="angle-reset">Reset angle</button></div>
+      </div>
+    </section>
+
+    <section class="panel" id="quadratic" role="tabpanel" aria-labelledby="tab-quadratic" hidden>
+      <div class="intro">
+        <div><h2>Parabola Pilot</h2><p>Move the entire parabola up or down. Land both roots on the two marked points on the x-axis.</p></div>
+        <div class="source"><h3>Sample homework</h3><p>Find k so that x² − 5x + k = 0 has roots 2 and 3.</p></div>
+      </div>
+      <div class="scene graph-scene"><canvas class="diagram" id="graph-canvas" width="660" height="345" role="img" aria-label="Graph of x squared minus five x plus k with target roots at two and three"></canvas></div>
+      <div class="controls">
+        <div class="status" id="graph-status" role="status"></div>
+        <label class="readout" for="graph-range">Shift the constant <output id="graph-value" for="graph-range">k = 4</output></label>
+        <div class="adjustment">
+          <button type="button" class="action" id="graph-down" aria-label="Decrease k by one half">−</button>
+          <input id="graph-range" type="range" min="0" max="12" step="0.5" value="4">
+          <button type="button" class="action" id="graph-up" aria-label="Increase k by one half">+</button>
+        </div>
+        <div class="actions"><button type="button" class="action" id="graph-reset">Reset graph</button></div>
+      </div>
+    </section>
+    <footer>These three levels use fixed sample problems.</footer>
+  </main>
+
+  <script>
+    const one = selector => document.querySelector(selector);
+    const all = selector => [...document.querySelectorAll(selector)];
+    const tabs = all('[data-world]');
+    function showWorld(index, focus) {
+      tabs.forEach((tab, i) => {
+        const selected = i === index;
+        tab.setAttribute('aria-selected', String(selected));
+        tab.tabIndex = selected ? 0 : -1;
+        one('#' + tab.dataset.world).hidden = !selected;
+      });
+      if (focus) tabs[index].focus();
+    }
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => showWorld(index, false));
+      tab.addEventListener('keydown', event => {
+        const destinations = { ArrowLeft: (index + 2) % 3, ArrowRight: (index + 1) % 3, Home: 0, End: 2 };
+        if (!(event.key in destinations)) return;
+        event.preventDefault();
+        showWorld(destinations[event.key], true);
+      });
+    });
+
+    const fractions = ['0', '1/8', '1/4', '3/8', '1/2', '5/8', '3/4', '7/8', '1'];
+    const rails = [one('#rail-first'), one('#rail-second')];
+    const railButtons = all('[data-rail]');
+    const targets = [6, 1];
+    const strips = [[], []];
+    const tiles = all('[data-piece]');
+    const fractionStatus = one('#fraction-status');
+    const measure = strip => strip.reduce((sum, size) => sum + size, 0);
+    let active = 0;
+    let wasJoined = false;
+
+    function createPiece(size, onRemove) {
+      const piece = document.createElement(onRemove ? 'button' : 'span');
+      piece.className = 'piece';
+      piece.dataset.size = String(size);
+      piece.style.setProperty('--size', size);
+      piece.textContent = fractions[size];
+      if (onRemove) {
+        piece.type = 'button';
+        piece.setAttribute('aria-label', 'Remove ' + fractions[size]);
+        piece.addEventListener('click', onRemove);
+      }
+      return piece;
+    }
+
+    function showFractions() {
+      const lengths = strips.map(measure);
+      rails.forEach((rail, i) => {
+        rail.style.setProperty('--position', lengths[i] * 12.5 + '%');
+        rail.classList.toggle('over', lengths[i] > targets[i]);
+        rail.replaceChildren(...strips[i].map((size, index) => createPiece(size, () => {
+          strips[i].splice(index, 1);
+          active = i;
+          showFractions();
+          tiles.find(tile => Number(tile.dataset.piece) === size).focus();
+        })));
+        railButtons[i].setAttribute('aria-pressed', String(active === i));
+      });
+      one('#built-first').textContent = fractions[lengths[0]] + ' of 3/4';
+      one('#built-second').textContent = fractions[lengths[1]] + ' of 1/8';
+      const complete = lengths.every((length, i) => length === targets[i]);
+      one('#joined').hidden = !complete;
+      one('#fraction-undo').disabled = strips[active].length === 0;
+      if (complete) {
+        if (!wasJoined) one('#rail-joined').replaceChildren(...strips.flat().map(size => createPiece(size)));
+        fractionStatus.textContent = 'Bridge joined! 3/4 is six eighths, so 6/8 + 1/8 = 7/8.';
+      } else {
+        const gap = targets[active] - lengths[active];
+        const name = active === 0 ? 'First part' : 'Second part';
+        fractionStatus.textContent = gap > 0 ? name + ': ' + fractions[gap] + ' more to the marker.'
+          : gap < 0 ? name + ': over the marker by ' + fractions[-gap] + '. Remove a piece or use Undo.'
+            : name + ' fits. Switch rails to build the other part.';
+      }
+      wasJoined = complete;
+    }
+    railButtons.forEach((button, i) => button.addEventListener('click', () => { active = i; showFractions(); }));
+    tiles.forEach(tile => tile.addEventListener('click', () => {
+      const size = Number(tile.dataset.piece);
+      if (measure(strips[active]) + size > 8) {
+        fractionStatus.textContent = 'That would go beyond one whole rail. Remove a piece or use a smaller one.';
+        return;
+      }
+      const rail = active;
+      strips[rail].push(size);
+      if (measure(strips[rail]) === targets[rail] && measure(strips[1 - rail]) !== targets[1 - rail]) active = 1 - rail;
+      showFractions();
+    }));
+    one('#fraction-undo').addEventListener('click', () => {
+      strips[active].pop();
+      showFractions();
+      if (one('#fraction-undo').disabled) tiles[0].focus();
+    });
+    one('#fraction-reset').addEventListener('click', () => {
+      strips.forEach(strip => { strip.length = 0; });
+      active = 0;
+      showFractions();
+      tiles[0].focus();
+    });
+
+    const angleInput = one('#angle-range');
+    const angleCanvas = one('#angle-canvas');
+    const angleContext = angleCanvas.getContext('2d');
+    const graphInput = one('#graph-range');
+    const graphCanvas = one('#graph-canvas');
+    const graphContext = graphCanvas.getContext('2d');
+    const radians = degrees => degrees * Math.PI / 180;
+
+    function line(context, fromX, fromY, toX, toY, color, width = 2) {
+      context.strokeStyle = color;
+      context.lineWidth = width;
+      context.beginPath();
+      context.moveTo(fromX, fromY);
+      context.lineTo(toX, toY);
+      context.stroke();
+    }
+    function label(context, value, x, y, color = '#193d3a', size = 22) {
+      context.fillStyle = color;
+      context.font = '700 ' + size + 'px system-ui, sans-serif';
+      context.textAlign = 'center';
+      context.textBaseline = 'middle';
+      context.fillText(value, x, y);
+    }
+
+    function showAngles() {
+      const unknown = Number(angleInput.value);
+      const sum = 48 + 67 + unknown;
+      const difference = 180 - sum;
+      one('#angle-value').textContent = unknown + '°';
+      one('#angle-status').textContent = '48° + 67° + ' + unknown + '° = ' + sum + '°. ' + (difference === 0
+        ? 'The wedges make one straight angle. The missing angle is 65°.'
+        : difference > 0 ? 'There is a ' + difference + '° gap.' : 'The wedge goes ' + (-difference) + '° past the line.');
+      angleCanvas.setAttribute('aria-label', 'The three angles total ' + sum + ' degrees. The target is 180 degrees.');
+      const c = angleContext;
+      if (!c) return;
+      c.clearRect(0, 0, 660, 345);
+
+      const xA = 41, xB = 200, base = 225;
+      const slopeA = Math.tan(radians(48)), slopeB = Math.tan(radians(67));
+      const xC = (slopeA * xA + slopeB * xB) / (slopeA + slopeB);
+      const yC = base - slopeA * (xC - xA);
+      c.beginPath();
+      c.moveTo(xA, base);
+      c.lineTo(xB, base);
+      c.lineTo(xC, yC);
+      c.closePath();
+      c.fillStyle = '#fff9e8';
+      c.fill();
+      c.strokeStyle = '#2d5651';
+      c.lineWidth = 3;
+      c.stroke();
+      label(c, '48°', 76, base - 17, '#305c58', 17);
+      label(c, '67°', 166, base - 17, '#80580e', 17);
+      label(c, '?', xC, yC + 29, '#5d4382', 24);
+      label(c, 'Original triangle', 119, 270, '#47615d', 19);
+
+      const x = 445, y = 207, radius = 140;
+      const pieces = [{ width: 48, color: '#8fcfbe' }, { width: 67, color: '#ffcf80' }, { width: unknown, color: '#d8c5f1' }];
+      line(c, x - radius - 20, y, x + radius + 20, y, '#47605c', 2);
+      let start = 0;
+      for (const piece of pieces) {
+        const end = start + piece.width;
+        c.beginPath();
+        c.moveTo(x, y);
+        c.arc(x, y, radius, -radians(start), -radians(end), true);
+        c.closePath();
+        c.fillStyle = piece.color;
+        c.fill();
+        c.strokeStyle = '#47605c';
+        c.lineWidth = 1.7;
+        c.stroke();
+        if (piece.width >= 16) {
+          const mid = radians((start + end) / 2);
+          label(c, piece.width + '°', x + Math.cos(mid) * 103, y - Math.sin(mid) * 103, '#193d3a', 21);
+        }
+        start = end;
+      }
+      line(c, x - radius - 18, y, x + radius + 18, y, difference === 0 ? '#18744b' : '#815c16', 3);
+      label(c, '180° line', x + 55, y + 29, difference === 0 ? '#18744b' : '#815c16', 19);
+    }
+
+    function plotQuadratic() {
+      const k = Number(graphInput.value);
+      const atTargets = k - 6;
+      one('#graph-value').textContent = 'k = ' + k;
+      one('#graph-status').textContent = 'At x = 2 and x = 3, y = ' + atTargets + '. ' + (atTargets === 0
+        ? 'Both points are on the x-axis, so k = 6.'
+        : 'The curve is ' + Math.abs(atTargets) + ' ' + (atTargets > 0 ? 'above' : 'below') + ' both targets.');
+      graphCanvas.setAttribute('aria-label', 'Parabola with k equal to ' + k + '. The curve height at both marked x values is ' + atTargets + '.');
+      const c = graphContext;
+      if (!c) return;
+      c.clearRect(0, 0, 660, 345);
+      const mapX = x => 60 + (x + 1) * 77;
+      const mapY = y => 285 - (y + 7) * 15;
+      for (let x = -1; x <= 6; x++) {
+        line(c, mapX(x), mapY(-7), mapX(x), mapY(10), '#bed3d2', 1);
+        label(c, String(x), mapX(x), mapY(0) + 17, '#365e66', 15);
+      }
+      for (let y = -6; y <= 10; y += 2) {
+        line(c, mapX(-1), mapY(y), mapX(6), mapY(y), '#bed3d2', 1);
+        if (y !== 0) label(c, String(y), mapX(0) - 17, mapY(y), '#365e66', 15);
+      }
+      line(c, mapX(-1), mapY(0), mapX(6), mapY(0), '#355663', 2.6);
+      line(c, mapX(0), mapY(-7), mapX(0), mapY(10), '#355663', 2.6);
+      label(c, 'x', mapX(6) + 19, mapY(0), '#355663', 17);
+      label(c, 'y', mapX(0), mapY(10) - 14, '#355663', 17);
+      c.save();
+      c.beginPath();
+      c.rect(mapX(-1), mapY(10), mapX(6) - mapX(-1), mapY(-7) - mapY(10));
+      c.clip();
+      c.beginPath();
+      for (let i = 0; i <= 140; i++) {
+        const x = -1 + i / 20;
+        const y = x * x - 5 * x + k;
+        if (i === 0) c.moveTo(mapX(x), mapY(y));
+        else c.lineTo(mapX(x), mapY(y));
+      }
+      c.lineWidth = 5;
+      c.strokeStyle = atTargets === 0 ? '#1d7754' : '#4d5bb3';
+      c.stroke();
+      c.restore();
+      for (const x of [2, 3]) {
+        if (atTargets !== 0) line(c, mapX(x), mapY(0), mapX(x), mapY(atTargets), '#af6e21', 2);
+        c.beginPath();
+        c.arc(mapX(x), mapY(0), 7, 0, 2 * Math.PI);
+        c.strokeStyle = atTargets === 0 ? '#1d7754' : '#af6e21';
+        c.lineWidth = 2.8;
+        c.stroke();
+      }
+      label(c, 'f(x) = x² − 5x + ' + k, 490, 313, '#243e64', 19);
+    }
+
+    function connectAdjuster(input, prefix, update) {
+      const startingValue = input.value;
+      input.addEventListener('input', update);
+      for (const direction of ['down', 'up']) {
+        one('#' + prefix + '-' + direction).addEventListener('click', () => {
+          const value = Number(input.value) + (direction === 'up' ? 1 : -1) * Number(input.step);
+          input.value = Math.max(Number(input.min), Math.min(Number(input.max), value));
+          update();
+        });
+      }
+      one('#' + prefix + '-reset').addEventListener('click', () => {
+        input.value = startingValue;
+        update();
+      });
+      update();
+    }
+    showFractions();
+    connectAdjuster(angleInput, 'angle', showAngles);
+    connectAdjuster(graphInput, 'graph', plotQuadratic);
+  </script>
+</body>
+</html>

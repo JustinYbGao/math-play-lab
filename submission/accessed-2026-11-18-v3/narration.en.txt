@@ -1,0 +1,33 @@
+Math Play Lab is an AI math learning companion designed for learners of all ages.
+
+Start with your own question. AI turns the problem into an interactive activity you can explore.
+
+Let's make a derivative something you can see and test.
+
+Explore the difference quotient of x squared at x equals three.
+
+Move the second point. From the left and the right, the secant slope approaches six.
+
+Build the quotient, then take the limit. Twelve over two is accepted as an equivalent answer.
+
+Use a hint when you need a next step. Reset and try again.
+
+In geometry, connect a parabola to its focus and directrix.
+
+Change the construction. Test points and compare their distances.
+
+The curve and the equation become one relationship you can explore.
+
+For algebra, keep both sides balanced as you solve an equation.
+
+Add seven. Divide by five. Then substitute to check your solution.
+
+Every action connects a symbolic step to a change you can see.
+
+For younger learners, division becomes equal groups you can count.
+
+Try an answer, see the feedback, and correct it. Six groups of four make twenty-four.
+
+From elementary mathematics through introductory calculus, explore math at your own pace.
+
+Math Play Lab. Your question. Your next discovery.

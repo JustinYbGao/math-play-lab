@@ -1,0 +1,72 @@
+1
+00:00:00,600 --> 00:00:05,535
+Math Play Lab is an AI math learning companion designed for learners of all ages.
+
+2
+00:00:11,000 --> 00:00:17,397
+Start with your own question. AI turns the problem into an interactive activity
+you can explore.
+
+3
+00:00:19,000 --> 00:00:22,183
+Let's make a derivative something you can see and test.
+
+4
+00:00:26,000 --> 00:00:29,837
+Explore the difference quotient of x squared at x equals three.
+
+5
+00:00:34,000 --> 00:00:39,284
+Move the second point. From the left and the right, the secant slope approaches
+six.
+
+6
+00:00:43,000 --> 00:00:48,747
+Build the quotient, then take the limit. Twelve over two is accepted as an
+equivalent answer.
+
+7
+00:00:52,000 --> 00:00:55,972
+Use a hint when you need a next step. Reset and try again.
+
+8
+00:01:00,000 --> 00:01:04,325
+In geometry, connect a parabola to its focus and directrix.
+
+9
+00:01:06,000 --> 00:01:10,081
+Change the construction. Test points and compare their distances.
+
+10
+00:01:14,000 --> 00:01:17,827
+The curve and the equation become one relationship you can explore.
+
+11
+00:01:24,000 --> 00:01:28,178
+For algebra, keep both sides balanced as you solve an equation.
+
+12
+00:01:31,000 --> 00:01:35,777
+Add seven. Divide by five. Then substitute to check your solution.
+
+13
+00:01:38,000 --> 00:01:41,895
+Every action connects a symbolic step to a change you can see.
+
+14
+00:01:46,000 --> 00:01:50,131
+For younger learners, division becomes equal groups you can count.
+
+15
+00:01:52,000 --> 00:01:57,835
+Try an answer, see the feedback, and correct it. Six groups of four make
+twenty-four.
+
+16
+00:02:05,000 --> 00:02:11,035
+From elementary mathematics through introductory calculus, explore math at your
+own pace.
+
+17
+00:02:12,000 --> 00:02:15,798
+Math Play Lab. Your question. Your next discovery.

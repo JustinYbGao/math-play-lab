@@ -1,0 +1,79 @@
+{
+  "createdAt": "2026-11-18T23:04:24.180587+00:00",
+  "video": {
+    "seconds": 138.0053514739229,
+    "bytes": 8196202,
+    "sha256": "8f422322d1df71d45034dab18f023f17a56b91ffd6d823dc9d94bfecf4442172",
+    "fullDecode": "passed",
+    "format": "1920x1080 H.264 + AAC",
+    "captionVoiceTextMatches": true,
+    "spokenSentences": 17,
+    "file": "video/math-play-lab-feature-tour.en.mp4"
+  },
+  "opening": {
+    "headline": "Math learning. For every age.",
+    "voice": "Math Play Lab is an AI math learning companion designed for learners of all ages.",
+    "demonstration": "difference quotient and moving secant"
+  },
+  "format": "edited feature tour",
+  "chapterOrder": [
+    "all-ages opening",
+    "question composer",
+    "calculus",
+    "geometry",
+    "algebra",
+    "sharing",
+    "closing"
+  ],
+  "narration": {
+    "language": "English",
+    "voice": "macOS Samantha (synthetic)",
+    "sentences": 17,
+    "captionTextMatches": true
+  },
+  "visualReview": {
+    "status": "passed",
+    "frameSeconds": [
+      1,
+      15,
+      36,
+      47,
+      72,
+      95,
+      113,
+      134
+    ],
+    "checks": [
+      "all-ages positioning in opening",
+      "calculus leads the feature demonstration",
+      "technical correction labels and cards removed from video",
+      "captions remain below activity controls",
+      "math results and feedback visible"
+    ]
+  },
+  "recording": {
+    "newScenes": 5,
+    "newModelRequests": 0,
+    "generationRequestShown": false,
+    "controls": "visible browser controls",
+    "browserErrors": 0,
+    "calculusPresentationCss": "graph height and margins adjusted only in capture frame"
+  },
+  "sources": {
+    "calculus": "evaluation/runs/77efbcb3-8b3f-4fa9-867b-8eafb6c5b654/html/C-D01-basic-repaired_exercise.html",
+    "sharing": ".work/product-video-v2/refined/page.html",
+    "geometryAndAlgebra": "prior verified recording; original generated HTML and math logic unchanged",
+    "sharingProvenance": "AI-generated page with a prior local refinement; see credits.en.md"
+  },
+  "integrity": {
+    "providerRequestsThisRevision": 0,
+    "recordingBudgetUnchanged": true,
+    "originalAndRefinedSharingHtmlUnchanged": true,
+    "historicalProtectedFilesUnchanged": 450
+  },
+  "delivery": {
+    "uploaded": false,
+    "publiclyDeployed": false,
+    "submittedToDevpost": false
+  }
+}

@@ -1,0 +1,1638 @@
+{
+  "status": "prepared_not_run",
+  "purpose": "Original middle-school curriculum cases for all 34 registry IDs; prepared references are not generated activity results.",
+  "cases": [
+    {
+      "id": "M-N01-basic",
+      "coverage": "M-N01",
+      "stage": "初中",
+      "variant": "basic",
+      "split": "holdout",
+      "problem": "For x=−7, find |x| and compare x with 0.",
+      "expected_behavior": "interactive",
+      "reference_answer": "|−7|=7; x<0.",
+      "checks": [
+        "Returns the requested result: |−7|=7; x<0.",
+        "Shows this case-specific reasoning: Absolute value is distance from 0, while the signed number remains negative.",
+        "Rejects this plausible error: x=7 confuses the number with its absolute value."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-N01-transfer",
+      "coverage": "M-N01",
+      "stage": "初中",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "把 −3、−1/2、0、2 从小到大排列，并求最大数与最小数之差。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "−3<−1/2<0<2；差为 2−(−3)=5。",
+      "checks": [
+        "Returns the requested result: −3<−1/2<0<2；差为 2−(−3)=5。",
+        "Shows this case-specific reasoning: Place negatives left of zero; subtracting a negative adds 3.",
+        "Rejects this plausible error: 差为 −1，反向做了最小数减最大数。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-N01-edge",
+      "coverage": "M-N01",
+      "stage": "初中",
+      "variant": "edge",
+      "split": "development",
+      "problem": "Solve |x−2|=5 over the reals and verify both solutions.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "x=7 or x=−3; each is 5 units from 2.",
+      "checks": [
+        "Returns the requested result: x=7 or x=−3; each is 5 units from 2.",
+        "Shows this case-specific reasoning: Absolute distance 5 gives x−2=±5.",
+        "Rejects this plausible error: x=3 is only one unit from 2."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-N02-basic",
+      "coverage": "M-N02",
+      "stage": "初中",
+      "variant": "basic",
+      "split": "development",
+      "problem": "计算 −8+3×(−2)。",
+      "expected_behavior": "interactive",
+      "reference_answer": "−8+(−6)=−14。",
+      "checks": [
+        "Returns the requested result: −8+(−6)=−14。",
+        "Shows this case-specific reasoning: 先乘法；正负号相同的负数相加。",
+        "Rejects this plausible error: −22先把加法和乘法按从左到右计算。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-N02-transfer",
+      "coverage": "M-N02",
+      "stage": "初中",
+      "variant": "transfer",
+      "split": "holdout",
+      "problem": "Evaluate 18÷(−3)−2(−4).",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "−6−(−8)=2.",
+      "checks": [
+        "Returns the requested result: −6−(−8)=2.",
+        "Shows this case-specific reasoning: Division and multiplication first; subtracting −8 adds 8.",
+        "Rejects this plausible error: −14 results from treating −2(−4) as −8."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-N02-edge",
+      "coverage": "M-N02",
+      "stage": "初中",
+      "variant": "edge",
+      "split": "development",
+      "problem": "计算 −2² 和 (−2)²，并解释为什么不同。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "−2²=−4；(−2)²=4。",
+      "checks": [
+        "Returns the requested result: −2²=−4；(−2)²=4。",
+        "Shows this case-specific reasoning: Exponent applies before unary minus unless parentheses include the negative base.",
+        "Rejects this plausible error: 两者都等于 4 忽略了运算优先级。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-N03-basic",
+      "coverage": "M-N03",
+      "stage": "初中",
+      "variant": "basic",
+      "split": "development",
+      "problem": "Simplify 2³·2⁴ and state the result.",
+      "expected_behavior": "interactive",
+      "reference_answer": "2^(3+4)=2⁷=128.",
+      "checks": [
+        "Returns the requested result: 2^(3+4)=2⁷=128.",
+        "Shows this case-specific reasoning: For the same base, add exponents when multiplying.",
+        "Rejects this plausible error: 2¹² adds the exponents incorrectly as factors."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-N03-transfer",
+      "coverage": "M-N03",
+      "stage": "初中",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "化简 (3×10⁵)(2×10⁻²)，用科学记数法表示。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "6×10³。",
+      "checks": [
+        "Returns the requested result: 6×10³。",
+        "Shows this case-specific reasoning: Multiply coefficients and add exponents: 6×10³, already normalized.",
+        "Rejects this plausible error: 6×10⁷ subtracts a negative exponent as if positive."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-N03-edge",
+      "coverage": "M-N03",
+      "stage": "初中",
+      "variant": "edge",
+      "split": "holdout",
+      "problem": "Write 0.00072 in scientific notation, then give its reciprocal.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "7.2×10⁻⁴; reciprocal=1/(7.2×10⁻⁴)=1.388…×10³ (exactly 12500/9).",
+      "checks": [
+        "Returns the requested result: 7.2×10⁻⁴; reciprocal=1/(7.2×10⁻⁴)=1.388…×10³ (exactly 12500/9).",
+        "Shows this case-specific reasoning: Move decimal four places left; invert exact fraction 72/100000=9/12500.",
+        "Rejects this plausible error: 7.2×10⁴ has the wrong exponent sign."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-N04-basic",
+      "coverage": "M-N04",
+      "stage": "初中",
+      "variant": "basic",
+      "split": "development",
+      "problem": "求 √81 和 ∛(−27)。",
+      "expected_behavior": "interactive",
+      "reference_answer": "√81=9（主平方根）；∛(−27)=−3。",
+      "checks": [
+        "Returns the requested result: √81=9（主平方根）；∛(−27)=−3。",
+        "Shows this case-specific reasoning: Square root symbol denotes nonnegative root; odd root preserves sign.",
+        "Rejects this plausible error: √81=±9 confuses √81 with solving x²=81."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-N04-transfer",
+      "coverage": "M-N04",
+      "stage": "初中",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "Simplify √50 and classify √50 as rational or irrational.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "√50=5√2, irrational.",
+      "checks": [
+        "Returns the requested result: √50=5√2, irrational.",
+        "Shows this case-specific reasoning: Factor 50=25·2; √2 is irrational.",
+        "Rejects this plausible error: 5√10 is not an equivalent simplification."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-N04-edge",
+      "coverage": "M-N04",
+      "stage": "初中",
+      "variant": "edge",
+      "split": "development",
+      "problem": "方程 x²=12 的实数解是什么？说明根号结果是否有理数。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "x=±2√3；两解均为无理数。",
+      "checks": [
+        "Returns the requested result: x=±2√3；两解均为无理数。",
+        "Shows this case-specific reasoning: Take both square roots; √3 irrational and nonzero rational scaling preserves irrationality.",
+        "Rejects this plausible error: 只写 2√3 漏掉负解。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-N05-basic",
+      "coverage": "M-N05",
+      "stage": "初中",
+      "variant": "basic",
+      "split": "development",
+      "problem": "Evaluate 3a+2b for a=4 m and b=5 m; include units.",
+      "expected_behavior": "interactive",
+      "reference_answer": "3(4 m)+2(5 m)=22 m.",
+      "checks": [
+        "Returns the requested result: 3(4 m)+2(5 m)=22 m.",
+        "Shows this case-specific reasoning: Coefficients are dimensionless and both terms have length units.",
+        "Rejects this plausible error: 22 m² adds units incorrectly."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-N05-transfer",
+      "coverage": "M-N05",
+      "stage": "初中",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "长方形长为 x+2 米，宽为 x 米，x=3 时面积是多少？",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "(3+2)×3=15 平方米。",
+      "checks": [
+        "Returns the requested result: (3+2)×3=15 平方米。",
+        "Shows this case-specific reasoning: Substitute x before multiplying length by width.",
+        "Rejects this plausible error: 8 米 adds side lengths and is not area."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-N05-edge",
+      "coverage": "M-N05",
+      "stage": "初中",
+      "variant": "edge",
+      "split": "development",
+      "problem": "For C=2πr, solve for r and evaluate when C=31.4 cm and π=3.14.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "r=C/(2π)=31.4/6.28=5 cm.",
+      "checks": [
+        "Returns the requested result: r=C/(2π)=31.4/6.28=5 cm.",
+        "Shows this case-specific reasoning: Divide both sides by 2π, then substitute with matching length units.",
+        "Rejects this plausible error: r=98.596 cm multiplies by 2π instead of dividing."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-N06-basic",
+      "coverage": "M-N06",
+      "stage": "初中",
+      "variant": "basic",
+      "split": "development",
+      "problem": "展开并合并 3(x+4)+2x。",
+      "expected_behavior": "interactive",
+      "reference_answer": "3x+12+2x=5x+12。",
+      "checks": [
+        "Returns the requested result: 3x+12+2x=5x+12。",
+        "Shows this case-specific reasoning: Distribute 3 to both terms, then combine x terms.",
+        "Rejects this plausible error: 5x+4 fails to distribute across the sum."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-N06-transfer",
+      "coverage": "M-N06",
+      "stage": "初中",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "Simplify 4(2y−3)−(y+5).",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "8y−12−y−5=7y−17.",
+      "checks": [
+        "Returns the requested result: 8y−12−y−5=7y−17.",
+        "Shows this case-specific reasoning: Distribute the leading minus across both terms in the second parentheses.",
+        "Rejects this plausible error: 7y−7 changes the sign of only one term."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-N06-edge",
+      "coverage": "M-N06",
+      "stage": "初中",
+      "variant": "edge",
+      "split": "holdout",
+      "problem": "化简 2a+3b−5a+3b，并说明是否能合成一个单项式。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "−3a+6b；不能合成一个单项式，因为 a、b 项不同类。",
+      "checks": [
+        "Returns the requested result: −3a+6b；不能合成一个单项式，因为 a、b 项不同类。",
+        "Shows this case-specific reasoning: Combine like-variable terms separately.",
+        "Rejects this plausible error: 3ab multiplies unlike terms instead of adding like terms."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-N07-basic",
+      "coverage": "M-N07",
+      "stage": "初中",
+      "variant": "basic",
+      "split": "holdout",
+      "problem": "Expand (x+3)(x+2).",
+      "expected_behavior": "interactive",
+      "reference_answer": "x²+5x+6.",
+      "checks": [
+        "Returns the requested result: x²+5x+6.",
+        "Shows this case-specific reasoning: Multiply all four term pairs and combine the two x terms.",
+        "Rejects this plausible error: x²+6 omits cross terms."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-N07-transfer",
+      "coverage": "M-N07",
+      "stage": "初中",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "展开 (2x−5)²。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "4x²−20x+25。",
+      "checks": [
+        "Returns the requested result: 4x²−20x+25。",
+        "Shows this case-specific reasoning: Use (a−b)²=a²−2ab+b².",
+        "Rejects this plausible error: 4x²+25 omits the negative cross term."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-N07-edge",
+      "coverage": "M-N07",
+      "stage": "初中",
+      "variant": "edge",
+      "split": "development",
+      "problem": "Simplify (x²−9)/(x−3) and state its domain in the original expression.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "x+3 for x≠3.",
+      "checks": [
+        "Returns the requested result: x+3 for x≠3.",
+        "Shows this case-specific reasoning: Factor numerator (x−3)(x+3) then retain the original denominator restriction.",
+        "Rejects this plausible error: x+3 for all real x incorrectly restores the excluded x=3."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-N08-basic",
+      "coverage": "M-N08",
+      "stage": "初中",
+      "variant": "basic",
+      "split": "development",
+      "problem": "分解 6x+12。",
+      "expected_behavior": "interactive",
+      "reference_answer": "6(x+2)。",
+      "checks": [
+        "Returns the requested result: 6(x+2)。",
+        "Shows this case-specific reasoning: Factor out the greatest common factor 6.",
+        "Rejects this plausible error: 6(x+12) does not expand back to 6x+12."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-N08-transfer",
+      "coverage": "M-N08",
+      "stage": "初中",
+      "variant": "transfer",
+      "split": "holdout",
+      "problem": "Factor x²−16 completely over the integers.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "(x−4)(x+4).",
+      "checks": [
+        "Returns the requested result: (x−4)(x+4).",
+        "Shows this case-specific reasoning: Use difference of squares.",
+        "Rejects this plausible error: (x−8)(x+2) expands to a different polynomial."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-N08-edge",
+      "coverage": "M-N08",
+      "stage": "初中",
+      "variant": "edge",
+      "split": "development",
+      "problem": "因式分解 x²+7x+12，并用乘积形式求零点。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "(x+3)(x+4)=0；x=−3 或 −4。",
+      "checks": [
+        "Returns the requested result: (x+3)(x+4)=0；x=−3 或 −4。",
+        "Shows this case-specific reasoning: Find factors with sum 7 and product 12, then use zero-product property.",
+        "Rejects this plausible error: x=3 or 4 ignores the signs in the factors."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-A01-basic",
+      "coverage": "M-A01",
+      "stage": "初中",
+      "variant": "basic",
+      "split": "development",
+      "problem": "Solve 5x−7=18.",
+      "expected_behavior": "interactive",
+      "reference_answer": "5x=25, x=5.",
+      "checks": [
+        "Returns the requested result: 5x=25, x=5.",
+        "Shows this case-specific reasoning: Add 7 then divide both sides by 5.",
+        "Rejects this plausible error: x=2.2 fails because 5(2.2)−7=4."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-A01-transfer",
+      "coverage": "M-A01",
+      "stage": "初中",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "解方程 3(x−2)=2x+5。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "3x−6=2x+5，故 x=11。",
+      "checks": [
+        "Returns the requested result: 3x−6=2x+5，故 x=11。",
+        "Shows this case-specific reasoning: Distribute before collecting x terms.",
+        "Rejects this plausible error: x=−1 results from moving −6 to the wrong side without changing sign."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-A01-edge",
+      "coverage": "M-A01",
+      "stage": "初中",
+      "variant": "edge",
+      "split": "development",
+      "problem": "Solve 2(x+1)=2x+5 and classify the solution set.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "2x+2=2x+5 implies 2=5; no solution.",
+      "checks": [
+        "Returns the requested result: 2x+2=2x+5 implies 2=5; no solution.",
+        "Shows this case-specific reasoning: Subtract 2x from both sides to reveal a contradiction.",
+        "Rejects this plausible error: Every real x is false because the remaining constants differ."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-A02-basic",
+      "coverage": "M-A02",
+      "stage": "初中",
+      "variant": "basic",
+      "split": "development",
+      "problem": "解方程组 x+y=7，x−y=1。",
+      "expected_behavior": "interactive",
+      "reference_answer": "相加得 2x=8，所以 x=4，y=3。",
+      "checks": [
+        "Returns the requested result: 相加得 2x=8，所以 x=4，y=3。",
+        "Shows this case-specific reasoning: Add equations to eliminate y, then substitute.",
+        "Rejects this plausible error: (3,4) fails x−y=1."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-A02-transfer",
+      "coverage": "M-A02",
+      "stage": "初中",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "Solve 2x+y=8 and x−y=1.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Add equations: 3x=9, x=3, y=2.",
+      "checks": [
+        "Returns the requested result: Add equations: 3x=9, x=3, y=2.",
+        "Shows this case-specific reasoning: Eliminate y by adding the equations.",
+        "Rejects this plausible error: (2,4) satisfies only the first equation."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-A02-edge",
+      "coverage": "M-A02",
+      "stage": "初中",
+      "variant": "edge",
+      "split": "development",
+      "problem": "判断方程组 2x+2y=6 与 x+y=3 的解有几个，并给出解集描述。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "两式等价；有无穷多解，所有满足 x+y=3 的实数有序对。",
+      "checks": [
+        "Returns the requested result: 两式等价；有无穷多解，所有满足 x+y=3 的实数有序对。",
+        "Shows this case-specific reasoning: The first equation is twice the second, so they describe one line.",
+        "Rejects this plausible error: 唯一解 (3,0) is only one member of the line."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-A03-basic",
+      "coverage": "M-A03",
+      "stage": "初中",
+      "variant": "basic",
+      "split": "development",
+      "problem": "Solve 3x−4<8 and describe the solution interval.",
+      "expected_behavior": "interactive",
+      "reference_answer": "3x<12, so x<4, interval (−∞,4).",
+      "checks": [
+        "Returns the requested result: 3x<12, so x<4, interval (−∞,4).",
+        "Shows this case-specific reasoning: Add 4 then divide by positive 3 without reversing inequality.",
+        "Rejects this plausible error: Including x=4 violates strict inequality."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-A03-transfer",
+      "coverage": "M-A03",
+      "stage": "初中",
+      "variant": "transfer",
+      "split": "holdout",
+      "problem": "解 −2x≥6，并用区间表示。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "x≤−3；区间 (−∞,−3]。",
+      "checks": [
+        "Returns the requested result: x≤−3；区间 (−∞,−3]。",
+        "Shows this case-specific reasoning: Divide by −2 and reverse the inequality sign.",
+        "Rejects this plausible error: x≥−3 forgets to reverse after dividing by a negative."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-A03-edge",
+      "coverage": "M-A03",
+      "stage": "初中",
+      "variant": "edge",
+      "split": "development",
+      "problem": "Which integers satisfy −1≤2x+1<7?",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "−1≤x<3, so integers −1,0,1,2.",
+      "checks": [
+        "Returns the requested result: −1≤x<3, so integers −1,0,1,2.",
+        "Shows this case-specific reasoning: Subtract 1 and divide by positive 2, preserving both bounds.",
+        "Rejects this plausible error: 3 is excluded because it makes 2x+1=7."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-A04-basic",
+      "coverage": "M-A04",
+      "stage": "初中",
+      "variant": "basic",
+      "split": "development",
+      "problem": "解不等式组 x>2 且 x≤5。",
+      "expected_behavior": "interactive",
+      "reference_answer": "交集为 (2,5]。",
+      "checks": [
+        "Returns the requested result: 交集为 (2,5]。",
+        "Shows this case-specific reasoning: Take numbers satisfying both conditions.",
+        "Rejects this plausible error: [2,5] incorrectly includes the strict lower endpoint."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-A04-transfer",
+      "coverage": "M-A04",
+      "stage": "初中",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "Solve x≥4 and x<1 over the reals.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "No solution; the intervals do not overlap.",
+      "checks": [
+        "Returns the requested result: No solution; the intervals do not overlap.",
+        "Shows this case-specific reasoning: A number cannot simultaneously be at least 4 and less than 1.",
+        "Rejects this plausible error: [4,1) is empty, not an interval containing endpoints."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-A04-edge",
+      "coverage": "M-A04",
+      "stage": "初中",
+      "variant": "edge",
+      "split": "holdout",
+      "problem": "解 −2≤x+1<4，再求其中的整数解。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "−3≤x<3；整数解 −3,−2,−1,0,1,2。",
+      "checks": [
+        "Returns the requested result: −3≤x<3；整数解 −3,−2,−1,0,1,2。",
+        "Shows this case-specific reasoning: Subtract 1 from all three parts; include −3 but exclude 3.",
+        "Rejects this plausible error: 3 is not included because the upper bound is strict."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-A05-basic",
+      "coverage": "M-A05",
+      "stage": "初中",
+      "variant": "basic",
+      "split": "holdout",
+      "problem": "From A=lw, solve for w when l≠0.",
+      "expected_behavior": "interactive",
+      "reference_answer": "w=A/l, with l≠0.",
+      "checks": [
+        "Returns the requested result: w=A/l, with l≠0.",
+        "Shows this case-specific reasoning: Divide both sides by nonzero l.",
+        "Rejects this plausible error: w=Al multiplies instead of isolating w."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-A05-transfer",
+      "coverage": "M-A05",
+      "stage": "初中",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "公式 v=u+at 中，a≠0。解出 t，并求 u=4、v=19、a=3 时的 t。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "t=(v−u)/a=5。",
+      "checks": [
+        "Returns the requested result: t=(v−u)/a=5。",
+        "Shows this case-specific reasoning: Subtract u then divide by a; units are consistent if u,v share speed units and a is acceleration.",
+        "Rejects this plausible error: t=45 multiplies by a rather than dividing."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-A05-edge",
+      "coverage": "M-A05",
+      "stage": "初中",
+      "variant": "edge",
+      "split": "development",
+      "problem": "For P=2l+2w with P=30 and l=2w, solve for l and w.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "30=6w, so w=5 and l=10.",
+      "checks": [
+        "Returns the requested result: 30=6w, so w=5 and l=10.",
+        "Shows this case-specific reasoning: Substitute l=2w into the perimeter equation, then recover l.",
+        "Rejects this plausible error: l=15,w=7.5 gives perimeter 45, not 30."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-A06-basic",
+      "coverage": "M-A06",
+      "stage": "初中",
+      "variant": "basic",
+      "split": "development",
+      "problem": "化简 (x²−4)/(x−2)，并写原式定义域。",
+      "expected_behavior": "interactive",
+      "reference_answer": "x+2，定义域 x≠2。",
+      "checks": [
+        "Returns the requested result: x+2，定义域 x≠2。",
+        "Shows this case-specific reasoning: Factor and cancel while retaining the original denominator restriction.",
+        "Rejects this plausible error: Claims the original expression is defined at x=2."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-A06-transfer",
+      "coverage": "M-A06",
+      "stage": "初中",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "Simplify 1/x+1/(x+1) and state all real domain exclusions.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "(2x+1)/(x(x+1)); x≠0,−1.",
+      "checks": [
+        "Returns the requested result: (2x+1)/(x(x+1)); x≠0,−1.",
+        "Shows this case-specific reasoning: Use common denominator x(x+1) and preserve both restrictions.",
+        "Rejects this plausible error: (2x+1)/(2x+1) incorrectly combines denominators by adding them."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-A06-edge",
+      "coverage": "M-A06",
+      "stage": "初中",
+      "variant": "edge",
+      "split": "development",
+      "problem": "计算 (x²−9)/(x²−3x)，并注明定义域。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "(x+3)/x，定义域 x≠0 且 x≠3。",
+      "checks": [
+        "Returns the requested result: (x+3)/x，定义域 x≠0 且 x≠3。",
+        "Shows this case-specific reasoning: Factor x²−9=(x−3)(x+3), denominator x(x−3), then retain exclusions.",
+        "Rejects this plausible error: x=3 is restored after cancellation even though original denominator is zero."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-A07-basic",
+      "coverage": "M-A07",
+      "stage": "初中",
+      "variant": "basic",
+      "split": "development",
+      "problem": "Solve 1/x=1/3 over the reals and check restrictions.",
+      "expected_behavior": "interactive",
+      "reference_answer": "x=3; restriction x≠0, so it is valid.",
+      "checks": [
+        "Returns the requested result: x=3; restriction x≠0, so it is valid.",
+        "Shows this case-specific reasoning: Cross multiply under nonzero denominator restriction.",
+        "Rejects this plausible error: x=0 is not allowed in the original equation."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-A07-transfer",
+      "coverage": "M-A07",
+      "stage": "初中",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "解 1/(x−1)=2/(x²−1)，并检查增根。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "定义域 x≠1,−1；乘以 (x−1)(x+1) 得 x+1=2，因此 x=1；但 x=1 不在定义域，故无解。",
+      "checks": [
+        "Returns the requested result: 定义域 x≠1,−1；乘以 (x−1)(x+1) 得 x+1=2，因此 x=1；但 x=1 不在定义域，故无解。",
+        "Shows this case-specific reasoning: Factor x²−1 and preserve both original denominator restrictions before accepting a root.",
+        "Rejects this plausible error: Accepting x=1 ignores that the original denominators are zero."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-A07-edge",
+      "coverage": "M-A07",
+      "stage": "初中",
+      "variant": "edge",
+      "split": "development",
+      "problem": "Solve x/(x−2)=2/(x−2).",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Domain x≠2; multiplying gives x=2, which is excluded, so no solution.",
+      "checks": [
+        "Returns the requested result: Domain x≠2; multiplying gives x=2, which is excluded, so no solution.",
+        "Shows this case-specific reasoning: Keep denominator condition then reject the only algebraic candidate.",
+        "Rejects this plausible error: x=2 is an extraneous candidate, not a valid solution."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-A08-basic",
+      "coverage": "M-A08",
+      "stage": "初中",
+      "variant": "basic",
+      "split": "holdout",
+      "problem": "成人票 12 元，儿童票 7 元。买 3 张成人票和 2 张儿童票需多少元？",
+      "expected_behavior": "interactive",
+      "reference_answer": "3×12+2×7=50 元。",
+      "checks": [
+        "Returns the requested result: 3×12+2×7=50 元。",
+        "Shows this case-specific reasoning: Model total cost as count×unit price for each category, then add.",
+        "Rejects this plausible error: 59 元 multiplies the two prices together."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-A08-transfer",
+      "coverage": "M-A08",
+      "stage": "初中",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "A taxi charges $4 plus $2 per mile. If the fare is $18, how many miles were traveled?",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "4+2m=18, m=7 miles.",
+      "checks": [
+        "Returns the requested result: 4+2m=18, m=7 miles.",
+        "Shows this case-specific reasoning: Subtract the fixed fee, then divide variable cost by rate.",
+        "Rejects this plausible error: 9 miles divides total fare by $2 and ignores the $4 fee."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-A08-edge",
+      "coverage": "M-A08",
+      "stage": "初中",
+      "variant": "edge",
+      "split": "development",
+      "problem": "每箱装 6 瓶，现有 53 瓶，至少买几个箱子才能装下？箱子按整箱购买。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "⌈53/6⌉=9 箱。",
+      "checks": [
+        "Returns the requested result: ⌈53/6⌉=9 箱。",
+        "Shows this case-specific reasoning: Eight boxes hold only 48 bottles; ninth covers remaining 5.",
+        "Rejects this plausible error: 8 箱容量 48<53，实际约束不满足。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-G01-basic",
+      "coverage": "M-G01",
+      "stage": "初中",
+      "variant": "basic",
+      "split": "development",
+      "problem": "Two parallel lines are cut by a transversal. One interior angle is 68°. Find its alternate interior angle and the adjacent interior angle on the same side of the transversal.",
+      "expected_behavior": "interactive",
+      "reference_answer": "Alternate interior angle=68°; same-side interior angle=112°.",
+      "checks": [
+        "Returns the requested result: Alternate interior angle=68°; same-side interior angle=112°.",
+        "Shows this case-specific reasoning: Parallel-line alternate interior angles are equal; same-side interior angles sum to 180°.",
+        "Rejects this plausible error: Both angles 68° would make same-side sum 136°."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-G01-transfer",
+      "coverage": "M-G01",
+      "stage": "初中",
+      "variant": "transfer",
+      "split": "holdout",
+      "problem": "两平行线被截线所截，一个同位角为 125°。其对应同位角和邻补角分别是多少？",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "同位角 125°；邻补角 55°。",
+      "checks": [
+        "Returns the requested result: 同位角 125°；邻补角 55°。",
+        "Shows this case-specific reasoning: Corresponding angles equal; linear pair totals 180°.",
+        "Rejects this plausible error: 邻补角 125° would not form a straight angle."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-G01-edge",
+      "coverage": "M-G01",
+      "stage": "初中",
+      "variant": "edge",
+      "split": "development",
+      "problem": "A transversal meets two lines. Same-side interior angles are 74° and 106°. What can be concluded about the two lines?",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "They are parallel, by the converse of the same-side interior angles theorem (sum 180°).",
+      "checks": [
+        "Returns the requested result: They are parallel, by the converse of the same-side interior angles theorem (sum 180°).",
+        "Shows this case-specific reasoning: Check 74+106=180 and apply the converse.",
+        "Rejects this plausible error: Concluding only that angles are supplementary does not state the line relationship."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-G02-basic",
+      "coverage": "M-G02",
+      "stage": "初中",
+      "variant": "basic",
+      "split": "development",
+      "problem": "三角形两个内角为 48° 和 67°，求第三角。",
+      "expected_behavior": "interactive",
+      "reference_answer": "180°−48°−67°=65°。",
+      "checks": [
+        "Returns the requested result: 180°−48°−67°=65°。",
+        "Shows this case-specific reasoning: Interior angles of a Euclidean triangle sum to 180°.",
+        "Rejects this plausible error: 75° results from subtracting only one angle."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-G02-transfer",
+      "coverage": "M-G02",
+      "stage": "初中",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "Can side lengths 4, 7, 12 make a triangle? Also identify the possible range for the third side when the other two sides are 5 and 9.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "No, since 4+7<12. For sides 5 and 9, third side x must satisfy 4<x<14.",
+      "checks": [
+        "Returns the requested result: No, since 4+7<12. For sides 5 and 9, third side x must satisfy 4<x<14.",
+        "Shows this case-specific reasoning: Use strict triangle inequalities: sum of shorter sides exceeds longest; |9−5|<x<9+5.",
+        "Rejects this plausible error: x=4 or x=14 is degenerate and excluded."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-G02-edge",
+      "coverage": "M-G02",
+      "stage": "初中",
+      "variant": "edge",
+      "split": "holdout",
+      "problem": "等腰三角形的两腰相等，顶角 34°。求两个底角，并说明若把 34° 当作底角会得到什么顶角。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "底角各 (180−34)/2=73°；若底角各 34°，顶角为 112°。",
+      "checks": [
+        "Returns the requested result: 底角各 (180−34)/2=73°；若底角各 34°，顶角为 112°。",
+        "Shows this case-specific reasoning: Use equal base angles and triangle angle sum in both interpretations.",
+        "Rejects this plausible error: 把顶角 34° 再均分成两个底角会混淆角的角色。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-G03-basic",
+      "coverage": "M-G03",
+      "stage": "初中",
+      "variant": "basic",
+      "split": "development",
+      "problem": "Triangles ABC and DEF have AB=DE, AC=DF, and ∠A=∠D, with each angle included between the stated sides. Which congruence criterion applies?",
+      "expected_behavior": "interactive",
+      "reference_answer": "SAS; correspondence A↔D, B↔E, C↔F, so BC=EF.",
+      "checks": [
+        "Returns the requested result: SAS; correspondence A↔D, B↔E, C↔F, so BC=EF.",
+        "Shows this case-specific reasoning: Two sides and the included angle match.",
+        "Rejects this plausible error: SSA is not the stated criterion and is not sufficient in general."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-G03-transfer",
+      "coverage": "M-G03",
+      "stage": "初中",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "已知 AB=AC，D 是 BC 中点。证明 △ABD≅△ACD，并指出结论 BD 与 DC。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "AB=AC，BD=DC，AD=AD；SSS 得 △ABD≅△ACD，因此对应边 BD=DC（已知）且 ∠BAD=∠DAC。",
+      "checks": [
+        "Returns the requested result: AB=AC，BD=DC，AD=AD；SSS 得 △ABD≅△ACD，因此对应边 BD=DC（已知）且 ∠BAD=∠DAC。",
+        "Shows this case-specific reasoning: Cite three equal side pairs and apply SSS; then state a corresponding angle consequence.",
+        "Rejects this plausible error: Claiming congruence from AB=AC alone omits the other side equalities."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-G03-edge",
+      "coverage": "M-G03",
+      "stage": "初中",
+      "variant": "edge",
+      "split": "development",
+      "problem": "Two right triangles have hypotenuse 10 and one corresponding leg 6. Is this enough to prove congruence? State the criterion and what follows.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Yes, hypotenuse-leg (HL) congruence; the remaining legs are both 8 by Pythagorean theorem.",
+      "checks": [
+        "Returns the requested result: Yes, hypotenuse-leg (HL) congruence; the remaining legs are both 8 by Pythagorean theorem.",
+        "Shows this case-specific reasoning: Both are right triangles and share equal hypotenuse plus a leg.",
+        "Rejects this plausible error: A remaining leg of 4 contradicts 6²+4²≠10²."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-G04-basic",
+      "coverage": "M-G04",
+      "stage": "初中",
+      "variant": "basic",
+      "split": "development",
+      "problem": "相似三角形对应边比为 2:5。小三角形一边长 6 厘米，对应大三角形边长多少？",
+      "expected_behavior": "interactive",
+      "reference_answer": "15 厘米。",
+      "checks": [
+        "Returns the requested result: 15 厘米。",
+        "Shows this case-specific reasoning: Scale factor small-to-large is 5/2; 6×5/2=15.",
+        "Rejects this plausible error: 12 cm uses 2 instead of 2.5 as the enlargement factor."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-G04-transfer",
+      "coverage": "M-G04",
+      "stage": "初中",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "A 1.5 m person casts a 2 m shadow while a tree casts a 12 m shadow at the same time on level ground. Estimate tree height.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Similar triangles give h/12=1.5/2, so h=9 m.",
+      "checks": [
+        "Returns the requested result: Similar triangles give h/12=1.5/2, so h=9 m.",
+        "Shows this case-specific reasoning: Same sun angle makes corresponding height-to-shadow ratios equal.",
+        "Rejects this plausible error: 18 m reverses the shadow ratio."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-G04-edge",
+      "coverage": "M-G04",
+      "stage": "初中",
+      "variant": "edge",
+      "split": "development",
+      "problem": "比例尺 1:25,000 的地图上两点相距 4.8 厘米，实地距离多少千米？",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "4.8×25,000=120,000 cm=1.2 km。",
+      "checks": [
+        "Returns the requested result: 4.8×25,000=120,000 cm=1.2 km。",
+        "Shows this case-specific reasoning: Multiply map length by scale denominator, then convert cm to km.",
+        "Rejects this plausible error: 120 km forgets conversion from centimeters."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-G05-basic",
+      "coverage": "M-G05",
+      "stage": "初中",
+      "variant": "basic",
+      "split": "development",
+      "problem": "A right triangle has legs 5 and 12. Find its hypotenuse.",
+      "expected_behavior": "interactive",
+      "reference_answer": "c=√(25+144)=13.",
+      "checks": [
+        "Returns the requested result: c=√(25+144)=13.",
+        "Shows this case-specific reasoning: Apply Pythagorean theorem to perpendicular legs.",
+        "Rejects this plausible error: 17 adds the leg lengths."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-G05-transfer",
+      "coverage": "M-G05",
+      "stage": "初中",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "直角三角形斜边 10，直角边 6，另一条直角边是多少？",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "√(10²−6²)=8。",
+      "checks": [
+        "Returns the requested result: √(10²−6²)=8。",
+        "Shows this case-specific reasoning: Subtract known leg square from hypotenuse square.",
+        "Rejects this plausible error: 16 comes from 10²−6² without taking the square root."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-G05-edge",
+      "coverage": "M-G05",
+      "stage": "初中",
+      "variant": "edge",
+      "split": "holdout",
+      "problem": "Do side lengths 7, 24, 25 form a right triangle? Justify using the converse.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Yes, because 7²+24²=49+576=625=25².",
+      "checks": [
+        "Returns the requested result: Yes, because 7²+24²=49+576=625=25².",
+        "Shows this case-specific reasoning: Longest side is 25; equality satisfies the converse of Pythagorean theorem.",
+        "Rejects this plausible error: 7²+25²=24² checks the wrong side as hypotenuse."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-G06-basic",
+      "coverage": "M-G06",
+      "stage": "初中",
+      "variant": "basic",
+      "split": "holdout",
+      "problem": "平行四边形一角为 68°，其余三个角是多少？",
+      "expected_behavior": "interactive",
+      "reference_answer": "对角 68°；两个邻角各 112°。",
+      "checks": [
+        "Returns the requested result: 对角 68°；两个邻角各 112°。",
+        "Shows this case-specific reasoning: Opposite angles are equal; adjacent angles are supplementary.",
+        "Rejects this plausible error: 四个角都为 68°不满足内角和 360°。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-G06-transfer",
+      "coverage": "M-G06",
+      "stage": "初中",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "A regular hexagon has what measure for each interior angle?",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "(6−2)×180°/6=120°.",
+      "checks": [
+        "Returns the requested result: (6−2)×180°/6=120°.",
+        "Shows this case-specific reasoning: Interior-angle sum is 720° and regularity divides equally.",
+        "Rejects this plausible error: 60° is the exterior angle, not interior."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-G06-edge",
+      "coverage": "M-G06",
+      "stage": "初中",
+      "variant": "edge",
+      "split": "development",
+      "problem": "菱形对角线长 10 和 24，求面积及边长。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "面积=(10×24)/2=120；边长=√(5²+12²)=13。",
+      "checks": [
+        "Returns the requested result: 面积=(10×24)/2=120；边长=√(5²+12²)=13。",
+        "Shows this case-specific reasoning: Diagonals bisect perpendicularly; area is half their product, and half-diagonals form a right triangle.",
+        "Rejects this plausible error: 边长 17 adds half-diagonals rather than using hypotenuse."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-G07-basic",
+      "coverage": "M-G07",
+      "stage": "初中",
+      "variant": "basic",
+      "split": "development",
+      "problem": "A circle has radius 5 cm. What is the radius length from the center to a point of tangency, and how does it meet the tangent?",
+      "expected_behavior": "interactive",
+      "reference_answer": "It is 5 cm and perpendicular (90°) to the tangent at contact.",
+      "checks": [
+        "Returns the requested result: It is 5 cm and perpendicular (90°) to the tangent at contact.",
+        "Shows this case-specific reasoning: A tangent is perpendicular to radius at its point of tangency.",
+        "Rejects this plausible error: A radius parallel to tangent contradicts tangency."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-G07-transfer",
+      "coverage": "M-G07",
+      "stage": "初中",
+      "variant": "transfer",
+      "split": "holdout",
+      "problem": "圆心角为 80°，所对弧的度数和同弧所对圆周角分别是多少？",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "弧度数 80°；圆周角 40°。",
+      "checks": [
+        "Returns the requested result: 弧度数 80°；圆周角 40°。",
+        "Shows this case-specific reasoning: Arc measure equals central angle; inscribed angle is half the intercepted arc.",
+        "Rejects this plausible error: 圆周角 80° is double rather than half."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-G07-edge",
+      "coverage": "M-G07",
+      "stage": "初中",
+      "variant": "edge",
+      "split": "development",
+      "problem": "A tangent-chord angle intercepts a minor arc of 110°. Find the angle; also find the inscribed angle subtending that same minor arc from a point on the major arc.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Both angles are 55°, because each is half the intercepted 110° arc.",
+      "checks": [
+        "Returns 55° for the tangent-chord angle and for the inscribed angle.",
+        "Uses the stated 110° minor arc as the intercepted arc for both angles.",
+        "Rejects 110° as the angle measure; the inscribed/tangent-chord angle is half the arc."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-G08-basic",
+      "coverage": "M-G08",
+      "stage": "初中",
+      "variant": "basic",
+      "split": "development",
+      "problem": "用直尺圆规作线段 AB 的垂直平分线。描述作图步骤并说明为何所得直线经过 AB 中点且垂直 AB。",
+      "expected_behavior": "interactive",
+      "reference_answer": "以 A、B 为圆心、相同且大于 AB/2 的半径画弧，两弧交于 P、Q；直线 PQ 为垂直平分线。因 PA=PB 且 QA=QB，P、Q 均在 AB 的垂直平分线上。",
+      "checks": [
+        "Returns the requested result: 以 A、B 为圆心、相同且大于 AB/2 的半径画弧，两弧交于 P、Q；直线 PQ 为垂直平分线。因 PA=PB 且 QA=QB，P、Q 均在 AB 的垂直平分线上。",
+        "Shows this case-specific reasoning: Explain equal-radius intersections and the locus of points equidistant from endpoints.",
+        "Rejects this plausible error: Using unequal radii does not guarantee the intersection points are equidistant from A and B."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-G08-transfer",
+      "coverage": "M-G08",
+      "stage": "初中",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "For a nondegenerate angle 0°<∠ABC<180°, construct its angle bisector with compass and straightedge. State the equal-distance fact proving it bisects the angle; name P as the non-B intersection of the equal-radius arcs that lies inside the angle.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "An arc centered at B cuts BA and BC at D and E. Draw equal-radius arcs centered at D and E, choosing their non-B intersection P inside the angle. Then BD=BE, DP=EP, and BP is common, so △BDP≅△BEP by SSS. Thus ray BP bisects ∠ABC.",
+      "checks": [
+        "Specifies the first arc centered at B and equal-radius arcs centered at D and E.",
+        "Chooses the non-B intersection P inside the stated nondegenerate angle, then constructs ray BP.",
+        "Uses BD=BE, DP=EP, BP=BP and SSS to justify equal half-angles."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-G08-edge",
+      "coverage": "M-G08",
+      "stage": "初中",
+      "variant": "edge",
+      "split": "development",
+      "problem": "在△ABC中，AB=AC。用已知与公共边证明底角相等，写出关键全等理由。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "取 BC 中点 D；AB=AC，BD=DC，AD=AD，所以 △ABD≅△ACD（SSS），故 ∠ABC=∠BCA。",
+      "checks": [
+        "Returns the requested result: 取 BC 中点 D；AB=AC，BD=DC，AD=AD，所以 △ABD≅△ACD（SSS），故 ∠ABC=∠BCA。",
+        "Shows this case-specific reasoning: Use the median point to create three equal side pairs, then corresponding angles.",
+        "Rejects this plausible error: 仅凭等腰外观或图形对称不能代替证明。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-G09-basic",
+      "coverage": "M-G09",
+      "stage": "初中",
+      "variant": "basic",
+      "split": "development",
+      "problem": "In a right triangle, the side opposite θ is 3 and the hypotenuse is 5. Find sin θ.",
+      "expected_behavior": "interactive",
+      "reference_answer": "sin θ=3/5.",
+      "checks": [
+        "Returns the requested result: sin θ=3/5.",
+        "Shows this case-specific reasoning: Sine is opposite over hypotenuse.",
+        "Rejects this plausible error: 5/3 reverses the ratio."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-G09-transfer",
+      "coverage": "M-G09",
+      "stage": "初中",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "直角三角形中 θ 的邻边为 8，斜边为 10，求 cos θ。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "cos θ=8/10=4/5。",
+      "checks": [
+        "Returns the requested result: cos θ=8/10=4/5。",
+        "Shows this case-specific reasoning: Cosine is adjacent over hypotenuse.",
+        "Rejects this plausible error: 3/4 uses opposite side over adjacent."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-G09-edge",
+      "coverage": "M-G09",
+      "stage": "初中",
+      "variant": "edge",
+      "split": "development",
+      "problem": "For an acute θ, tan θ=3/4. Find sin θ and cos θ.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Use legs 3,4 and hypotenuse 5: sin θ=3/5, cos θ=4/5.",
+      "checks": [
+        "Returns the requested result: Use legs 3,4 and hypotenuse 5: sin θ=3/5, cos θ=4/5.",
+        "Shows this case-specific reasoning: Tangent gives opposite:adjacent=3:4; Pythagorean theorem sets hypotenuse 5.",
+        "Rejects this plausible error: sin θ=3/4 confuses tangent with sine."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-G10-basic",
+      "coverage": "M-G10",
+      "stage": "初中",
+      "variant": "basic",
+      "split": "development",
+      "problem": "半径 6 厘米的圆中，60°圆心角对应弧长是多少？",
+      "expected_behavior": "interactive",
+      "reference_answer": "(60/360)×2π×6=2π 厘米。",
+      "checks": [
+        "Returns the requested result: (60/360)×2π×6=2π 厘米。",
+        "Shows this case-specific reasoning: Arc length is central-angle fraction of circumference.",
+        "Rejects this plausible error: 12π cm is the full circumference."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-G10-transfer",
+      "coverage": "M-G10",
+      "stage": "初中",
+      "variant": "transfer",
+      "split": "holdout",
+      "problem": "A sector has radius 4 m and central angle 90°. Find its area.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "(90/360)π(4²)=4π m².",
+      "checks": [
+        "Returns the requested result: (90/360)π(4²)=4π m².",
+        "Shows this case-specific reasoning: Quarter of the full disk area.",
+        "Rejects this plausible error: 8π m² uses arc length-like multiplication, not area."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-G10-edge",
+      "coverage": "M-G10",
+      "stage": "初中",
+      "variant": "edge",
+      "split": "development",
+      "problem": "The semicircle is the region x²+y²≤9 with y≥0, so its radius is 3 and diameter lies on the x-axis. A 3-by-2 rectangle occupies −1.5≤x≤1.5 and 0≤y≤2; it is fully inside the semicircle, centered on the diameter, with its 2-unit height toward the arc. Find the area of the semicircle left after removing the rectangle.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "The semicircle area is 9π/2 and the rectangle area is 6, so the remaining area is 9π/2−6 square units.",
+      "checks": [
+        "Returns 9π/2−6 square units.",
+        "Uses half of π·3² for the semicircle and 3·2 for the contained rectangle.",
+        "Rejects 9π−6, which uses the full circle instead of the semicircle."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-F01-basic",
+      "coverage": "M-F01",
+      "stage": "初中",
+      "variant": "basic",
+      "split": "development",
+      "problem": "A relation maps each input 1,2,3 to outputs 4,5,6 respectively. Is it a function? Give ordered pairs.",
+      "expected_behavior": "interactive",
+      "reference_answer": "Yes: {(1,4),(2,5),(3,6)}; each input has exactly one output.",
+      "checks": [
+        "Returns the requested result: Yes: {(1,4),(2,5),(3,6)}; each input has exactly one output.",
+        "Shows this case-specific reasoning: Check uniqueness of output per input.",
+        "Rejects this plausible error: A relation with one output for each input is not disqualified by different outputs across different inputs."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-F01-transfer",
+      "coverage": "M-F01",
+      "stage": "初中",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "函数 y=2x−1。求 x=0,2 时的函数值，并写出表中对应点。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "y(0)=−1，y(2)=3；点为 (0,−1)、(2,3)。",
+      "checks": [
+        "Returns the requested result: y(0)=−1，y(2)=3；点为 (0,−1)、(2,3)。",
+        "Shows this case-specific reasoning: Substitute each input into the rule, then use (x,y) order.",
+        "Rejects this plausible error: (−1,0) reverses input-output coordinate order."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-F01-edge",
+      "coverage": "M-F01",
+      "stage": "初中",
+      "variant": "edge",
+      "split": "holdout",
+      "problem": "A graph consists of the points (1,2), (1,4), and (3,5). Does it represent y as a function of x? Explain.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "No; input x=1 has two outputs, 2 and 4.",
+      "checks": [
+        "Returns the requested result: No; input x=1 has two outputs, 2 and 4.",
+        "Shows this case-specific reasoning: Apply the vertical-line/unique-output test at x=1.",
+        "Rejects this plausible error: Calling it a function because there are only three points ignores repeated input."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-F02-basic",
+      "coverage": "M-F02",
+      "stage": "初中",
+      "variant": "basic",
+      "split": "holdout",
+      "problem": "直线 y=3x−2 的斜率和 y 轴截距是什么？",
+      "expected_behavior": "interactive",
+      "reference_answer": "斜率 3，y 轴截距 −2。",
+      "checks": [
+        "Returns the requested result: 斜率 3，y 轴截距 −2。",
+        "Shows this case-specific reasoning: Read coefficient and constant in y=mx+b form.",
+        "Rejects this plausible error: 斜率 −2 is the intercept."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-F02-transfer",
+      "coverage": "M-F02",
+      "stage": "初中",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "Find the slope through (2,1) and (6,9), then write the line equation.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "m=(9−1)/(6−2)=2; y=2x−3.",
+      "checks": [
+        "Returns the requested result: m=(9−1)/(6−2)=2; y=2x−3.",
+        "Shows this case-specific reasoning: Use rise over run, then substitute a point to find intercept.",
+        "Rejects this plausible error: Slope 1/2 inverts rise and run."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-F02-edge",
+      "coverage": "M-F02",
+      "stage": "初中",
+      "variant": "edge",
+      "split": "development",
+      "problem": "一条直线经过 (0,4) 和 (2,4)。求斜率和截距；按约定“一次函数”指 y=kx+b 且 k≠0，判断该图像是否为一次函数图像。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "斜率为 0，截距为 4，图像是水平直线 y=4；按题目给定的 k≠0 定义，它不是一次函数图像。",
+      "checks": [
+        "Returns slope 0, y-intercept 4, and equation y=4.",
+        "States it is a horizontal constant function and not a first-degree function under the stated k≠0 convention.",
+        "Rejects an undefined slope; vertical lines, not horizontal lines, have undefined slope."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-F03-basic",
+      "coverage": "M-F03",
+      "stage": "初中",
+      "variant": "basic",
+      "split": "development",
+      "problem": "If y is directly proportional to x and y=12 when x=3, find y when x=5.",
+      "expected_behavior": "interactive",
+      "reference_answer": "y=kx, k=4, so y=20.",
+      "checks": [
+        "Returns the requested result: y=kx, k=4, so y=20.",
+        "Shows this case-specific reasoning: Find constant ratio y/x first.",
+        "Rejects this plausible error: y=15 assumes the known output itself is k."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-F03-transfer",
+      "coverage": "M-F03",
+      "stage": "初中",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "反比例关系 y=k/x 经过点 (4,6)，求 k 和 x=8 时的 y。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "k=24；y=24/8=3。",
+      "checks": [
+        "Returns the requested result: k=24；y=24/8=3。",
+        "Shows this case-specific reasoning: For inverse proportion, xy is constant.",
+        "Rejects this plausible error: y=12 scales directly rather than inversely."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-F03-edge",
+      "coverage": "M-F03",
+      "stage": "初中",
+      "variant": "edge",
+      "split": "development",
+      "problem": "For y=−6/x, what happens to y as x approaches 0 from the right and from the left?",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "x→0⁺ gives y→−∞; x→0⁻ gives y→+∞.",
+      "checks": [
+        "Returns the requested result: x→0⁺ gives y→−∞; x→0⁻ gives y→+∞.",
+        "Shows this case-specific reasoning: Track sign of denominator on each side while numerator is negative.",
+        "Rejects this plausible error: Both sides tending to −∞ ignores the sign change across zero."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-F04-basic",
+      "coverage": "M-F04",
+      "stage": "初中",
+      "variant": "basic",
+      "split": "development",
+      "problem": "解 x²−5x+6=0。",
+      "expected_behavior": "interactive",
+      "reference_answer": "(x−2)(x−3)=0，解为 x=2,3。",
+      "checks": [
+        "Returns the requested result: (x−2)(x−3)=0，解为 x=2,3。",
+        "Shows this case-specific reasoning: Factor and apply zero-product property.",
+        "Rejects this plausible error: −2,−3 are roots of x²+5x+6 instead."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-F04-transfer",
+      "coverage": "M-F04",
+      "stage": "初中",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "Solve x²=9 over the reals and give the solution set.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "{−3,3}.",
+      "checks": [
+        "Returns the requested result: {−3,3}.",
+        "Shows this case-specific reasoning: Both square roots solve the equation.",
+        "Rejects this plausible error: {3} omits the negative root."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-F04-edge",
+      "coverage": "M-F04",
+      "stage": "初中",
+      "variant": "edge",
+      "split": "development",
+      "problem": "方程 x²+4=0 在实数范围内有解吗？",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "无实数解，因为 x²≥0，故 x²+4≥4>0。",
+      "checks": [
+        "Returns the requested result: 无实数解，因为 x²≥0，故 x²+4≥4>0。",
+        "Shows this case-specific reasoning: Use nonnegativity of real squares to rule out zero.",
+        "Rejects this plausible error: x=±2 is imaginary not a real solution."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-F05-basic",
+      "coverage": "M-F05",
+      "stage": "初中",
+      "variant": "basic",
+      "split": "holdout",
+      "problem": "Find the vertex of y=(x−2)²+3 and its minimum value.",
+      "expected_behavior": "interactive",
+      "reference_answer": "Vertex (2,3); minimum y=3.",
+      "checks": [
+        "Returns the requested result: Vertex (2,3); minimum y=3.",
+        "Shows this case-specific reasoning: Read vertex from y=(x−h)²+k; square term is nonnegative.",
+        "Rejects this plausible error: (−2,3) changes the sign convention for h."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-F05-transfer",
+      "coverage": "M-F05",
+      "stage": "初中",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "抛物线 y=x²−4x+3 的顶点和零点是什么？",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "配方 y=(x−2)²−1，顶点 (2,−1)；因式分解得零点 x=1,3。",
+      "checks": [
+        "Returns the requested result: 配方 y=(x−2)²−1，顶点 (2,−1)；因式分解得零点 x=1,3。",
+        "Shows this case-specific reasoning: Complete square and factor separately for vertex and roots.",
+        "Rejects this plausible error: 顶点 (−2,−1) uses wrong sign in −4x."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-F05-edge",
+      "coverage": "M-F05",
+      "stage": "初中",
+      "variant": "edge",
+      "split": "development",
+      "problem": "For y=−(x+1)²+4, state the vertex, opening direction, and x-intercepts.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Vertex (−1,4), opens downward; zeros solve (x+1)²=4, so x=1,−3.",
+      "checks": [
+        "Returns the requested result: Vertex (−1,4), opens downward; zeros solve (x+1)²=4, so x=1,−3.",
+        "Shows this case-specific reasoning: Vertex form gives center; negative leading coefficient opens down; solve for zeros.",
+        "Rejects this plausible error: x=3,−1 are zeros of a sign-misread equation."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-F06-basic",
+      "coverage": "M-F06",
+      "stage": "初中",
+      "variant": "basic",
+      "split": "development",
+      "problem": "直线 y=x+1 与 y=5−x 的交点是什么？",
+      "expected_behavior": "interactive",
+      "reference_answer": "x+1=5−x 得 x=2,y=3；交点 (2,3)。",
+      "checks": [
+        "Returns the requested result: x+1=5−x 得 x=2,y=3；交点 (2,3)。",
+        "Shows this case-specific reasoning: Set outputs equal and substitute back.",
+        "Rejects this plausible error: (3,2) reverses coordinates and fails both equations."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-F06-transfer",
+      "coverage": "M-F06",
+      "stage": "初中",
+      "variant": "transfer",
+      "split": "holdout",
+      "problem": "Solve the system y=2x and y=x+3 by identifying the graph intersection.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "2x=x+3 gives x=3,y=6; intersection (3,6).",
+      "checks": [
+        "Returns the requested result: 2x=x+3 gives x=3,y=6; intersection (3,6).",
+        "Shows this case-specific reasoning: At the intersection both line equations have the same x,y.",
+        "Rejects this plausible error: (6,3) swaps coordinates."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-F06-edge",
+      "coverage": "M-F06",
+      "stage": "初中",
+      "variant": "edge",
+      "split": "development",
+      "problem": "直线 y=2x+1 与 y=2x−3 是否相交？",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "不相交；斜率相同而截距不同，是平行直线，方程组无解。",
+      "checks": [
+        "Returns the requested result: 不相交；斜率相同而截距不同，是平行直线，方程组无解。",
+        "Shows this case-specific reasoning: Equal slopes 2 and unequal intercepts prevent any common point.",
+        "Rejects this plausible error: 交点存在会要求 2x+1=2x−3，即 1=−3。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-F07-basic",
+      "coverage": "M-F07",
+      "stage": "初中",
+      "variant": "basic",
+      "split": "development",
+      "problem": "Find the distance and midpoint between A(1,2) and B(5,5).",
+      "expected_behavior": "interactive",
+      "reference_answer": "Distance=√(4²+3²)=5; midpoint=(3,3.5).",
+      "checks": [
+        "Returns the requested result: Distance=√(4²+3²)=5; midpoint=(3,3.5).",
+        "Shows this case-specific reasoning: Use coordinate differences for distance and coordinate averages for midpoint.",
+        "Rejects this plausible error: Midpoint (4,7) adds coordinates without halving."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-F07-transfer",
+      "coverage": "M-F07",
+      "stage": "初中",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "点 P(−2,4) 关于原点对称的点是什么？原点到 P 的距离是多少？",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "像点 (2,−4)；距离 √(4+16)=2√5。",
+      "checks": [
+        "Returns the requested result: 像点 (2,−4)；距离 √(4+16)=2√5。",
+        "Shows this case-specific reasoning: Origin reflection negates both coordinates; distance formula uses squares.",
+        "Rejects this plausible error: (2,4) reflects over y-axis only."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-F07-edge",
+      "coverage": "M-F07",
+      "stage": "初中",
+      "variant": "edge",
+      "split": "holdout",
+      "problem": "A triangle has vertices (0,0),(2,0),(0,2). Rotate every point 90° counterclockwise about the origin. Give the image vertices.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "(0,0),(0,2),(−2,0).",
+      "checks": [
+        "Returns the requested result: (0,0),(0,2),(−2,0).",
+        "Shows this case-specific reasoning: Map each (x,y) to (−y,x).",
+        "Rejects this plausible error: (0,0),(0,−2),(2,0) is clockwise rotation."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-F08-basic",
+      "coverage": "M-F08",
+      "stage": "初中",
+      "variant": "basic",
+      "split": "development",
+      "problem": "出租车收费：起步 10 元，另每千米 2 元。行驶 4 千米总价多少？",
+      "expected_behavior": "interactive",
+      "reference_answer": "10+2×4=18 元。",
+      "checks": [
+        "Returns the requested result: 10+2×4=18 元。",
+        "Shows this case-specific reasoning: Apply fixed fee once plus distance rate.",
+        "Rejects this plausible error: 48 元 charges the base fare per kilometer."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-F08-transfer",
+      "coverage": "M-F08",
+      "stage": "初中",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "A phone plan costs $20 for up to 2 GB, then $5 per additional GB. Give the charge for 1 GB and 4 GB.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "1 GB: $20; 4 GB: $20+2×$5=$30.",
+      "checks": [
+        "Returns the requested result: 1 GB: $20; 4 GB: $20+2×$5=$30.",
+        "Shows this case-specific reasoning: Use the flat tier through 2 GB, then charge only excess usage.",
+        "Rejects this plausible error: 4 GB at $40 applies $20 per GB rather than the stated piecewise rule."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "M-F08-edge",
+      "coverage": "M-F08",
+      "stage": "初中",
+      "variant": "edge",
+      "split": "development",
+      "problem": "水费分段计价：前 10 立方米每立方米 3 元，超出部分每立方米 5 元。用水 12 立方米的费用是多少？",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "10×3+2×5=40 元。",
+      "checks": [
+        "Returns the requested result: 10×3+2×5=40 元。",
+        "Shows this case-specific reasoning: Apply each rate only to its interval.",
+        "Rejects this plausible error: 12×5=60 元把高档单价套用于全部用水。"
+      ],
+      "reference_status": "authored_unreviewed"
+    }
+  ]
+}

@@ -1,0 +1,881 @@
+{
+  "schemaVersion": 1,
+  "sourceCatalogPath": "public/curriculum.json",
+  "sourceCatalogSha256": "486e74b26cc13840e9fdfecb4818a1705058cf545fa6c30f7a57a8bd0777a846",
+  "language": "en",
+  "stages": {
+    "小学": "Elementary School",
+    "初中": "Middle School",
+    "高中": "High School",
+    "基础微积分": "Introductory Calculus"
+  },
+  "domains": {
+    "数与运算": "Numbers and Operations",
+    "分数小数百分数": "Fractions, Decimals and Percents",
+    "应用与测量": "Applications and Measurement",
+    "图形与数据": "Geometry and Data",
+    "实数与整式": "Real Numbers and Polynomials",
+    "方程与不等式": "Equations and Inequalities",
+    "几何": "Geometry",
+    "函数与坐标": "Functions and Coordinates",
+    "代数与函数": "Algebra and Functions",
+    "三角": "Trigonometry",
+    "向量解析与空间几何": "Vectors, Analytic Geometry and 3D Geometry",
+    "集合逻辑与概率": "Sets, Logic and Probability",
+    "统计与数列": "Statistics and Sequences",
+    "极限与连续": "Limits and Continuity",
+    "导数及应用": "Derivatives and Applications",
+    "积分及应用": "Integrals and Applications"
+  },
+  "topics": {
+    "E-N01": {
+      "title": "Counting and Comparing Numbers",
+      "examples": {
+        "E-N01-transfer": "There are 84 cards. After giving away 29 and buying 17 more, how many cards are there now?"
+      }
+    },
+    "E-N02": {
+      "title": "Decimal Place Value and Decomposing Numbers",
+      "examples": {
+        "E-N02-basic": "In 5,307, what is the place of the digit 3, and what is its value?",
+        "E-N02-edge": "Use each of the digits 6, 0, 4, and 2 exactly once to make the greatest and least four-digit numbers (the first digit cannot be 0). Find the difference."
+      }
+    },
+    "E-N03": {
+      "title": "Addition and Subtraction with Regrouping",
+      "examples": {
+        "E-N03-transfer": "A rope is 1,000 centimeters long. If 386 centimeters are cut off, how many centimeters remain?"
+      }
+    },
+    "E-N04": {
+      "title": "Multiplication and Equal Groups",
+      "examples": {
+        "E-N04-basic": "Each box holds 8 pencils. How many pencils are in 6 boxes?"
+      }
+    },
+    "E-N05": {
+      "title": "Division and Remainders",
+      "examples": {
+        "E-N05-transfer": "Pack 53 candies into bags that hold 6 candies each. How many full bags can you make, and how many candies are left?"
+      }
+    },
+    "E-N06": {
+      "title": "Order of Operations and Parentheses",
+      "examples": {
+        "E-N06-basic": "Evaluate 18−3×4 and explain which operation comes first."
+      }
+    },
+    "E-N07": {
+      "title": "Estimation and Rounding",
+      "examples": {
+        "E-N07-transfer": "Estimate 198×31 by first rounding each factor to the nearest ten."
+      }
+    },
+    "E-N08": {
+      "title": "Factors, Multiples and Prime Numbers",
+      "examples": {
+        "E-N08-basic": "List all positive factors of 18.",
+        "E-N08-edge": "Determine whether 48 is a multiple of 6, and find the greatest common factor of 48 and 6."
+      }
+    },
+    "E-N09": {
+      "title": "Greatest Common Factor and Least Common Multiple",
+      "examples": {
+        "E-N09-transfer": "Two lights flash every 8 seconds and every 12 seconds. They flash together now. After how many seconds will they next flash together?"
+      }
+    },
+    "E-F01": {
+      "title": "Meaning of Fractions and the Same Whole",
+      "examples": {
+        "E-F01-basic": "A sheet of paper is divided into 8 equal parts, and 3 parts are shaded. What fraction of the whole sheet is shaded?",
+        "E-F01-edge": "Half of pie A and half of pie B are each given to Ming. Which half is guaranteed to be larger?"
+      }
+    },
+    "E-F02": {
+      "title": "Equivalent Fractions, Simplifying and Common Denominators",
+      "examples": {}
+    },
+    "E-F03": {
+      "title": "Comparing Fractions and the Number Line",
+      "examples": {
+        "E-F03-basic": "Compare 3/7 and 4/7, and show their order on the number line from 0 to 1."
+      }
+    },
+    "E-F04": {
+      "title": "Adding and Subtracting Fractions",
+      "examples": {
+        "E-F04-transfer": "Compute 5/6−1/4. Give the answer in simplest form."
+      }
+    },
+    "E-F05": {
+      "title": "Multiplying and Dividing Fractions",
+      "examples": {
+        "E-F05-basic": "Find three-fifths of two-thirds.",
+        "E-F05-edge": "A rope is 3/4 meter long. If each piece must be 1/8 meter, how many pieces can be cut?"
+      }
+    },
+    "E-F06": {
+      "title": "Decimal Place Value and Operations",
+      "examples": {
+        "E-F06-transfer": "Compute 2.4+0.35 and 2.4−0.35."
+      }
+    },
+    "E-F07": {
+      "title": "Converting Fractions, Decimals and Percents",
+      "examples": {
+        "E-F07-edge": "Forty percent of a number is 18. Find the number, and express 18 as a fraction of that number."
+      }
+    },
+    "E-F08": {
+      "title": "Percents and Percent Change",
+      "examples": {}
+    },
+    "E-F09": {
+      "title": "Improper Fractions, Mixed Numbers and Whole Quantities",
+      "examples": {
+        "E-F09-basic": "Write 11/4 as a mixed number."
+      }
+    },
+    "E-M01": {
+      "title": "Ratios, Proportions and Sharing",
+      "examples": {
+        "E-M01-transfer": "Divide 84 yuan between A and B in the ratio 3:4. How many yuan does B receive?"
+      }
+    },
+    "E-M02": {
+      "title": "Unit Rates and Unit Prices",
+      "examples": {
+        "E-M02-basic": "Five kilograms of apples cost 30 yuan. What is the average cost per kilogram?",
+        "E-M02-edge": "Twelve pens cost 30 yuan. At the same unit price, how much do 8 pens cost?"
+      }
+    },
+    "E-M03": {
+      "title": "Speed, Time and Distance",
+      "examples": {
+        "E-M03-transfer": "A cyclist travels at 12 kilometers per hour for 2.5 hours. What distance do they travel in kilometers?"
+      }
+    },
+    "E-M04": {
+      "title": "Converting Units of Length, Mass and Capacity",
+      "examples": {
+        "E-M04-edge": "A container holds 1.2 liters of water. After 350 milliliters are poured out, how many milliliters remain?"
+      }
+    },
+    "E-M05": {
+      "title": "Time, Dates and Elapsed Time",
+      "examples": {}
+    },
+    "E-M06": {
+      "title": "Money, Change and Shopping",
+      "examples": {
+        "E-M06-basic": "A notebook costs 18 yuan. If you pay 20 yuan, how much change should you receive?",
+        "E-M06-edge": "Pens cost 3 yuan each and notebooks cost 7 yuan each. If you buy 4 pens and 2 notebooks, is 30 yuan enough? What is the difference between the payment and the total cost?"
+      }
+    },
+    "E-M07": {
+      "title": "Multi-Step Word Problems and Quantitative Relationships",
+      "examples": {
+        "E-M07-transfer": "Each table seats 6 people. If 41 people arrive, what is the minimum number of tables needed?"
+      }
+    },
+    "E-M08": {
+      "title": "Number and Shape Patterns and Simple Unknowns",
+      "examples": {
+        "E-M08-edge": "If 3x+5=26, solve for x and check your answer."
+      }
+    },
+    "E-G01": {
+      "title": "Classifying Plane Shapes and Their Properties",
+      "examples": {
+        "E-G01-transfer": "Triangle ABC has AB=AC. Classify it by its sides. Another triangle has angles 100°, 40°, and 40°; classify it by its angles."
+      }
+    },
+    "E-G02": {
+      "title": "Classifying and Measuring Angles",
+      "examples": {
+        "E-G02-edge": "Two lines intersect, and one angle measures 62°. What are the other three angles?"
+      }
+    },
+    "E-G03": {
+      "title": "Perimeter and Area with Units",
+      "examples": {
+        "E-G03-transfer": "A square has side length 5 meters. What is its area in square meters?"
+      }
+    },
+    "E-G04": {
+      "title": "Areas of Rectangles, Triangles and Composite Shapes",
+      "examples": {
+        "E-G04-basic": "A rectangle is 9 centimeters long and 4 centimeters wide. What is its area?",
+        "E-G04-edge": "A 10×6 rectangle has a 2×3 rectangle removed from one corner, with its sides parallel to the original sides. Find the remaining area."
+      }
+    },
+    "E-G05": {
+      "title": "Solid Nets and Volume",
+      "examples": {
+        "E-G05-transfer": "A rectangular prism has dimensions 2 cm, 3 cm, and 5 cm. What is its volume?"
+      }
+    },
+    "E-G06": {
+      "title": "Symmetry, Translations and Rotations",
+      "examples": {
+        "E-G06-basic": "What are the coordinates of point A(2,1) after reflection across the y-axis?",
+        "E-G06-edge": "Where does point (1,0) land after a 90° counterclockwise rotation about the origin?"
+      }
+    },
+    "E-G07": {
+      "title": "Coordinates and Grid Paths",
+      "examples": {
+        "E-G07-transfer": "Starting at (−2,1), move 5 grid units right and then 3 units down. What are the endpoint coordinates?"
+      }
+    },
+    "E-G08": {
+      "title": "Tables, Bar and Line Graphs, and Mean",
+      "examples": {
+        "E-G08-basic": "A table shows 2, 4, and 6 pages read on three days. What was the average number of pages read per day?",
+        "E-G08-edge": "A line graph shows temperatures of 10, 12, 9, and 13°C over four consecutive days. Find the maximum, minimum, and mean."
+      }
+    },
+    "E-G09": {
+      "title": "Circumference, Circle Area and Pi",
+      "examples": {
+        "E-G09-transfer": "A circle has diameter 10 meters. Use π=3.14 to find its circumference."
+      }
+    },
+    "M-N01": {
+      "title": "Negative and Rational Numbers, Absolute Value",
+      "examples": {
+        "M-N01-transfer": "Order −3, −1/2, 0, and 2 from least to greatest. Find the difference between the greatest and least."
+      }
+    },
+    "M-N02": {
+      "title": "Operations with Rational Numbers",
+      "examples": {
+        "M-N02-basic": "Evaluate −8+3×(−2).",
+        "M-N02-edge": "Evaluate −2² and (−2)², and explain why the results differ."
+      }
+    },
+    "M-N03": {
+      "title": "Exponents and Scientific Notation",
+      "examples": {
+        "M-N03-transfer": "Simplify (3×10⁵)(2×10⁻²). Write the result in scientific notation."
+      }
+    },
+    "M-N04": {
+      "title": "Square Roots, Cube Roots and Irrational Numbers",
+      "examples": {
+        "M-N04-basic": "Find √81 and ∛(−27).",
+        "M-N04-edge": "What are the real solutions to x²=12? State whether the radical result is rational."
+      }
+    },
+    "M-N05": {
+      "title": "Substituting into Algebraic Expressions and Units",
+      "examples": {
+        "M-N05-transfer": "A rectangle has length x+2 meters and width x meters. Find its area when x=3."
+      }
+    },
+    "M-N06": {
+      "title": "Distributive Property and Combining Like Terms",
+      "examples": {
+        "M-N06-basic": "Expand and combine like terms: 3(x+4)+2x."
+      }
+    },
+    "M-N07": {
+      "title": "Polynomial Multiplication and Identities",
+      "examples": {
+        "M-N07-transfer": "Expand (2x−5)²."
+      }
+    },
+    "M-N08": {
+      "title": "Factoring",
+      "examples": {
+        "M-N08-basic": "Factor 6x+12.",
+        "M-N08-edge": "Factor x²+7x+12 and use the factored form to find its zeros."
+      }
+    },
+    "M-A01": {
+      "title": "Linear Equations in One Variable",
+      "examples": {
+        "M-A01-transfer": "Solve 3(x−2)=2x+5."
+      }
+    },
+    "M-A02": {
+      "title": "Systems of Linear Equations",
+      "examples": {
+        "M-A02-basic": "Solve the system x+y=7, x−y=1.",
+        "M-A02-edge": "How many solutions does the system 2x+2y=6 and x+y=3 have? Describe the solution set."
+      }
+    },
+    "M-A03": {
+      "title": "Linear Inequalities and Number Lines",
+      "examples": {}
+    },
+    "M-A04": {
+      "title": "Systems of Inequalities and Boundary Values",
+      "examples": {
+        "M-A04-basic": "Solve the system of inequalities x>2 and x≤5."
+      }
+    },
+    "M-A05": {
+      "title": "Rearranging Formulas and Parameters",
+      "examples": {
+        "M-A05-transfer": "Given v=u+at with a≠0, solve for t. Then find t when u=4, v=19, and a=3."
+      }
+    },
+    "M-A06": {
+      "title": "Rational Expressions and Domain",
+      "examples": {
+        "M-A06-basic": "Simplify (x²−4)/(x−2) and state the domain of the original expression.",
+        "M-A06-edge": "Simplify (x²−9)/(x²−3x) and state its domain."
+      }
+    },
+    "M-A07": {
+      "title": "Rational Equations and Extraneous Solutions",
+      "examples": {
+        "M-A07-transfer": "Solve 1/(x−1)=2/(x²−1), and check for extraneous solutions."
+      }
+    },
+    "M-A08": {
+      "title": "Modeling Equations and Real-World Constraints",
+      "examples": {
+        "M-A08-edge": "Each box holds 6 bottles. There are 53 bottles. What is the minimum number of boxes to buy if boxes are sold only whole?"
+      }
+    },
+    "M-G01": {
+      "title": "Parallel Lines and Angle Relationships",
+      "examples": {}
+    },
+    "M-G02": {
+      "title": "Triangle Angle and Side Relationships",
+      "examples": {
+        "M-G02-basic": "Two interior angles of a triangle are 48° and 67°. Find the third angle."
+      }
+    },
+    "M-G03": {
+      "title": "Congruence and Proof",
+      "examples": {
+        "M-G03-transfer": "Given AB=AC and D is the midpoint of BC, prove △ABD≅△ACD. State the resulting relationship between BD and DC."
+      }
+    },
+    "M-G04": {
+      "title": "Similarity and Scale",
+      "examples": {
+        "M-G04-basic": "Corresponding sides of similar triangles are in a 2:5 ratio. A side of the smaller triangle is 6 cm. Find the corresponding side of the larger triangle.",
+        "M-G04-edge": "A map has scale 1:25,000. Two points are 4.8 cm apart on the map. What is their actual distance in kilometers?"
+      }
+    },
+    "M-G05": {
+      "title": "Pythagorean Theorem and Converse",
+      "examples": {
+        "M-G05-transfer": "A right triangle has hypotenuse 10 and one leg 6. Find the other leg."
+      }
+    },
+    "M-G06": {
+      "title": "Quadrilaterals and Polygons",
+      "examples": {
+        "M-G06-edge": "A rhombus has diagonals of lengths 10 and 24. Find its area and side length."
+      }
+    },
+    "M-G07": {
+      "title": "Circles, Arcs, Angles and Tangents",
+      "examples": {}
+    },
+    "M-G08": {
+      "title": "Geometric Constructions and Proof",
+      "examples": {
+        "M-G08-basic": "Use a compass and straightedge to construct the perpendicular bisector of segment AB. Describe the steps and explain why the line passes through the midpoint of AB and is perpendicular to AB.",
+        "M-G08-edge": "In △ABC with AB=AC, use the given sides and a shared side to prove the base angles are equal. State the key congruence reasoning."
+      }
+    },
+    "M-G09": {
+      "title": "Right Triangle Trigonometry",
+      "examples": {
+        "M-G09-transfer": "In a right triangle, the side adjacent to θ is 8 and the hypotenuse is 10. Find cos θ."
+      }
+    },
+    "M-G10": {
+      "title": "Arc Length, Sector Area and Composite Figures",
+      "examples": {
+        "M-G10-basic": "A circle has radius 6 cm. Find the arc length subtended by a 60° central angle."
+      }
+    },
+    "M-F01": {
+      "title": "Representing Functions with Tables, Rules and Graphs",
+      "examples": {
+        "M-F01-transfer": "For y=2x−1, find the function values at x=0 and x=2, and list the corresponding points."
+      }
+    },
+    "M-F02": {
+      "title": "Slope and Intercepts of Linear Functions",
+      "examples": {
+        "M-F02-edge": "A line passes through (0,4) and (2,4). Find its slope and intercept. Under the convention that a “linear function” is y=kx+b with k≠0, determine whether this graph is a linear-function graph."
+      }
+    },
+    "M-F03": {
+      "title": "Direct and Inverse Variation",
+      "examples": {
+        "M-F03-transfer": "An inverse variation y=k/x passes through (4,6). Find k and then find y when x=8."
+      }
+    },
+    "M-F04": {
+      "title": "Quadratic Equations and Solution Sets",
+      "examples": {
+        "M-F04-basic": "Solve x²−5x+6=0.",
+        "M-F04-edge": "Does x²+4=0 have any real solutions?"
+      }
+    },
+    "M-F05": {
+      "title": "Vertex and Zeros of Quadratic Functions",
+      "examples": {
+        "M-F05-transfer": "Find the vertex and zeros of the parabola y=x²−4x+3."
+      }
+    },
+    "M-F06": {
+      "title": "Intersections of Graphs and Systems",
+      "examples": {
+        "M-F06-basic": "Find the intersection of y=x+1 and y=5−x.",
+        "M-F06-edge": "Do the lines y=2x+1 and y=2x−3 intersect?"
+      }
+    },
+    "M-F07": {
+      "title": "Coordinate Distance, Midpoint and Transformations",
+      "examples": {
+        "M-F07-transfer": "Reflect P(−2,4) across the origin. Find the distance from the origin to P."
+      }
+    },
+    "M-F08": {
+      "title": "Piecewise Relationships and Applied Modeling",
+      "examples": {
+        "M-F08-basic": "A taxi charges a 10-yuan base fare plus 2 yuan per kilometer. What is the fare for 4 kilometers?",
+        "M-F08-edge": "Water costs 3 yuan per cubic meter for the first 10 m³ and 5 yuan per cubic meter above that. What is the cost for 12 m³?"
+      }
+    },
+    "H-A01": {
+      "title": "Function Domains, Ranges and Properties",
+      "examples": {
+        "H-A01-transfer": "For f(x)=x²−4 restricted to −1≤x≤3, find the range."
+      }
+    },
+    "H-A02": {
+      "title": "Composite and Inverse Functions",
+      "examples": {
+        "H-A02-basic": "Let f(x)=x²+1 and g(x)=2x. Find f(g(−2)).",
+        "H-A02-edge": "Let f(x)=x² with domain x≥0. Find its inverse. If the domain were all real numbers, would an inverse still exist?"
+      }
+    },
+    "H-A03": {
+      "title": "Polynomial Operations, Remainders and Factor Theorem",
+      "examples": {
+        "H-A03-transfer": "Expand (x+1)(x−2)(x−3), and use the Factor Theorem to determine whether x−2 is a factor."
+      }
+    },
+    "H-A04": {
+      "title": "Rational Functions, Holes and Asymptotes",
+      "examples": {
+        "H-A04-basic": "For f(x)=(x²−1)/(x−1), give its domain, the hole’s coordinates, and any vertical asymptote.",
+        "H-A04-edge": "For f(x)=(x²−4)/(x²−4x+4), find any hole or vertical asymptote and the horizontal asymptote."
+      }
+    },
+    "H-A05": {
+      "title": "Radical and Absolute-Value Equations and Inequalities",
+      "examples": {
+        "H-A05-transfer": "Solve |2x−1|=5."
+      }
+    },
+    "H-A06": {
+      "title": "Exponential Functions, Equations, Growth and Decay",
+      "examples": {
+        "H-A06-basic": "Solve 2^(x+1)=16."
+      }
+    },
+    "H-A07": {
+      "title": "Logarithmic Functions, Equations and Domains",
+      "examples": {
+        "H-A07-transfer": "Solve log₂(x−1)+log₂(x+1)=3, preserving the domain restrictions."
+      }
+    },
+    "H-A08": {
+      "title": "Complex Numbers, Modulus and Complex Plane",
+      "examples": {
+        "H-A08-basic": "Compute (3+2i)+(1−5i).",
+        "H-A08-edge": "Compute (1+i)/(1−i) and give the point’s coordinates in the complex plane."
+      }
+    },
+    "H-A09": {
+      "title": "Quadratic and Rational Inequalities",
+      "examples": {
+        "H-A09-transfer": "Solve (x−1)/(x+2)>0."
+      }
+    },
+    "H-A10": {
+      "title": "Equations with Parameters and Case Analysis",
+      "examples": {
+        "H-A10-basic": "Solve (a−1)x=2 by cases on the parameter a.",
+        "H-A10-edge": "How many real solutions does (a−2)x=a−2 have? Classify by a and give the solution set."
+      }
+    },
+    "H-A11": {
+      "title": "Basic Inequalities and Equality Conditions",
+      "examples": {}
+    },
+    "H-T01": {
+      "title": "Radian and Degree Measure and Arc Length",
+      "examples": {
+        "H-T01-basic": "Convert π/3 radians to degrees."
+      }
+    },
+    "H-T02": {
+      "title": "Unit Circle and Trigonometric Values",
+      "examples": {
+        "H-T02-transfer": "What point on the unit circle corresponds to angle −π/3?"
+      }
+    },
+    "H-T03": {
+      "title": "Trigonometric Graphs, Period and Phase",
+      "examples": {
+        "H-T03-basic": "For y=2sin(3x−π/2)+1, find the amplitude, period, rightward shift, and range."
+      }
+    },
+    "H-T04": {
+      "title": "Trigonometric Identities and Justification",
+      "examples": {
+        "H-T04-transfer": "Assuming sin x≠0, simplify (1−cos²x)/sin x and justify the steps."
+      }
+    },
+    "H-T05": {
+      "title": "Trigonometric Equations on Intervals",
+      "examples": {
+        "H-T05-edge": "Find all solutions to sin x=0 on the closed interval [0,2π]."
+      }
+    },
+    "H-T06": {
+      "title": "Inverse Trigonometric Functions and Principal Values",
+      "examples": {}
+    },
+    "H-T07": {
+      "title": "Sine and Cosine Laws, Including the Ambiguous Case",
+      "examples": {
+        "H-T07-basic": "In a triangle, A=30°, B=60°, and side c=10 is opposite C. Find C and side a."
+      }
+    },
+    "H-T08": {
+      "title": "Solving Triangles and Measurement",
+      "examples": {
+        "H-T08-transfer": "In a triangle, A=45°, B=60°, and side c=10 m is opposite C. Use the Law of Sines to find the exact value of side a."
+      }
+    },
+    "H-G01": {
+      "title": "Vectors: Operations and Coordinates",
+      "examples": {
+        "H-G01-basic": "Let u=(1,2) and v=(3,−1). Find u+v and u−v.",
+        "H-G01-edge": "Let u=(2,−3) and v=(−1,4). Find 2u−3v."
+      }
+    },
+    "H-G02": {
+      "title": "Dot Product, Angles, Orthogonality and Projection",
+      "examples": {
+        "H-G02-transfer": "Find the vector projection of u=(3,4) onto v=(0,2)."
+      }
+    },
+    "H-G03": {
+      "title": "Lines, Circles and Their Relative Positions",
+      "examples": {
+        "H-G03-edge": "Determine the relative position of the line y=4 and the circle x²+y²=9."
+      }
+    },
+    "H-G04": {
+      "title": "Conic Sections: Parabolas, Ellipses and Hyperbolas",
+      "examples": {}
+    },
+    "H-G05": {
+      "title": "Analytic Geometry, Loci and Parameter Constraints",
+      "examples": {
+        "H-G05-basic": "A point is P=(t,2t+1) for t∈[0,2]. Give the equation of its locus and specify which part of the curve is traced.",
+        "H-G05-edge": "A point is P=(t,1−t) for 0≤t≤1. Does it stay in the closed first quadrant? Find the trajectory length."
+      }
+    },
+    "H-G06": {
+      "title": "Lines and Planes in 3D: Parallel and Perpendicular",
+      "examples": {
+        "H-G06-transfer": "How is the line L(t)=(1,2,t) positioned relative to the plane z=0? Where do they intersect?"
+      }
+    },
+    "H-G07": {
+      "title": "Solid Surface Area, Volume and Cross-Sections",
+      "examples": {
+        "H-G07-basic": "A cube has side length 2. Find its volume and total surface area."
+      }
+    },
+    "H-G08": {
+      "title": "Introductory Matrices and Linear Transformations",
+      "examples": {
+        "H-G08-transfer": "The matrix A=[[0,−1],[1,0]] represents a plane linear transformation. Find the image of (2,3) and identify the transformation."
+      }
+    },
+    "H-P01": {
+      "title": "Set Operations and Intervals",
+      "examples": {
+        "H-P01-edge": "Let A=(−∞,2] and B=[0,5). Find A\\B."
+      }
+    },
+    "H-P02": {
+      "title": "Propositions, Quantifiers, Necessary and Sufficient Conditions, and Counterexamples",
+      "examples": {
+        "H-P02-transfer": "Is the statement “for every real x, x²>0” true? If not, give a counterexample."
+      }
+    },
+    "H-P03": {
+      "title": "Addition and Multiplication Counting Principles",
+      "examples": {
+        "H-P03-basic": "There are 3 shirts and 4 pairs of pants. How many outfits can be made by choosing one of each?",
+        "H-P03-edge": "How many two-digit numbers can be formed from 0, 1, 2, 3, 4 without repeating digits, if the first digit cannot be 0?"
+      }
+    },
+    "H-P04": {
+      "title": "Permutations, Combinations and Repetition Limits",
+      "examples": {
+        "H-P04-transfer": "How many ways are there to choose 3 students from 8 to form a group, with no roles assigned?"
+      }
+    },
+    "H-P05": {
+      "title": "Binomial Theorem",
+      "examples": {
+        "H-P05-basic": "Find the coefficient of x³ in the expansion of (2+x)^5.",
+        "H-P05-edge": "Find the coefficient of x² in (1+2x)^4."
+      }
+    },
+    "H-P06": {
+      "title": "Sample Spaces and Event Operations",
+      "examples": {
+        "H-P06-transfer": "Draw one card at random from a standard 52-card deck. Find the probability of drawing a red card or an ace."
+      }
+    },
+    "H-P07": {
+      "title": "Conditional Probability, Independence and Sampling Without Replacement",
+      "examples": {
+        "H-P07-basic": "A box contains 4 red and 6 blue balls. Two balls are drawn without replacement. Given that the first ball is red, what is the conditional probability that the second is red?",
+        "H-P07-edge": "Roll a fair die. Let A={even numbers} and B={numbers greater than 3}. Are A and B independent?"
+      }
+    },
+    "H-P08": {
+      "title": "Discrete Distributions, Expected Value and Binomial Distribution",
+      "examples": {
+        "H-P08-transfer": "Let X~Binomial(n=4,p=1/4). Find the expected value and P(X=0)."
+      }
+    },
+    "H-S01": {
+      "title": "Mean, Median, Mode, Quantiles, Quartiles and Outliers",
+      "examples": {
+        "H-S01-basic": "For the data 1,2,2,3,10, find the mean, median, mode, Q1, and Q3. For quartiles, sort the data, exclude the overall median, then take the median of each half."
+      }
+    },
+    "H-S02": {
+      "title": "Variance, Standard Deviation and Comparing Distributions",
+      "examples": {
+        "H-S02-transfer": "For sample data 1,3,5, use the sample variance definition with denominator n−1 to find the mean, sample variance, and sample standard deviation."
+      }
+    },
+    "H-S03": {
+      "title": "Sampling Bias and Study Design",
+      "examples": {
+        "H-S03-edge": "An observational study finds that people who drink coffee are less likely to be late. Can we conclude that coffee causes fewer late arrivals? Name a possible confounder and propose a stronger study design."
+      }
+    },
+    "H-S04": {
+      "title": "Scatterplots, Correlation, Regression and Residuals",
+      "examples": {
+        "H-S04-transfer": "For the points (0,1),(1,3),(2,5), identify the direction of linear association, give the exact line model, and give the correlation coefficient."
+      }
+    },
+    "H-S05": {
+      "title": "Normal Distributions and Standard Scores",
+      "examples": {
+        "H-S05-basic": "Exam scores are approximately normally distributed with mean 70 and standard deviation 10. Find the z-score for a score of 85.",
+        "H-S05-edge": "If X is normally distributed with μ=50 and σ=5, find P(X≤50) and explain why."
+      }
+    },
+    "H-S06": {
+      "title": "Arithmetic Sequences and Finite Sums",
+      "examples": {}
+    },
+    "H-S07": {
+      "title": "Geometric Sequences and Finite Sums",
+      "examples": {
+        "H-S07-basic": "A geometric sequence has first term 3 and common ratio 2. Find the sixth term and the sum of the first six terms."
+      }
+    },
+    "H-S08": {
+      "title": "Recurrence Relations and Mathematical Induction",
+      "examples": {
+        "H-S08-transfer": "For the recurrence a₁=1, aₙ₊₁=2aₙ+1, find a₂, a₃, and a₄."
+      }
+    },
+    "C-L01": {
+      "title": "Tables, Graphs and Intuition about Limits",
+      "examples": {
+        "C-L01-transfer": "A curve approaches the open point (1,2) as x approaches 1 from both sides, but has a filled point at (1,5). Find the limit and f(1)."
+      }
+    },
+    "C-L02": {
+      "title": "One-Sided Limits and Nonexistent Limits",
+      "examples": {
+        "C-L02-basic": "Find the left-hand and right-hand limits of 1/x as x→0, and determine whether the two-sided limit exists.",
+        "C-L02-edge": "Use two sequences to prove that limₓ→₀ sin(1/x) does not exist."
+      }
+    },
+    "C-L03": {
+      "title": "Limit Laws, Factoring and Rationalizing",
+      "examples": {
+        "C-L03-transfer": "Find limₓ→₄ [√(x+5)−3]/(x−4)."
+      }
+    },
+    "C-L04": {
+      "title": "Squeeze Theorem and Basic Trigonometric Limits",
+      "examples": {
+        "C-L04-basic": "Given |sin(1/x)|≤1, use the Squeeze Theorem to find limₓ→₀ x²sin(1/x)."
+      }
+    },
+    "C-L05": {
+      "title": "Infinite Limits and Limits at Infinity",
+      "examples": {
+        "C-L05-transfer": "Find limₓ→∞ (2x+1)/(x²+1)."
+      }
+    },
+    "C-L06": {
+      "title": "Continuity and Types of Discontinuity",
+      "examples": {
+        "C-L06-basic": "Let f(x)=(x²−1)/(x−1) for x≠1 and f(1)=2. Determine whether f is continuous at x=1."
+      }
+    },
+    "C-L07": {
+      "title": "Intermediate Value Theorem and Checking Assumptions",
+      "examples": {
+        "C-L07-transfer": "Someone claims f(x)=1/x has a zero on [−1,1] because its endpoint values have opposite signs. Identify the issue and determine whether there is actually a zero in the interval."
+      }
+    },
+    "C-L08": {
+      "title": "L'Hôpital's Rule and When It Applies",
+      "examples": {
+        "C-L08-basic": "Use L’Hôpital’s Rule to find limₓ→₀ (eˣ−1)/x, and first state the indeterminate form.",
+        "C-L08-edge": "Find limₓ→₀ (x²+1)/(x+1), and determine whether L’Hôpital’s Rule applies."
+      }
+    },
+    "C-D01": {
+      "title": "Definition of Derivative, Difference Quotients, Secant and Tangent Lines",
+      "examples": {}
+    },
+    "C-D02": {
+      "title": "Power, Product, Quotient and Chain Rules",
+      "examples": {
+        "C-D02-basic": "Find the derivative of f(x)=3x⁴−2x.",
+        "C-D02-edge": "For x≠0, find the derivative of f(x)=(x²+1)/x and state its domain."
+      }
+    },
+    "C-D03": {
+      "title": "Derivatives of Trigonometric, Exponential, Logarithmic and Inverse Functions",
+      "examples": {}
+    },
+    "C-D04": {
+      "title": "Implicit and Higher-Order Derivatives",
+      "examples": {
+        "C-D04-basic": "On the curve x²+y²=25, find dy/dx at (3,4)."
+      }
+    },
+    "C-D05": {
+      "title": "Differentiability and Continuity",
+      "examples": {}
+    },
+    "C-D06": {
+      "title": "Rolle's and Mean Value Theorems and Checking Assumptions",
+      "examples": {
+        "C-D06-basic": "Apply Rolle’s Theorem to x²−1 on [−1,1]. Verify the hypotheses and find every interior value c.",
+        "C-D06-edge": "Check Rolle’s Theorem’s conditions for cos x on [0,2π], then find all interior values c."
+      }
+    },
+    "C-D07": {
+      "title": "Increasing and Decreasing Behavior, Extrema, Concavity, Inflection Points and Graphs",
+      "examples": {
+        "C-D07-transfer": "For f=x³−3x, find the intervals of concavity and the inflection point."
+      }
+    },
+    "C-D08": {
+      "title": "Constrained Optimization and Endpoints",
+      "examples": {
+        "C-D08-edge": "On [0,5], find the absolute maximum and minimum of x(4−x), comparing the endpoint values."
+      }
+    },
+    "C-D09": {
+      "title": "Related Rates and Units",
+      "examples": {}
+    },
+    "C-D10": {
+      "title": "Position, Velocity, Acceleration and Direction",
+      "examples": {
+        "C-D10-basic": "A particle’s position is s=t²−4t meters for t≥0. Find its velocity and acceleration, and determine its direction of motion at t=1."
+      }
+    },
+    "C-D11": {
+      "title": "Linear Approximation and Differentials",
+      "examples": {
+        "C-D11-transfer": "Use a linear approximation at x=0 to estimate e^0.05."
+      }
+    },
+    "C-I01": {
+      "title": "Basic Antiderivatives and the Constant of Integration",
+      "examples": {
+        "C-I01-basic": "Find ∫3x² dx.",
+        "C-I01-edge": "Given F′=2x and F(1)=5, find F."
+      }
+    },
+    "C-I02": {
+      "title": "Riemann Sums and Definite Integrals",
+      "examples": {}
+    },
+    "C-I03": {
+      "title": "Fundamental Theorem of Calculus in Both Directions",
+      "examples": {
+        "C-I03-edge": "Let G(x)=∫ₓ¹ cos t dt. Find G′(x) and explain the sign."
+      }
+    },
+    "C-I04": {
+      "title": "Accumulation Functions and Differentiation with Variable Upper Limit",
+      "examples": {}
+    },
+    "C-I05": {
+      "title": "Basic Substitution and Changing Bounds",
+      "examples": {
+        "C-I05-basic": "Use u=x² to evaluate ∫₀¹2x cos(x²)dx.",
+        "C-I05-edge": "Evaluate ∫₀¹ x/(1+x²)dx."
+      }
+    },
+    "C-I06": {
+      "title": "Signed Integrals and Geometric Area",
+      "examples": {
+        "C-I06-transfer": "Evaluate ∫₀^π sin x dx and determine whether it equals the geometric area."
+      }
+    },
+    "C-I07": {
+      "title": "Area Between Curves and Intersection Points",
+      "examples": {
+        "C-I07-basic": "Find the area enclosed by y=x and y=x² on [0,1]."
+      }
+    },
+    "C-I08": {
+      "title": "Net Change and Total Distance",
+      "examples": {
+        "C-I08-transfer": "Velocity is v=3t² m/s for 0≤t≤2. Find the net displacement and total distance."
+      }
+    },
+    "C-I09": {
+      "title": "Average Value of a Function and Mean Value for Integrals",
+      "examples": {
+        "C-I09-edge": "Let f=0 on [−1,0) and f=1 on [0,1]. Find the average value of f on [−1,1], and explain whether the continuous-function Mean Value Theorem for Integrals guarantees a point where f takes that value."
+      }
+    },
+    "C-I10": {
+      "title": "Basic Cross-Sections and Volumes of Revolution",
+      "examples": {
+        "C-I10-transfer": "Rotate the region under y=x for 0≤x≤1 about the x-axis. Find the volume using disks."
+      }
+    }
+  }
+}

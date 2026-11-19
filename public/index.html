@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f6ee">
+  <meta name="description" content="Turn a written math problem into a hands-on activity.">
+  <title>Math Play Lab</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="page-width header-inner">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <rect width="40" height="40" rx="11" fill="#1c4a3a"/>
+          <path d="M9 12v17h23M10 27l7-9 6 4 7-10" stroke="#f6f2df" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="17" cy="18" r="2.65" fill="#efb85d"/>
+          <circle cx="30" cy="12" r="2.65" fill="#bde0b2"/>
+        </svg>
+        <span>Math Play Lab</span>
+      </div>
+      <span class="header-label">A hands-on math studio</span>
+    </div>
+  </header>
+
+  <main class="page-width">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow"><span class="eyebrow-rule"></span>The workshop</p>
+      <h1 id="page-title">Turn your math problem into a playable <em>activity.</em></h1>
+      <p class="intro-copy">Enter a problem. AI creates an interactive activity you can explore.</p>
+      <p class="scope-copy">From elementary math to introductory calculus.</p>
+    </section>
+
+    <div class="workbench">
+      <section class="card composer" aria-labelledby="composer-title">
+        <div class="card-heading">
+          <span class="step-index" aria-hidden="true">01</span>
+          <div>
+            <h2 id="composer-title">Write your problem</h2>
+            <p id="problem-hint">Paste or type a problem. Include any instructions or details from its diagram.</p>
+          </div>
+        </div>
+        <form id="problem-form">
+          <label for="problem">Write your problem</label>
+          <textarea id="problem" name="problem" dir="auto" rows="5" aria-describedby="problem-hint problem-error" placeholder="Find all real solutions of x² + x − 6 = 0. How do they relate to the graph?"></textarea>
+          <p id="problem-error" class="field-error" hidden></p>
+          <div class="form-actions">
+            <span class="char-count" id="char-count" aria-hidden="true">0 / 10,000</span>
+            <div class="button-group">
+              <button type="button" class="btn btn-quiet" id="cancel-build" hidden>Cancel generation</button>
+              <button type="submit" class="btn btn-primary" id="make-playable" disabled>
+                Make it playable
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.5 12h14.75m-5.5-5.5 5.5 5.5-5.5 5.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+          </div>
+        </form>
+        <div id="config-notice" class="notice" data-kind="info" aria-live="polite">
+          <span class="notice-icon" aria-hidden="true">i</span>
+          <div><strong id="config-title">Connecting to the lab</strong><p id="config-message">Checking whether live generation is available.</p></div>
+          <button type="button" class="btn btn-quiet" id="retry-availability" hidden>Retry availability</button>
+        </div>
+        <p class="privacy-note">Your problem is sent to an AI service to create the activity.</p>
+        <p id="draft-status" class="draft-status" role="status" hidden></p>
+        <div id="build-status" class="notice" data-kind="info" tabindex="-1" hidden>
+          <span id="build-icon" class="notice-icon" aria-hidden="true"></span>
+          <div class="build-copy"><strong id="build-title"></strong><p id="build-message" role="status" aria-live="polite"></p><p id="elapsed" role="timer" aria-live="off"></p>
+            <details id="failed-problem-details" class="failed-problem-details" hidden>
+              <summary>Problem to retry</summary>
+              <p id="failed-problem" dir="auto"></p>
+            </details>
+            <div id="error-actions" class="button-group error-actions" hidden>
+              <button type="button" class="btn btn-primary" id="retry-failed">Retry this problem</button>
+              <button type="button" class="btn btn-quiet" id="edit-failed">Edit problem</button>
+            </div>
+          </div>
+        </div>
+        <section id="clarification-area" class="clarification card" aria-labelledby="clarification-title" hidden>
+          <h3 id="clarification-title">One detail is missing</h3>
+          <p id="clarification-question"></p>
+          <details>
+            <summary>Original problem</summary>
+            <p id="clarification-original" dir="auto"></p>
+          </details>
+          <form id="clarification-form">
+            <label for="additional-details">Additional details</label>
+            <textarea id="additional-details" dir="auto" rows="3" aria-describedby="additional-details-error"></textarea>
+            <p id="additional-details-error" class="field-error" hidden></p>
+            <button type="submit" class="btn btn-primary">Generate with these details</button>
+          </form>
+        </section>
+      </section>
+
+      <aside class="card sample-card" aria-labelledby="sample-card-title">
+        <div class="sample-heading">
+          <p class="eyebrow">How it works</p>
+        </div>
+        <h2 id="sample-card-title">From problem to play</h2>
+        <ol class="how-steps">
+          <li>Enter a math problem.</li>
+          <li>AI creates an interactive activity.</li>
+          <li>Explore, check and learn.</li>
+        </ol>
+        <div class="preview-block">
+          <span class="sample-badge">Built-in preview</span>
+          <button type="button" class="btn btn-sample" id="open-sample">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m9 6 9 6-9 6V6Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+            Try an interactive preview
+          </button>
+        </div>
+        <p id="sample-status" class="sample-status" role="status" hidden></p>
+      </aside>
+    </div>
+
+    <section id="player" class="card player" aria-labelledby="player-title" hidden>
+      <div class="player-heading">
+        <div class="card-heading">
+          <span class="step-index" aria-hidden="true">02</span>
+          <div class="player-title-copy">
+            <p class="eyebrow" id="player-source">Play the math</p>
+            <h2 id="player-title" dir="auto" tabindex="-1"></h2>
+            <p id="activity-objective" class="activity-objective" dir="auto" hidden></p>
+          </div>
+        </div>
+        <div class="player-actions">
+          <span id="player-badge" class="player-badge"></span>
+          <span id="previous-activity" class="previous-badge" hidden>Previous activity</span>
+          <button type="button" class="btn btn-quiet" id="edit-problem" hidden>Edit problem</button>
+        </div>
+      </div>
+      <details id="submitted-details" class="submitted-details">
+        <summary>Original problem</summary>
+        <p id="submitted-problem" dir="auto"></p>
+      </details>
+      <iframe id="game-frame" title="Math game" sandbox="allow-scripts" referrerpolicy="no-referrer"></iframe>
+      <details id="explanation-details" class="explanation-details" hidden>
+        <summary id="explanation-summary">See explanation</summary>
+        <p class="answer-label">Proposed answer</p>
+        <p id="reference-answer" dir="auto"></p>
+        <p id="explanation" dir="auto"></p>
+        <p class="answer-note">AI-generated explanation. Browser checks do not verify the mathematics.</p>
+      </details>
+    </section>
+
+  </main>
+
+  <footer class="page-width site-footer">
+    <span>Math Play Lab</span>
+    <span>Made for curious learners.</span>
+  </footer>
+</body>
+</html>

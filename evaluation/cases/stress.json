@@ -1,0 +1,828 @@
+{
+  "status": "prepared_not_run",
+  "purpose": "Original cross-stage stress cases for ambiguity, domains, solution sets, diagram precision, reasoning, interaction, transfer, and generation failure. Software scenarios describe recovery expectations and are not math-model prompts.",
+  "cases": [
+    {
+      "id": "S-INPUT_AMBIGUITY-01",
+      "coverage": "stress-input_ambiguity",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "holdout",
+      "stress_group": "input_ambiguity",
+      "problem": "A rectangle has perimeter 20 cm. Find its area.",
+      "expected_behavior": "clarification",
+      "reference_answer": "The area is not determined by perimeter alone. If the rectangle is a 5-by-5 square, area is 25 cm²; if it is 4-by-6, area is 24 cm². Ask for a side length or an optimization goal.",
+      "checks": [
+        "Identifies that perimeter 20 cm does not fix a unique rectangle area.",
+        "Gives two valid examples such as 5×5→25 cm² and 4×6→24 cm².",
+        "Asks for a missing side constraint or whether maximum/minimum area is intended."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-INPUT_AMBIGUITY-02",
+      "coverage": "stress-input_ambiguity",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "holdout",
+      "stress_group": "input_ambiguity",
+      "problem": "Round 2.5.",
+      "expected_behavior": "clarification",
+      "reference_answer": "Ask for place value and tie convention; nearest integer gives 3 under half-up but 2 under ties-to-even.",
+      "checks": [
+        "Names missing rounding place.",
+        "Identifies halfway tie convention can change the result.",
+        "Does not assume nearest integer silently."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-INPUT_AMBIGUITY-03",
+      "coverage": "stress-input_ambiguity",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "development",
+      "stress_group": "input_ambiguity",
+      "problem": "A vehicle travels at constant speed for 2 hours. How far does it travel?",
+      "expected_behavior": "clarification",
+      "reference_answer": "The distance is underdetermined without the speed. If the speed is v km/h, the distance is 2v km; ask for the speed.",
+      "checks": [
+        "Names speed as the missing quantity.",
+        "States distance=2v km when v is in km/h.",
+        "Does not invent a numerical speed or distance."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-INPUT_AMBIGUITY-04",
+      "coverage": "stress-input_ambiguity",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "development",
+      "stress_group": "input_ambiguity",
+      "problem": "What is the probability of drawing an ace?",
+      "expected_behavior": "clarification",
+      "reference_answer": "Ask for the sample space and draw assumptions; from one draw of a standard 52-card deck the answer would be 1/13.",
+      "checks": [
+        "Names the unspecified deck/sample space.",
+        "Labels 1/13 as conditional on a standard deck assumption.",
+        "Does not report 1/13 as unconditional."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-INPUT_AMBIGUITY-05",
+      "coverage": "stress-input_ambiguity",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "development",
+      "stress_group": "input_ambiguity",
+      "problem": "Solve log(x)=2.",
+      "expected_behavior": "clarification",
+      "reference_answer": "Ask for the logarithm base and real-domain convention; for base b>0, b≠1, solution is x=b²>0.",
+      "checks": [
+        "Identifies the missing base.",
+        "Keeps the real logarithm restriction.",
+        "Does not assume base 10 or e silently."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-INPUT_AMBIGUITY-06",
+      "coverage": "stress-input_ambiguity",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "development",
+      "stress_group": "input_ambiguity",
+      "problem": "Round 0.5 to the nearest integer.",
+      "expected_behavior": "clarification",
+      "reference_answer": "The value is exactly halfway: half-up gives 1 while ties-to-even gives 0. Ask which tie rule to use.",
+      "checks": [
+        "Notes 0.5 is halfway between 0 and 1.",
+        "Gives both convention-dependent outputs.",
+        "Does not claim one tie rule is universal."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-DOMAIN-01",
+      "coverage": "stress-domain",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "holdout",
+      "stress_group": "domain",
+      "problem": "State the real domain of 1/(x−3).",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "ℝ\\{3}.",
+      "checks": [
+        "Excludes the denominator zero x=3.",
+        "Allows all other real inputs.",
+        "Does not restrict valid negative or fractional x."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-DOMAIN-02",
+      "coverage": "stress-domain",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "holdout",
+      "stress_group": "domain",
+      "problem": "State the real domain of √(5−x).",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "5−x≥0, so (−∞,5].",
+      "checks": [
+        "Requires a nonnegative radicand.",
+        "Includes x=5.",
+        "Excludes x>5."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-DOMAIN-03",
+      "coverage": "stress-domain",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "development",
+      "stress_group": "domain",
+      "problem": "State the real domain of ln(x−1).",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "x−1>0, so (1,∞).",
+      "checks": [
+        "Requires a strictly positive log argument.",
+        "Excludes x=1.",
+        "Does not allow x<1 just because the argument is nonzero."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-DOMAIN-04",
+      "coverage": "stress-domain",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "development",
+      "stress_group": "domain",
+      "problem": "For (x²−1)/(x−1), state the original domain and simplify where defined.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Original domain x≠1; where defined the expression equals x+1.",
+      "checks": [
+        "Factors and cancels x−1.",
+        "Retains x≠1.",
+        "Distinguishes the simplification from the original function at the hole."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-DOMAIN-05",
+      "coverage": "stress-domain",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "development",
+      "stress_group": "domain",
+      "problem": "State the real domain of arcsin x.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "[−1,1].",
+      "checks": [
+        "Includes both endpoints.",
+        "Rejects inputs outside [−1,1].",
+        "Uses the real inverse-sine range condition."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-DOMAIN-06",
+      "coverage": "stress-domain",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "development",
+      "stress_group": "domain",
+      "problem": "State the real domain of √(x²−4)/(x−2).",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "x²−4≥0 gives x≤−2 or x≥2; exclude x=2. Domain (−∞,−2]∪(2,∞).",
+      "checks": [
+        "Combines radical and denominator restrictions.",
+        "Includes −2 but excludes 2.",
+        "Does not restore x=2 after simplification."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-SOLUTION_SETS-01",
+      "coverage": "stress-solution_sets",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "holdout",
+      "stress_group": "solution_sets",
+      "problem": "Solve x²=4 over the reals and give the full solution set.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "{−2,2}.",
+      "checks": [
+        "Returns both square roots.",
+        "Substitutes both values into the equation.",
+        "Rejects the incomplete singleton {2}."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-SOLUTION_SETS-02",
+      "coverage": "stress-solution_sets",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "development",
+      "stress_group": "solution_sets",
+      "problem": "Solve (x²−1)/(x−1)=0 over the reals, preserving the original domain.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Factor and cancel with x≠1; the only valid zero is x=−1.",
+      "checks": [
+        "Sets numerator zero.",
+        "Rejects x=1 because the original denominator is zero.",
+        "Returns solution set {−1}."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-SOLUTION_SETS-03",
+      "coverage": "stress-solution_sets",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "development",
+      "stress_group": "solution_sets",
+      "problem": "Solve x²≤9 over ℝ.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "[−3,3].",
+      "checks": [
+        "Uses |x|≤3 or equivalent two-sided bounds.",
+        "Includes endpoints because equality is allowed.",
+        "Does not return only isolated roots."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-SOLUTION_SETS-04",
+      "coverage": "stress-solution_sets",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "development",
+      "stress_group": "solution_sets",
+      "problem": "Solve √x=x over ℝ.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Domain x≥0; x²=x gives x=0 or 1, and both check.",
+      "checks": [
+        "States the domain.",
+        "Checks both candidates in the original equation.",
+        "Rejects any negative candidate."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-SOLUTION_SETS-05",
+      "coverage": "stress-solution_sets",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "development",
+      "stress_group": "solution_sets",
+      "problem": "Find every x∈[0,2π) with 2sin x=1, in radians.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "x=π/6,5π/6.",
+      "checks": [
+        "Uses reference angle π/6.",
+        "Includes quadrants I and II only.",
+        "Respects half-open interval and radian convention."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-SOLUTION_SETS-06",
+      "coverage": "stress-solution_sets",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "development",
+      "stress_group": "solution_sets",
+      "problem": "Solve |x−1|=x over ℝ.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "For x≥1 no root; for x<1, 1−x=x gives x=1/2, valid.",
+      "checks": [
+        "Splits by sign of x−1.",
+        "Returns only 1/2.",
+        "Checks branch conditions and original equation."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-DIAGRAM_PRECISION-01",
+      "coverage": "stress-diagram_precision",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "holdout",
+      "stress_group": "diagram_precision",
+      "problem": "In the triangle diagram, find x. No diagram or labels are attached.",
+      "expected_behavior": "clarification",
+      "reference_answer": "Request the diagram or a text description of side lengths, angle measures, and markings; x is undetermined as given.",
+      "checks": [
+        "Names missing diagram/labels.",
+        "Does not invent a triangle or value.",
+        "Offers textual description as an alternative."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-DIAGRAM_PRECISION-02",
+      "coverage": "stress-diagram_precision",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "development",
+      "stress_group": "diagram_precision",
+      "problem": "Two lines and a transversal are shown in a missing picture. Find angle x; parallel markings and known angles are not described.",
+      "expected_behavior": "clarification",
+      "reference_answer": "Ask for the given angle and whether parallelism is stated/marked; x is not determined yet.",
+      "checks": [
+        "Requests a known angle and line relationship.",
+        "Does not infer parallelism from appearance.",
+        "Explains that visual appearance is not a geometric condition."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-DIAGRAM_PRECISION-03",
+      "coverage": "stress-diagram_precision",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "development",
+      "stress_group": "diagram_precision",
+      "problem": "Find the shaded area in a circle of radius 6; the image is missing.",
+      "expected_behavior": "clarification",
+      "reference_answer": "Ask which region is shaded (sector angle or other boundary); radius alone gives only whole-disk area 36π, not the shaded area.",
+      "checks": [
+        "Requests the missing shaded boundary.",
+        "Does not guess a semicircle or sector.",
+        "Distinguishes whole-disk area from shaded area."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-DIAGRAM_PRECISION-04",
+      "coverage": "stress-diagram_precision",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "development",
+      "stress_group": "diagram_precision",
+      "problem": "A point outside a circle of radius 5 has a tangent drawn. Find tangent length; the diagram gives no center-to-point distance.",
+      "expected_behavior": "clarification",
+      "reference_answer": "Ask for that distance d or equivalent data; for d>5 the tangent length is √(d²−25).",
+      "checks": [
+        "Uses a perpendicular radius to form a right triangle.",
+        "States radius alone is insufficient.",
+        "Requires d>5 for an external point."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-DIAGRAM_PRECISION-05",
+      "coverage": "stress-diagram_precision",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "development",
+      "stress_group": "diagram_precision",
+      "problem": "A map picture shows a segment AB. Find the real distance; scale and map measurement are absent.",
+      "expected_behavior": "clarification",
+      "reference_answer": "Ask for scale and map length; the real distance cannot be computed without them.",
+      "checks": [
+        "Requests both scale and map measurement.",
+        "Does not invent a scale.",
+        "States that a drawn segment alone has no real-world length."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-DIAGRAM_PRECISION-06",
+      "coverage": "stress-diagram_precision",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "development",
+      "stress_group": "diagram_precision",
+      "problem": "Find the line equation from a graph. The graph, points, and slope are not supplied.",
+      "expected_behavior": "clarification",
+      "reference_answer": "Request the graph or two points (equivalently slope and a point); there is no unique line from current data.",
+      "checks": [
+        "Names sufficient data for a unique line.",
+        "Does not fabricate slope/intercept.",
+        "Notes one point alone is insufficient."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-REASONING-01",
+      "coverage": "stress-reasoning",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "holdout",
+      "stress_group": "reasoning",
+      "problem": "Prove by induction that 1+3+…+(2n−1)=n² for every integer n≥1.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Base n=1: 1=1². Assume sum through 2k−1 is k²; add 2k+1 to get k²+2k+1=(k+1)².",
+      "checks": [
+        "States base case.",
+        "Shows the k→k+1 step using next odd term 2k+1.",
+        "Does not rely on several checked examples as proof."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-REASONING-02",
+      "coverage": "stress-reasoning",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "development",
+      "stress_group": "reasoning",
+      "problem": "Prove √2 irrational by contradiction.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Assume √2=p/q in lowest positive terms. Then p²=2q² makes p even; p=2r gives q²=2r², so q is even too, contradicting lowest terms.",
+      "checks": [
+        "Assumes a reduced fraction.",
+        "Shows both p and q must be even.",
+        "States the contradiction with coprimality."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-REASONING-03",
+      "coverage": "stress-reasoning",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "development",
+      "stress_group": "reasoning",
+      "problem": "Prove that if integer n² is even then n is even.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Contrapositive: if n=2k+1 is odd, n²=4k(k+1)+1 is odd. Thus an even square forces n even.",
+      "checks": [
+        "Uses a valid contrapositive over integers.",
+        "Shows odd square is odd algebraically.",
+        "Does not use finite examples as proof."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-REASONING-04",
+      "coverage": "stress-reasoning",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "development",
+      "stress_group": "reasoning",
+      "problem": "Is every continuous real function differentiable? Give a counterexample.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "No. |x| is continuous at 0 but its one-sided derivatives are −1 and 1.",
+      "checks": [
+        "States continuity at 0.",
+        "Shows unequal one-sided derivatives.",
+        "Does not call the corner discontinuous."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-REASONING-05",
+      "coverage": "stress-reasoning",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "development",
+      "stress_group": "reasoning",
+      "problem": "f is continuous on [−2,2], f(−2)=f(2)=3. What does IVT prove about roots? Is a root unique?",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "No root is guaranteed; f(x)=3 is a matching continuous counterexample with no root. Even when IVT brackets zero, it guarantees existence, not uniqueness.",
+      "checks": [
+        "Checks that zero is not between equal endpoint outputs.",
+        "Gives a counterexample matching both endpoints.",
+        "Separates existence from uniqueness."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-REASONING-06",
+      "coverage": "stress-reasoning",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "development",
+      "stress_group": "reasoning",
+      "problem": "A student says f′(0)=0 proves x=0 is a local extremum. Disprove it.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Use f(x)=x³: f′(0)=0 but f is strictly increasing through 0, so 0 is neither a max nor min.",
+      "checks": [
+        "Verifies derivative zero.",
+        "Shows monotonic increase through 0.",
+        "Distinguishes critical point from extremum."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-INTERACTION-01",
+      "coverage": "stress-interaction",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "holdout",
+      "stress_group": "interaction",
+      "problem": "Solve 3x+5=20.",
+      "expected_behavior": "interactive",
+      "reference_answer": "Subtract 5 from both sides and divide by 3: x=5. Check: 3(5)+5=20.",
+      "checks": [
+        "A valid path reaches x=5 by undoing +5 then multiplying by 1/3.",
+        "The activity verifies the submitted value in the original equation before marking it complete.",
+        "A plausible wrong value such as x=8 receives case-specific feedback and does not count as solved."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-INTERACTION-02",
+      "coverage": "stress-interaction",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "development",
+      "stress_group": "interaction",
+      "problem": "A triangle has base 10 cm and perpendicular height 6 cm. Find its area.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "A=(1/2)(10)(6)=30 cm².",
+      "checks": [
+        "Accepts 30 cm² with square-centimeter units.",
+        "Flags 60 cm² as the rectangle-area error and identifies the missing factor 1/2.",
+        "After the incorrect attempt, allows the learner to enter 30 cm² and reach a solved state."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-INTERACTION-03",
+      "coverage": "stress-interaction",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "development",
+      "stress_group": "interaction",
+      "problem": "Solve 2(x+3)=18 and verify the solution.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Divide by 2 to get x+3=9, so x=6; substitution gives 2(6+3)=18.",
+      "checks": [
+        "A wrong first attempt x=12 gets targeted feedback that substitution gives 2(12+3)=30≠18; alternatively identify the omitted division by 2.",
+        "Keeps the exercise recoverable so a later x=6 submission is accepted.",
+        "Marks completion only after the original equation check succeeds."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-INTERACTION-04",
+      "coverage": "stress-interaction",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "development",
+      "stress_group": "interaction",
+      "problem": "Factor x²−7x+12 and find all real zeros.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "x²−7x+12=(x−3)(x−4); zeros are x=3 and x=4.",
+      "checks": [
+        "The hint gives a useful next step such as finding two factors of 12 whose sum is 7 before revealing the factorization.",
+        "Accepts both zeros 3 and 4 as the complete solution set.",
+        "A wrong factor pair receives feedback and can be corrected without losing the problem."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-INTERACTION-05",
+      "coverage": "stress-interaction",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "development",
+      "stress_group": "interaction",
+      "problem": "A rectangle has perimeter 28 cm and width 5 cm. Find its length and area.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "2(L+5)=28, so L=9 cm and area=45 cm².",
+      "checks": [
+        "Initial data are perimeter 28 cm and width 5 cm; a valid solution reaches length 9 cm and area 45 cm².",
+        "Reset restores the original data and clears solved/error/hint state.",
+        "After reset, the same correct values can be entered to complete the exercise again."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-INTERACTION-06",
+      "coverage": "stress-interaction",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "development",
+      "stress_group": "interaction",
+      "problem": "For the line y=−2x+6 on 0≤x≤4, find the x-intercept and y-value at x=4.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Set y=0: −2x+6=0 gives x=3. At x=4, y=−8+6=−2.",
+      "checks": [
+        "Returns x-intercept 3 and y(4)=−2.",
+        "Touch input and keyboard arrow/step input can both set the same x-state to 3 and show y=0.",
+        "Both touch and keyboard can set x=4 and show y=−2 without stale or divergent state."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-TRANSFER-01",
+      "coverage": "stress-transfer",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "holdout",
+      "stress_group": "transfer",
+      "problem": "A car travels 72 km/h. Convert to m/s, then find time for a 250 m segment at constant speed.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "72 km/h=20 m/s; time=250/20=12.5 s.",
+      "checks": [
+        "Converts by 1000/3600.",
+        "Uses time=distance/speed.",
+        "Keeps metric units consistent."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-TRANSFER-02",
+      "coverage": "stress-transfer",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "development",
+      "stress_group": "transfer",
+      "problem": "A recipe uses 3/4 cup flour for 4 servings. How much for 10 servings at the same rate?",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "(3/4)(10/4)=15/8=1 7/8 cups.",
+      "checks": [
+        "Finds per-serving amount or scales by 10/4.",
+        "Returns 1 7/8 cups.",
+        "Does not add the 6 extra servings as 6 cups."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-TRANSFER-03",
+      "coverage": "stress-transfer",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "development",
+      "stress_group": "transfer",
+      "problem": "A map scale is 1:25,000; locations are 3.6 cm apart on the map. Find real distance in km.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "3.6×25,000=90,000 cm=0.9 km.",
+      "checks": [
+        "Applies scale denominator.",
+        "Converts centimeters to kilometers.",
+        "Rejects 90 km as a unit-conversion error."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-TRANSFER-04",
+      "coverage": "stress-transfer",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "development",
+      "stress_group": "transfer",
+      "problem": "A ramp rises 1.2 m over horizontal run 8 m. Find grade percent and angle above horizontal to nearest 0.1°.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Grade=15%; angle=arctan(0.15)≈8.5°.",
+      "checks": [
+        "Uses rise/run×100 for grade.",
+        "Uses tangent inverse for angle.",
+        "Does not treat 15% as 15°."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-TRANSFER-05",
+      "coverage": "stress-transfer",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "development",
+      "stress_group": "transfer",
+      "problem": "Each component independently fails with probability 0.02. For 10 components, find probability of at least one failure.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "1−0.98¹⁰≈0.182927, about 18.3%.",
+      "checks": [
+        "Uses complement of no failures.",
+        "Uses the stated independence.",
+        "Does not use 10·0.02 as an exact probability."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-TRANSFER-06",
+      "coverage": "stress-transfer",
+      "stage": "跨学段",
+      "variant": "edge",
+      "split": "development",
+      "stress_group": "transfer",
+      "problem": "A drone flies one segment at 15 m/s for 40 s, then another at 12 m/s for 25 s. Find total distance and average speed.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Distance=900 m; time=65 s; average speed=900/65=180/13≈13.85 m/s.",
+      "checks": [
+        "Adds segment distances.",
+        "Divides by total time.",
+        "Does not use an unweighted mean of the speeds."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "S-GENERATION_FAILURE-01",
+      "coverage": "stress-generation_failure",
+      "stage": "跨学段",
+      "stress_group": "generation_failure",
+      "split": "holdout",
+      "kind": "software_scenario",
+      "expected_behavior": "error",
+      "problem": "A valid math request is submitted; provider times out after 30 seconds before returning content.",
+      "reference_answer": "Show a recoverable timeout error, stop loading, preserve the prompt, and allow retry.",
+      "checks": [
+        "Surfaces timeout as failure, not success.",
+        "Preserves prompt for retry.",
+        "Renders no partial/fabricated playable activity."
+      ],
+      "reference_status": "authored_unreviewed",
+      "variant": "edge"
+    },
+    {
+      "id": "S-GENERATION_FAILURE-02",
+      "coverage": "stress-generation_failure",
+      "stage": "跨学段",
+      "stress_group": "generation_failure",
+      "split": "development",
+      "kind": "software_scenario",
+      "expected_behavior": "cancellation",
+      "problem": "User presses Cancel while a partial activity is streaming.",
+      "reference_answer": "Stop request, mark canceled, clear partial activity from playable slot, preserve prompt, and allow another attempt.",
+      "checks": [
+        "Reports cancellation, not success.",
+        "Stops spinner and removes partial result.",
+        "Allows clean retry without stale output."
+      ],
+      "reference_status": "authored_unreviewed",
+      "variant": "edge"
+    },
+    {
+      "id": "S-GENERATION_FAILURE-03",
+      "coverage": "stress-generation_failure",
+      "stage": "跨学段",
+      "stress_group": "generation_failure",
+      "split": "development",
+      "kind": "software_scenario",
+      "expected_behavior": "error",
+      "problem": "Provider returns malformed JSON after request completes.",
+      "reference_answer": "Reject payload, show recoverable format error, preserve prompt, and leave playable activity unset.",
+      "checks": [
+        "Does not save malformed output.",
+        "Shows recoverable failure.",
+        "Keeps prompt and does not claim success."
+      ],
+      "reference_status": "authored_unreviewed",
+      "variant": "edge"
+    },
+    {
+      "id": "S-GENERATION_FAILURE-04",
+      "coverage": "stress-generation_failure",
+      "stage": "跨学段",
+      "stress_group": "generation_failure",
+      "split": "development",
+      "kind": "software_scenario",
+      "expected_behavior": "error",
+      "problem": "Network drops halfway through response; no complete activity object arrives.",
+      "reference_answer": "Stop loading, report connection error, discard incomplete stream, and preserve request for retry.",
+      "checks": [
+        "Does not mark truncated content complete.",
+        "Clears stale loading state.",
+        "Retains prompt and retry path."
+      ],
+      "reference_status": "authored_unreviewed",
+      "variant": "edge"
+    },
+    {
+      "id": "S-GENERATION_FAILURE-05",
+      "coverage": "stress-generation_failure",
+      "stage": "跨学段",
+      "stress_group": "generation_failure",
+      "split": "development",
+      "kind": "software_scenario",
+      "expected_behavior": "error",
+      "problem": "Provider returns an empty response with successful transport status.",
+      "reference_answer": "Treat empty content as generation failure, show recoverable error, and leave no playable activity.",
+      "checks": [
+        "Checks response content as well as transport status.",
+        "Does not create blank playable activity.",
+        "Preserves prompt and offers retry."
+      ],
+      "reference_status": "authored_unreviewed",
+      "variant": "edge"
+    },
+    {
+      "id": "S-GENERATION_FAILURE-06",
+      "coverage": "stress-generation_failure",
+      "stage": "跨学段",
+      "stress_group": "generation_failure",
+      "split": "development",
+      "kind": "software_scenario",
+      "expected_behavior": "cancellation",
+      "problem": "Run A is canceled, user starts run B, then a late completion from A arrives.",
+      "reference_answer": "Ignore canceled run A completion; keep B as active/result and do not overwrite B with stale output.",
+      "checks": [
+        "Honors cancellation after late data arrives.",
+        "Does not overwrite newer run B state.",
+        "Keeps loading/success state consistent for B."
+      ],
+      "reference_status": "authored_unreviewed",
+      "variant": "edge"
+    }
+  ]
+}

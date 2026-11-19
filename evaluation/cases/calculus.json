@@ -1,0 +1,1398 @@
+{
+  "status": "prepared_not_run",
+  "purpose": "Original introductory calculus curriculum cases for all 29 registry IDs; prepared references are not generated activity results.",
+  "cases": [
+    {
+      "id": "C-L01-basic",
+      "coverage": "C-L01",
+      "stage": "基础微积分",
+      "variant": "basic",
+      "split": "holdout",
+      "problem": "A table lists f(1.9)=3.9, f(1.99)=3.99, f(2.01)=4.01, f(2.1)=4.1. What does it suggest for lim x→2 f(x), and does it prove it?",
+      "expected_behavior": "interactive",
+      "reference_answer": "It suggests 4; finitely many samples do not prove the limit.",
+      "checks": [
+        "Returns the requested result: It suggests 4; finitely many samples do not prove the limit.",
+        "Shows this case-specific reasoning: Values on both sides approach 4, but a limit concerns behavior arbitrarily near 2.",
+        "Rejects this plausible error: The table does not determine f(2) or rule out different behavior between listed inputs."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-L01-transfer",
+      "coverage": "C-L01",
+      "stage": "基础微积分",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "文字图像：曲线在 x 从左右趋近 1 时都趋近开圆点 (1,2)，但实心点是 (1,5)。求极限和 f(1)。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "lim x→1 f(x)=2，而 f(1)=5；函数在 1 不连续。",
+      "checks": [
+        "Returns the requested result: lim x→1 f(x)=2，而 f(1)=5；函数在 1 不连续。",
+        "Shows this case-specific reasoning: Approaching curve gives the limit; filled point gives the function value.",
+        "Rejects this plausible error: 把实心点的 5 当作极限。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-L01-edge",
+      "coverage": "C-L01",
+      "stage": "基础微积分",
+      "variant": "edge",
+      "split": "development",
+      "problem": "A finite table gives f(1/n)=0 for n=1,…,10. Can it establish lim x→0 f(x)=0? Give a counterexample consistent with the table.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "No. Set those ten listed values to 0 and f(x)=1 at other nearby x. Along x_k=1/(10+k)→0, f(x_k)=1, so the table does not establish limit 0.",
+      "checks": [
+        "Returns the requested result: No. Set those ten listed values to 0 and f(x)=1 at other nearby x. Along x_k=1/(10+k)→0, f(x_k)=1, so the table does not establish limit 0.",
+        "Shows this case-specific reasoning: A finite sample leaves inputs arbitrarily close to 0 unchecked.",
+        "Rejects this plausible error: The sequence 1/(10+k) is not among the ten listed values."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-L02-basic",
+      "coverage": "C-L02",
+      "stage": "基础微积分",
+      "variant": "basic",
+      "split": "development",
+      "problem": "求 1/x 在 x→0 左、右的极限，并判断双侧极限。",
+      "expected_behavior": "interactive",
+      "reference_answer": "左极限 −∞，右极限 +∞；双侧极限不存在。",
+      "checks": [
+        "Returns the requested result: 左极限 −∞，右极限 +∞；双侧极限不存在。",
+        "Shows this case-specific reasoning: Check denominator signs on either side of zero.",
+        "Rejects this plausible error: 把左右极限都写成 +∞ 忽略了 x<0 的符号。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-L02-transfer",
+      "coverage": "C-L02",
+      "stage": "基础微积分",
+      "variant": "transfer",
+      "split": "holdout",
+      "problem": "Let f(x)=2x+1 for x<1 and f(x)=x+4 for x>1; f(1) is undefined. Find both one-sided limits at 1.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Left=3; right=5; the two-sided limit does not exist.",
+      "checks": [
+        "Returns the requested result: Left=3; right=5; the two-sided limit does not exist.",
+        "Shows this case-specific reasoning: Use the correct branch on each side and compare.",
+        "Rejects this plausible error: Using the left branch on both sides incorrectly gives a two-sided limit of 3."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-L02-edge",
+      "coverage": "C-L02",
+      "stage": "基础微积分",
+      "variant": "edge",
+      "split": "development",
+      "problem": "用两个数列证明 lim x→0 sin(1/x) 不存在。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "取 x_n=1/(π/2+2πn)，值恒为 1；取 y_n=1/(3π/2+2πn)，值恒为 −1。两列都趋于 0，但函数值极限不同。",
+      "checks": [
+        "Returns the requested result: 取 x_n=1/(π/2+2πn)，值恒为 1；取 y_n=1/(3π/2+2πn)，值恒为 −1。两列都趋于 0，但函数值极限不同。",
+        "Shows this case-specific reasoning: Apply the sequential criterion with two sequences approaching zero.",
+        "Rejects this plausible error: 只凭振荡图像直觉不足以证明不存在。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-L03-basic",
+      "coverage": "C-L03",
+      "stage": "基础微积分",
+      "variant": "basic",
+      "split": "development",
+      "problem": "Evaluate lim x→1 (x²−1)/(x−1).",
+      "expected_behavior": "interactive",
+      "reference_answer": "Factor and cancel for x≠1; limit=2.",
+      "checks": [
+        "Returns the requested result: Factor and cancel for x≠1; limit=2.",
+        "Shows this case-specific reasoning: Use x²−1=(x−1)(x+1).",
+        "Rejects this plausible error: Direct substitution 0/0 is indeterminate, not a value."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-L03-transfer",
+      "coverage": "C-L03",
+      "stage": "基础微积分",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "求 lim x→4 [√(x+5)−3]/(x−4)。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "有理化后为 1/(√(x+5)+3)，极限 1/6。",
+      "checks": [
+        "Returns the requested result: 有理化后为 1/(√(x+5)+3)，极限 1/6。",
+        "Shows this case-specific reasoning: Multiply by the conjugate and cancel x−4.",
+        "Rejects this plausible error: 直接代入得到 0/0，不能说极限为 0。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-L03-edge",
+      "coverage": "C-L03",
+      "stage": "基础微积分",
+      "variant": "edge",
+      "split": "holdout",
+      "problem": "For radians, evaluate lim x→0 (1−cos x)/x² without L’Hôpital.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Use 1−cos x=2sin²(x/2); limit is (1/2)·1²=1/2.",
+      "checks": [
+        "Returns the requested result: Use 1−cos x=2sin²(x/2); limit is (1/2)·1²=1/2.",
+        "Shows this case-specific reasoning: Apply the half-angle identity and sin u/u→1.",
+        "Rejects this plausible error: Dropping the factor 1/2 changes the limit."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-L04-basic",
+      "coverage": "C-L04",
+      "stage": "基础微积分",
+      "variant": "basic",
+      "split": "development",
+      "problem": "已知 |sin(1/x)|≤1。用夹逼定理求 lim x→0 x²sin(1/x)。",
+      "expected_behavior": "interactive",
+      "reference_answer": "−x²≤x²sin(1/x)≤x²，故极限为 0。",
+      "checks": [
+        "Returns the requested result: −x²≤x²sin(1/x)≤x²，故极限为 0。",
+        "Shows this case-specific reasoning: Multiply the bound by positive x² and squeeze.",
+        "Rejects this plausible error: sin(1/x) itself has no limit, but its bounded product does."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-L04-transfer",
+      "coverage": "C-L04",
+      "stage": "基础微积分",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "Using radians, evaluate lim x→0 sin(3x)/(5x).",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Rewrite (3/5)·sin(3x)/(3x); limit=3/5.",
+      "checks": [
+        "Returns the requested result: Rewrite (3/5)·sin(3x)/(3x); limit=3/5.",
+        "Shows this case-specific reasoning: Apply sin u/u→1 with u=3x.",
+        "Rejects this plausible error: The value 1 ignores factor 3/5."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-L04-edge",
+      "coverage": "C-L04",
+      "stage": "基础微积分",
+      "variant": "edge",
+      "split": "development",
+      "problem": "Suppose −1≤f(x)≤1 for all 0<|x|<1. Do these bounds alone prove lim x→0 f(x)=0? Give a function satisfying the bounds whose limit does not exist.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "No. The bounds have limits −1 and 1, not a common value, so squeeze does not apply. f(x)=sin(1/x) satisfies the bounds but has no limit at 0.",
+      "checks": [
+        "Recognizes the two bounding functions do not approach the same value.",
+        "Rejects a conclusion of limit 0 from these bounds alone.",
+        "Gives sin(1/x) as a bounded counterexample with no limit."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-L05-basic",
+      "coverage": "C-L05",
+      "stage": "基础微积分",
+      "variant": "basic",
+      "split": "development",
+      "problem": "Evaluate lim x→∞ (3x²−1)/(x²+4).",
+      "expected_behavior": "interactive",
+      "reference_answer": "Divide by x²; limit=3.",
+      "checks": [
+        "Returns the requested result: Divide by x²; limit=3.",
+        "Shows this case-specific reasoning: The leading-degree coefficient ratio determines the limit.",
+        "Rejects this plausible error: Limit 0 applies when the denominator degree is larger."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-L05-transfer",
+      "coverage": "C-L05",
+      "stage": "基础微积分",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "求 lim x→∞ (2x+1)/(x²+1)。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "分母次数更高，极限为 0。",
+      "checks": [
+        "Returns the requested result: 分母次数更高，极限为 0。",
+        "Shows this case-specific reasoning: Divide through by x²; all numerator terms vanish relative to denominator.",
+        "Rejects this plausible error: 极限 2 忽略分母的二次增长。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-L05-edge",
+      "coverage": "C-L05",
+      "stage": "基础微积分",
+      "variant": "edge",
+      "split": "development",
+      "problem": "Find lim x→0⁺ ln x.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "The limit is −∞.",
+      "checks": [
+        "Returns the requested result: The limit is −∞.",
+        "Shows this case-specific reasoning: As positive x approaches 0, ln x decreases without bound.",
+        "Rejects this plausible error: A two-sided real limit is not asked; ln x is undefined for x<0."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-L06-basic",
+      "coverage": "C-L06",
+      "stage": "基础微积分",
+      "variant": "basic",
+      "split": "development",
+      "problem": "f(x)=(x²−1)/(x−1)（x≠1），f(1)=2。判断 x=1 处连续性。",
+      "expected_behavior": "interactive",
+      "reference_answer": "x≠1 时 f=x+1；极限 2 等于 f(1)，故连续。",
+      "checks": [
+        "Returns the requested result: x≠1 时 f=x+1；极限 2 等于 f(1)，故连续。",
+        "Shows this case-specific reasoning: Compare the two-sided limit with the assigned function value.",
+        "Rejects this plausible error: 原分母在 1 为零不代表补定义后的函数不连续。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-L06-transfer",
+      "coverage": "C-L06",
+      "stage": "基础微积分",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "Let f(x)=0 for x<0, f(0)=1, and f(x)=2 for x>0. Classify the discontinuity at 0.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "One-sided limits exist but differ (0 and 2); it is a jump discontinuity.",
+      "checks": [
+        "Returns the requested result: One-sided limits exist but differ (0 and 2); it is a jump discontinuity.",
+        "Shows this case-specific reasoning: Compute left and right limits separately.",
+        "Rejects this plausible error: No single value can remove this jump."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-L06-edge",
+      "coverage": "C-L06",
+      "stage": "基础微积分",
+      "variant": "edge",
+      "split": "holdout",
+      "problem": "f(x)=1/(x−2) 在 x=2 的间断是什么类型？",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "左侧趋于 −∞、右侧趋于 +∞；是无穷间断，有垂直渐近线 x=2。",
+      "checks": [
+        "Returns the requested result: 左侧趋于 −∞、右侧趋于 +∞；是无穷间断，有垂直渐近线 x=2。",
+        "Shows this case-specific reasoning: Track denominator signs and unbounded behavior.",
+        "Rejects this plausible error: 可去间断不可能产生无界函数值。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-L07-basic",
+      "coverage": "C-L07",
+      "stage": "基础微积分",
+      "variant": "basic",
+      "split": "holdout",
+      "problem": "f is continuous on [0,2], with f(0)=−1 and f(2)=3. What does IVT guarantee?",
+      "expected_behavior": "interactive",
+      "reference_answer": "Every value between −1 and 3 is attained; in particular there is at least one c∈(0,2) with f(c)=0, since the nonzero endpoint values cannot be roots.",
+      "checks": [
+        "Names continuity on [0,2] and the sign change as the IVT hypotheses.",
+        "States at least one root c∈(0,2), not just in the closed interval.",
+        "Does not claim uniqueness."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-L07-transfer",
+      "coverage": "C-L07",
+      "stage": "基础微积分",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "有人称 f(x)=1/x 在 [−1,1] 内有零点，因为端点异号。指出问题并判断区间内是否真有零点。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "不能用介值定理，因为 f 在 0 未定义、不在整个闭区间连续；且 1/x 从不等于 0。",
+      "checks": [
+        "Returns the requested result: 不能用介值定理，因为 f 在 0 未定义、不在整个闭区间连续；且 1/x 从不等于 0。",
+        "Shows this case-specific reasoning: Check continuity across the whole interval before using IVT.",
+        "Rejects this plausible error: 端点异号不能替代连续性假设。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-L07-edge",
+      "coverage": "C-L07",
+      "stage": "基础微积分",
+      "variant": "edge",
+      "split": "development",
+      "problem": "If f is continuous on [0,2] and f(0)=f(2)=1, does IVT guarantee a root? Give a matching counterexample.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "No. f(x)=1 is continuous with both endpoint values 1 and has no root.",
+      "checks": [
+        "Returns the requested result: No. f(x)=1 is continuous with both endpoint values 1 and has no root.",
+        "Shows this case-specific reasoning: IVT only guarantees values between the endpoint outputs, which need not include zero.",
+        "Rejects this plausible error: Equal positive endpoints alone do not bracket zero."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-L08-basic",
+      "coverage": "C-L08",
+      "stage": "基础微积分",
+      "variant": "basic",
+      "split": "development",
+      "problem": "用洛必达求 lim x→0 (e^x−1)/x，并先说明适用形式。",
+      "expected_behavior": "interactive",
+      "reference_answer": "是 0/0 型；导数比 e^x/1 趋于 1，故原极限为 1。",
+      "checks": [
+        "Returns the requested result: 是 0/0 型；导数比 e^x/1 趋于 1，故原极限为 1。",
+        "Shows this case-specific reasoning: Verify indeterminate form and differentiability before differentiating.",
+        "Rejects this plausible error: 未经验证 0/0 或 ∞/∞ 就套用法则是不充分的。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-L08-transfer",
+      "coverage": "C-L08",
+      "stage": "基础微积分",
+      "variant": "transfer",
+      "split": "holdout",
+      "problem": "Evaluate lim x→∞ ln(x)/x using L’Hôpital and state the form.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "It is ∞/∞; derivative ratio (1/x)/1→0, so the limit is 0.",
+      "checks": [
+        "Returns the requested result: It is ∞/∞; derivative ratio (1/x)/1→0, so the limit is 0.",
+        "Shows this case-specific reasoning: Check the indeterminate form, then differentiate numerator and denominator.",
+        "Rejects this plausible error: The derivative ratio is used for the limit, not as an identity at finite x."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-L08-edge",
+      "coverage": "C-L08",
+      "stage": "基础微积分",
+      "variant": "edge",
+      "split": "development",
+      "problem": "求 lim x→0 (x²+1)/(x+1)，并判断能否用洛必达。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "直接代入得 1；不能用洛必达，因为形式是 1/1。导数比的值 0 不是原极限。",
+      "checks": [
+        "Returns the requested result: 直接代入得 1；不能用洛必达，因为形式是 1/1。导数比的值 0 不是原极限。",
+        "Shows this case-specific reasoning: Recognize direct continuity and absence of an indeterminate form.",
+        "Rejects this plausible error: 把导数比 0 当原极限是误用。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-D01-basic",
+      "coverage": "C-D01",
+      "stage": "基础微积分",
+      "variant": "basic",
+      "split": "development",
+      "problem": "Use the difference quotient to find f′(3) for f(x)=x².",
+      "expected_behavior": "interactive",
+      "reference_answer": "lim h→0[((3+h)²−9)/h]=lim(6+h)=6.",
+      "checks": [
+        "Returns the requested result: lim h→0[((3+h)²−9)/h]=lim(6+h)=6.",
+        "Shows this case-specific reasoning: Expand and cancel h before taking the limit.",
+        "Rejects this plausible error: Substituting h=0 first gives indeterminate 0/0."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-D01-transfer",
+      "coverage": "C-D01",
+      "stage": "基础微积分",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "For f(x)=1/x, find the secant slope from x=1 to x=1+h (h≠0,−1), then find its limit as h→0, the tangent slope at x=1.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Secant slope=[1/(1+h)−1]/h=−1/(1+h); as h→0 it tends to −1, the tangent slope at x=1.",
+      "checks": [
+        "Returns secant slope −1/(1+h) under the stated restrictions.",
+        "Takes h→0 to get tangent slope −1.",
+        "Retains h≠−1 so the second function value is defined."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-D01-edge",
+      "coverage": "C-D01",
+      "stage": "基础微积分",
+      "variant": "edge",
+      "split": "development",
+      "problem": "For f(x)=|x| at 0, compare left and right derivative limits.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Left=−1, right=1; f is not differentiable at 0.",
+      "checks": [
+        "Returns the requested result: Left=−1, right=1; f is not differentiable at 0.",
+        "Shows this case-specific reasoning: Evaluate |h|/h for h<0 and h>0.",
+        "Rejects this plausible error: Continuity does not force equal one-sided derivatives."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-D02-basic",
+      "coverage": "C-D02",
+      "stage": "基础微积分",
+      "variant": "basic",
+      "split": "development",
+      "problem": "求 f(x)=3x⁴−2x 的导数。",
+      "expected_behavior": "interactive",
+      "reference_answer": "f′=12x³−2。",
+      "checks": [
+        "Returns the requested result: f′=12x³−2。",
+        "Shows this case-specific reasoning: Apply power rule termwise.",
+        "Rejects this plausible error: 3x³ is not derivative of 3x⁴."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-D02-transfer",
+      "coverage": "C-D02",
+      "stage": "基础微积分",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "Differentiate f(x)=(x²+1)e^(x²).",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "f′=2x e^(x²)+2x(x²+1)e^(x²)=2x(x²+2)e^(x²).",
+      "checks": [
+        "Returns the requested result: f′=2x e^(x²)+2x(x²+1)e^(x²)=2x(x²+2)e^(x²).",
+        "Shows this case-specific reasoning: Use product rule and chain factor 2x.",
+        "Rejects this plausible error: Omitting the inner derivative loses a factor 2x."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-D02-edge",
+      "coverage": "C-D02",
+      "stage": "基础微积分",
+      "variant": "edge",
+      "split": "development",
+      "problem": "对 x≠0，求 f(x)=(x²+1)/x 的导数并注明定义域。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "化为 x+1/x，故 f′=1−1/x²=(x²−1)/x²，x≠0。",
+      "checks": [
+        "Returns the requested result: 化为 x+1/x，故 f′=1−1/x²=(x²−1)/x²，x≠0。",
+        "Shows this case-specific reasoning: Simplify or use quotient rule and retain original domain.",
+        "Rejects this plausible error: 在原函数未定义的 x=0 处求导。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-D03-basic",
+      "coverage": "C-D03",
+      "stage": "基础微积分",
+      "variant": "basic",
+      "split": "development",
+      "problem": "For x>0 differentiate sin x+e^x+ln x.",
+      "expected_behavior": "interactive",
+      "reference_answer": "cos x+e^x+1/x.",
+      "checks": [
+        "Returns the requested result: cos x+e^x+1/x.",
+        "Shows this case-specific reasoning: Use trig, exponential, and logarithm derivative rules.",
+        "Rejects this plausible error: Derivative of ln x is 1/x, not ln x."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-D03-transfer",
+      "coverage": "C-D03",
+      "stage": "基础微积分",
+      "variant": "transfer",
+      "split": "holdout",
+      "problem": "求 g(x)=arctan(2x) 的导数。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "g′=2/(1+4x²)。",
+      "checks": [
+        "Returns the requested result: g′=2/(1+4x²)。",
+        "Shows this case-specific reasoning: Use u′/(1+u²) with u=2x.",
+        "Rejects this plausible error: Omitting inner derivative gives a missing factor 2."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-D03-edge",
+      "coverage": "C-D03",
+      "stage": "基础微积分",
+      "variant": "edge",
+      "split": "development",
+      "problem": "For −1<x<1 differentiate arcsin x and state where the formula is valid.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "d/dx arcsin x=1/√(1−x²), valid on the open interval (−1,1).",
+      "checks": [
+        "Returns the requested result: d/dx arcsin x=1/√(1−x²), valid on the open interval (−1,1).",
+        "Shows this case-specific reasoning: Use inverse-sine derivative; the endpoint denominator vanishes.",
+        "Rejects this plausible error: Include ±1 where the derivative is not finite."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-D04-basic",
+      "coverage": "C-D04",
+      "stage": "基础微积分",
+      "variant": "basic",
+      "split": "development",
+      "problem": "曲线 x²+y²=25 在 (3,4) 求 dy/dx。",
+      "expected_behavior": "interactive",
+      "reference_answer": "隐式求导得 2x+2yy′=0，y′=−x/y=−3/4。",
+      "checks": [
+        "Returns the requested result: 隐式求导得 2x+2yy′=0，y′=−x/y=−3/4。",
+        "Shows this case-specific reasoning: Differentiate implicitly and substitute y≠0.",
+        "Rejects this plausible error: 正号丢掉移项带来的负号。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-D04-transfer",
+      "coverage": "C-D04",
+      "stage": "基础微积分",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "Find the third derivative of x⁴.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "f′=4x³, f″=12x², f‴=24x.",
+      "checks": [
+        "Returns the requested result: f′=4x³, f″=12x², f‴=24x.",
+        "Shows this case-specific reasoning: Differentiate successively three times.",
+        "Rejects this plausible error: 24 is the fourth derivative."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-D04-edge",
+      "coverage": "C-D04",
+      "stage": "基础微积分",
+      "variant": "edge",
+      "split": "holdout",
+      "problem": "曲线 x²+xy+y²=7 在 (1,2) 求 y′、y″。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "y′=−(2x+y)/(x+2y)=−4/5；二阶式 2+2y′+2(y′)²+(x+2y)y″=0，故 y″=−42/125。",
+      "checks": [
+        "Returns the requested result: y′=−(2x+y)/(x+2y)=−4/5；二阶式 2+2y′+2(y′)²+(x+2y)y″=0，故 y″=−42/125。",
+        "Shows this case-specific reasoning: Differentiate twice, including both product-rule terms from xy.",
+        "Rejects this plausible error: 漏掉 2(y′)² 会改变二阶导数。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-D05-basic",
+      "coverage": "C-D05",
+      "stage": "基础微积分",
+      "variant": "basic",
+      "split": "holdout",
+      "problem": "What does differentiability at c guarantee about continuity? Give a continuous function not differentiable at 0.",
+      "expected_behavior": "interactive",
+      "reference_answer": "Differentiability implies continuity. |x| is continuous at 0 but has unequal one-sided derivatives.",
+      "checks": [
+        "Returns the requested result: Differentiability implies continuity. |x| is continuous at 0 but has unequal one-sided derivatives.",
+        "Shows this case-specific reasoning: Separate implication from its converse and verify the corner.",
+        "Rejects this plausible error: Continuity alone does not guarantee differentiability."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-D05-transfer",
+      "coverage": "C-D05",
+      "stage": "基础微积分",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "Let f(0)=1 and f(x)=x for x≠0. Is f continuous or differentiable at 0? Use the difference quotient to support the differentiability conclusion.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Not continuous because lim x→0 f(x)=0≠f(0)=1. The quotient [f(h)−f(0)]/h=(h−1)/h has no finite limit, so it is not differentiable at 0.",
+      "checks": [
+        "Compares limit 0 with assigned value 1 and concludes discontinuity.",
+        "Forms the quotient (h−1)/h for h≠0.",
+        "Concludes no derivative exists and does not reuse the |x| corner example."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-D05-edge",
+      "coverage": "C-D05",
+      "stage": "基础微积分",
+      "variant": "edge",
+      "split": "development",
+      "problem": "Let f(0)=0 and f(x)=x sin(1/x) otherwise. Test continuity and differentiability at 0.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Continuous by |f(x)|≤|x|. The derivative quotient is sin(1/x), which has no limit, so not differentiable.",
+      "checks": [
+        "Returns the requested result: Continuous by |f(x)|≤|x|. The derivative quotient is sin(1/x), which has no limit, so not differentiable.",
+        "Shows this case-specific reasoning: Use squeeze for continuity and the derivative definition for differentiability.",
+        "Rejects this plausible error: The factor x cancels in the derivative quotient."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-D06-basic",
+      "coverage": "C-D06",
+      "stage": "基础微积分",
+      "variant": "basic",
+      "split": "development",
+      "problem": "对 x²−1 在 [−1,1] 用罗尔定理，验证假设并求全部内部 c。",
+      "expected_behavior": "interactive",
+      "reference_answer": "连续、开区间可导且端点值均为 0；f′=2x，唯一 c=0。",
+      "checks": [
+        "Returns the requested result: 连续、开区间可导且端点值均为 0；f′=2x，唯一 c=0。",
+        "Shows this case-specific reasoning: Verify all hypotheses and solve derivative zero in the open interval.",
+        "Rejects this plausible error: 端点不属于要求的 c 区间。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-D06-transfer",
+      "coverage": "C-D06",
+      "stage": "基础微积分",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "For f(x)=|x| on [−1,1], can Rolle’s theorem be applied? Separately apply the general Mean Value Theorem to g(x)=x² on [1,3] and find a guaranteed c.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Rolle cannot be applied to |x| because it is not differentiable at 0. For g=x², continuity on [1,3] and differentiability on (1,3) hold; the secant slope is (9−1)/(3−1)=4. Since g′(c)=2c, MVT gives c=2.",
+      "checks": [
+        "Identifies the failed differentiability hypothesis for Rolle on |x|.",
+        "Uses unequal endpoint values 1 and 9 for the general MVT example.",
+        "Solves 2c=4 to obtain c=2∈(1,3)."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-D06-edge",
+      "coverage": "C-D06",
+      "stage": "基础微积分",
+      "variant": "edge",
+      "split": "development",
+      "problem": "对 cos x 在 [0,2π] 检查罗尔条件并求区间内部 c。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "端点值均为 1；连续且可导。−sin x=0 的内部解仅 c=π。",
+      "checks": [
+        "Returns the requested result: 端点值均为 1；连续且可导。−sin x=0 的内部解仅 c=π。",
+        "Shows this case-specific reasoning: Solve derivative equation and exclude endpoints.",
+        "Rejects this plausible error: 将 0 或 2π 作为 c 不满足开区间条件。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-D07-basic",
+      "coverage": "C-D07",
+      "stage": "基础微积分",
+      "variant": "basic",
+      "split": "development",
+      "problem": "For f=x³−3x find increasing/decreasing intervals and local extrema.",
+      "expected_behavior": "interactive",
+      "reference_answer": "f′=3(x²−1): increasing on (−∞,−1),(1,∞), decreasing on (−1,1); local max 2 at −1, min −2 at 1.",
+      "checks": [
+        "Returns the requested result: f′=3(x²−1): increasing on (−∞,−1),(1,∞), decreasing on (−1,1); local max 2 at −1, min −2 at 1.",
+        "Shows this case-specific reasoning: Use a derivative sign chart at ±1.",
+        "Rejects this plausible error: Reversing the sign changes reverses the extrema."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-D07-transfer",
+      "coverage": "C-D07",
+      "stage": "基础微积分",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "对 f=x³−3x 求凹凸区间和拐点。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "f″=6x；x<0 向下凹，x>0 向上凹，拐点 (0,0)。",
+      "checks": [
+        "Returns the requested result: f″=6x；x<0 向下凹，x>0 向上凹，拐点 (0,0)。",
+        "Shows this case-specific reasoning: Check concavity changes across 0.",
+        "Rejects this plausible error: f″(0)=0 alone does not establish an inflection point."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-D07-edge",
+      "coverage": "C-D07",
+      "stage": "基础微积分",
+      "variant": "edge",
+      "split": "development",
+      "problem": "For |x| on [−1,1], find its absolute minimum and explain why f′=0 misses it.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Minimum 0 occurs at x=0; derivative is undefined there, so nondifferentiable critical points and endpoints must be checked.",
+      "checks": [
+        "Returns the requested result: Minimum 0 occurs at x=0; derivative is undefined there, so nondifferentiable critical points and endpoints must be checked.",
+        "Shows this case-specific reasoning: Evaluate the corner and include points where derivative does not exist.",
+        "Rejects this plausible error: Ignoring x=0 misses the minimum."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-D08-basic",
+      "coverage": "C-D08",
+      "stage": "基础微积分",
+      "variant": "basic",
+      "split": "holdout",
+      "problem": "20 米围栏围成长方形，边长为正实数，求最大面积及尺寸。",
+      "expected_behavior": "interactive",
+      "reference_answer": "2x+2y=20，A=xy 最大在 x=y=5，面积 25 平方米。",
+      "checks": [
+        "Returns the requested result: 2x+2y=20，A=xy 最大在 x=y=5，面积 25 平方米。",
+        "Shows this case-specific reasoning: Reduce to A=x(10−x) and optimize.",
+        "Rejects this plausible error: 4×6 的面积 24 小于最大值。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-D08-transfer",
+      "coverage": "C-D08",
+      "stage": "基础微积分",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "Find absolute max and min of f=x(6−x) on closed interval [0,6].",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Critical point x=3 gives 9; endpoints give 0,0. Max 9 at 3; min 0 at both endpoints.",
+      "checks": [
+        "Returns the requested result: Critical point x=3 gives 9; endpoints give 0,0. Max 9 at 3; min 0 at both endpoints.",
+        "Shows this case-specific reasoning: Compare the interior critical point and both endpoints.",
+        "Rejects this plausible error: Checking only f′=0 omits endpoint extrema."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-D08-edge",
+      "coverage": "C-D08",
+      "stage": "基础微积分",
+      "variant": "edge",
+      "split": "development",
+      "problem": "在 [0,5] 上求 x(4−x) 的绝对最大、最小值，比较端点。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "临界点 x=2，值 4；端点值 f(0)=0、f(5)=−5；最大 4，最小 −5。",
+      "checks": [
+        "Returns the requested result: 临界点 x=2，值 4；端点值 f(0)=0、f(5)=−5；最大 4，最小 −5。",
+        "Shows this case-specific reasoning: Evaluate the critical point and both closed-interval endpoints.",
+        "Rejects this plausible error: 只比较临界点会漏掉 x=5 的最小值。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-D09-basic",
+      "coverage": "C-D09",
+      "stage": "基础微积分",
+      "variant": "basic",
+      "split": "development",
+      "problem": "A circle radius grows at 2 cm/s. At r=3 cm, how fast is area changing?",
+      "expected_behavior": "interactive",
+      "reference_answer": "dA/dt=2πr·dr/dt=12π cm²/s.",
+      "checks": [
+        "Returns the requested result: dA/dt=2πr·dr/dt=12π cm²/s.",
+        "Shows this case-specific reasoning: Differentiate A=πr² with respect to time.",
+        "Rejects this plausible error: 4π cm/s has wrong units and omits r."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-D09-transfer",
+      "coverage": "C-D09",
+      "stage": "基础微积分",
+      "variant": "transfer",
+      "split": "holdout",
+      "problem": "10 ft 梯子靠墙，底端以 3 ft/s 向外移动。当底端距墙 6 ft、顶端高 8 ft，求顶端高度变化率。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "x²+y²=100；2x x′+2y y′=0，y′=−18/8=−9/4 ft/s。",
+      "checks": [
+        "Returns the requested result: x²+y²=100；2x x′+2y y′=0，y′=−18/8=−9/4 ft/s。",
+        "Shows this case-specific reasoning: Differentiate the fixed-length constraint and substitute the 6-8-10 triangle.",
+        "Rejects this plausible error: 正号与顶端正在下降相反。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-D09-edge",
+      "coverage": "C-D09",
+      "stage": "基础微积分",
+      "variant": "edge",
+      "split": "development",
+      "problem": "A sphere radius increases at 0.5 m/min. At r=2 m find dV/dt.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "V′=4πr²r′=8π m³/min.",
+      "checks": [
+        "Returns the requested result: V′=4πr²r′=8π m³/min.",
+        "Shows this case-specific reasoning: Differentiate sphere volume and retain cubic-volume-per-time units.",
+        "Rejects this plausible error: 2π m/min is dimensionally wrong."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-D10-basic",
+      "coverage": "C-D10",
+      "stage": "基础微积分",
+      "variant": "basic",
+      "split": "development",
+      "problem": "粒子位置 s=t²−4t 米，t≥0。求速度、加速度，并判断 t=1 运动方向。",
+      "expected_behavior": "interactive",
+      "reference_answer": "v=2t−4 m/s；a=2 m/s²；v(1)=−2，沿负方向运动。",
+      "checks": [
+        "Returns the requested result: v=2t−4 m/s；a=2 m/s²；v(1)=−2，沿负方向运动。",
+        "Shows this case-specific reasoning: Differentiate position twice; velocity sign gives direction.",
+        "Rejects this plausible error: 加速度方向不单独决定当前运动方向。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-D10-transfer",
+      "coverage": "C-D10",
+      "stage": "基础微积分",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "For s=t³−6t²+9t on 0≤t≤4, find v,a and forward-motion intervals.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "v=3(t−1)(t−3), a=6t−12; moves forward on [0,1) and (3,4], with rest at 1,3.",
+      "checks": [
+        "Returns the requested result: v=3(t−1)(t−3), a=6t−12; moves forward on [0,1) and (3,4], with rest at 1,3.",
+        "Shows this case-specific reasoning: Factor velocity and inspect sign in the stated time interval.",
+        "Rejects this plausible error: Acceleration sign alone does not indicate direction."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-D10-edge",
+      "coverage": "C-D10",
+      "stage": "基础微积分",
+      "variant": "edge",
+      "split": "holdout",
+      "problem": "粒子 s=t³−3t 米，0≤t≤2。求净位移和总路程。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "位置 s(0)=0,s(1)=−2,s(2)=2；v=3(t²−1) 在 1 处换向。净位移 2 米，总路程 2+4=6 米。",
+      "checks": [
+        "Returns the requested result: 位置 s(0)=0,s(1)=−2,s(2)=2；v=3(t²−1) 在 1 处换向。净位移 2 米，总路程 2+4=6 米。",
+        "Shows this case-specific reasoning: Find the turning time and add absolute changes in position.",
+        "Rejects this plausible error: 终点减起点只是净位移，不是总路程。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-D11-basic",
+      "coverage": "C-D11",
+      "stage": "基础微积分",
+      "variant": "basic",
+      "split": "development",
+      "problem": "Use linearization at x=4 to approximate √4.1.",
+      "expected_behavior": "interactive",
+      "reference_answer": "f(4)=2, f′(4)=1/4; L(4.1)=2+0.1/4=2.025.",
+      "checks": [
+        "Returns the requested result: f(4)=2, f′(4)=1/4; L(4.1)=2+0.1/4=2.025.",
+        "Shows this case-specific reasoning: Use L(x)=f(a)+f′(a)(x−a).",
+        "Rejects this plausible error: Adding 1/4 rather than (1/4)(0.1) is too large."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-D11-transfer",
+      "coverage": "C-D11",
+      "stage": "基础微积分",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "用 x=0 处线性近似估算 e^0.05。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "e^x≈1+x，得 1.05。",
+      "checks": [
+        "Returns the requested result: e^x≈1+x，得 1.05。",
+        "Shows this case-specific reasoning: At 0, e⁰=1 and derivative is 1.",
+        "Rejects this plausible error: 0.05 忘记基准函数值 1。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-D11-edge",
+      "coverage": "C-D11",
+      "stage": "基础微积分",
+      "variant": "edge",
+      "split": "development",
+      "problem": "For f=x² at x=3 and dx=0.1, find dy and exact Δy.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "dy=6(0.1)=0.6; Δy=3.1²−3²=0.61; difference=0.01.",
+      "checks": [
+        "Returns the requested result: dy=6(0.1)=0.6; Δy=3.1²−3²=0.61; difference=0.01.",
+        "Shows this case-specific reasoning: Compute differential and actual finite increment separately.",
+        "Rejects this plausible error: Equating dy and Δy omits (dx)²."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-I01-basic",
+      "coverage": "C-I01",
+      "stage": "基础微积分",
+      "variant": "basic",
+      "split": "development",
+      "problem": "求 ∫3x² dx。",
+      "expected_behavior": "interactive",
+      "reference_answer": "x³+C。",
+      "checks": [
+        "Returns the requested result: x³+C。",
+        "Shows this case-specific reasoning: Differentiate the result to check.",
+        "Rejects this plausible error: Omitting C does not give all antiderivatives."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-I01-transfer",
+      "coverage": "C-I01",
+      "stage": "基础微积分",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "Find the general antiderivative of 2x+1/x on its real domain.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "For x≠0, x²+ln|x|+C; constants can differ on x<0 and x>0.",
+      "checks": [
+        "Returns the requested result: For x≠0, x²+ln|x|+C; constants can differ on x<0 and x>0.",
+        "Shows this case-specific reasoning: Integrate each term and preserve disconnected domain components.",
+        "Rejects this plausible error: ln x is not real-valued on the negative component."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-I01-edge",
+      "coverage": "C-I01",
+      "stage": "基础微积分",
+      "variant": "edge",
+      "split": "development",
+      "problem": "F′=2x 且 F(1)=5，求 F。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "F=x²+C，代入得 C=4，所以 F=x²+4。",
+      "checks": [
+        "Returns the requested result: F=x²+C，代入得 C=4，所以 F=x²+4。",
+        "Shows this case-specific reasoning: Integrate, then use the initial condition.",
+        "Rejects this plausible error: x²+5 fails at x=1."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-I02-basic",
+      "coverage": "C-I02",
+      "stage": "基础微积分",
+      "variant": "basic",
+      "split": "development",
+      "problem": "Evaluate lim n→∞ (1/n)Σ(k/n), k=1,…,n, and identify the integral.",
+      "expected_behavior": "interactive",
+      "reference_answer": "It is ∫₀¹x dx=1/2, a right-endpoint Riemann sum.",
+      "checks": [
+        "Returns the requested result: It is ∫₀¹x dx=1/2, a right-endpoint Riemann sum.",
+        "Shows this case-specific reasoning: Δx=1/n and sample point x_k=k/n.",
+        "Rejects this plausible error: The limit is accumulated area, not endpoint value 1."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-I02-transfer",
+      "coverage": "C-I02",
+      "stage": "基础微积分",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "For f(x)=x² on [0,2], use 4 equal subintervals to compute the left and right Riemann-sum estimates. Compare them with the exact integral.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Δx=1/2. Left sum=(1/2)[0²+(1/2)²+1²+(3/2)²]=7/4; right sum=(1/2)[(1/2)²+1²+(3/2)²+2²]=15/4. The exact integral is ∫₀²x²dx=8/3, between the estimates.",
+      "checks": [
+        "Returns left estimate 7/4 and right estimate 15/4.",
+        "Computes exact integral 8/3 and labels the finite sums as estimates, not exact values.",
+        "Confirms 7/4<8/3<15/4 for this increasing function."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-I02-edge",
+      "coverage": "C-I02",
+      "stage": "基础微积分",
+      "variant": "edge",
+      "split": "holdout",
+      "problem": "Evaluate ∫₋₁¹x²dx exactly.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "[x³/3]₋₁¹=2/3.",
+      "checks": [
+        "Returns the requested result: [x³/3]₋₁¹=2/3.",
+        "Shows this case-specific reasoning: Use an antiderivative or even symmetry.",
+        "Rejects this plausible error: The integral is not zero because x² is nonnegative."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-I03-basic",
+      "coverage": "C-I03",
+      "stage": "基础微积分",
+      "variant": "basic",
+      "split": "holdout",
+      "problem": "求 d/dx ∫₁ˣ(t²+1)dt。",
+      "expected_behavior": "interactive",
+      "reference_answer": "由 FTC Part I，导数为 x²+1。",
+      "checks": [
+        "Returns the requested result: 由 FTC Part I，导数为 x²+1。",
+        "Shows this case-specific reasoning: Integrand is continuous and is evaluated at upper limit.",
+        "Rejects this plausible error: No extra x factor appears because upper bound is x."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-I03-transfer",
+      "coverage": "C-I03",
+      "stage": "基础微积分",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "Evaluate ∫₀²3x²dx using FTC.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Antiderivative x³; value 8−0=8.",
+      "checks": [
+        "Returns the requested result: Antiderivative x³; value 8−0=8.",
+        "Shows this case-specific reasoning: Subtract antiderivative endpoint values.",
+        "Rejects this plausible error: Giving only x³ omits evaluation."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-I03-edge",
+      "coverage": "C-I03",
+      "stage": "基础微积分",
+      "variant": "edge",
+      "split": "development",
+      "problem": "G(x)=∫ₓ¹ cos t dt，求 G′(x) 并解释符号。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "G′(x)=−cos x；变量是下限，所以带负号。",
+      "checks": [
+        "Returns the requested result: G′(x)=−cos x；变量是下限，所以带负号。",
+        "Shows this case-specific reasoning: Use FTC for a variable lower bound.",
+        "Rejects this plausible error: Positive cos x ignores lower-limit orientation."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-I04-basic",
+      "coverage": "C-I04",
+      "stage": "基础微积分",
+      "variant": "basic",
+      "split": "development",
+      "problem": "F(x)=∫₀^{x²}√(1+t²)dt. Find F′.",
+      "expected_behavior": "interactive",
+      "reference_answer": "F′=2x√(1+x⁴).",
+      "checks": [
+        "Returns the requested result: F′=2x√(1+x⁴).",
+        "Shows this case-specific reasoning: Evaluate integrand at t=x² and multiply by derivative 2x.",
+        "Rejects this plausible error: √(1+x²) fails to substitute t=x²."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-I04-transfer",
+      "coverage": "C-I04",
+      "stage": "基础微积分",
+      "variant": "transfer",
+      "split": "holdout",
+      "problem": "G(x)=∫ₓ^{2x}t²dt，求 G′。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "G′=(2x)²·2−x²=7x²。",
+      "checks": [
+        "Returns the requested result: G′=(2x)²·2−x²=7x²。",
+        "Shows this case-specific reasoning: Upper-bound term minus lower-bound term.",
+        "Rejects this plausible error: Dropping the lower-bound contribution gives 8x²."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-I04-edge",
+      "coverage": "C-I04",
+      "stage": "基础微积分",
+      "variant": "edge",
+      "split": "development",
+      "problem": "For A(x)=∫₁ˣf(t)dt with continuous f, give A′(a), including if f(a)=0.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "A′(a)=f(a); it equals 0 when f(a)=0.",
+      "checks": [
+        "Returns the requested result: A′(a)=f(a); it equals 0 when f(a)=0.",
+        "Shows this case-specific reasoning: Apply FTC Part I at a.",
+        "Rejects this plausible error: Accumulated value A(a) is not generally its derivative."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-I05-basic",
+      "coverage": "C-I05",
+      "stage": "基础微积分",
+      "variant": "basic",
+      "split": "development",
+      "problem": "用 u=x² 计算 ∫₀¹2x cos(x²)dx。",
+      "expected_behavior": "interactive",
+      "reference_answer": "u 从 0 到 1，结果 ∫₀¹cos u du=sin1。",
+      "checks": [
+        "Returns the requested result: u 从 0 到 1，结果 ∫₀¹cos u du=sin1。",
+        "Shows this case-specific reasoning: Transform differential and bounds.",
+        "Rejects this plausible error: Mixing u integrand with old x bounds is invalid."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-I05-transfer",
+      "coverage": "C-I05",
+      "stage": "基础微积分",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "Use u=2x to evaluate ∫₀^{π/2}sin(2x)dx with changed bounds.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "u:0→π; value=(1/2)∫₀^πsin u du=1.",
+      "checks": [
+        "Returns the requested result: u:0→π; value=(1/2)∫₀^πsin u du=1.",
+        "Shows this case-specific reasoning: Include dx=du/2 and transform upper bound.",
+        "Rejects this plausible error: Keeping upper bound π/2 misses the substitution."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-I05-edge",
+      "coverage": "C-I05",
+      "stage": "基础微积分",
+      "variant": "edge",
+      "split": "development",
+      "problem": "求 ∫₀¹ x/(1+x²)dx。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "结果为 (1/2)ln2。",
+      "checks": [
+        "Returns the requested result: 结果为 (1/2)ln2。",
+        "Shows this case-specific reasoning: Let u=1+x²; du=2x dx and bounds 1 to 2.",
+        "Rejects this plausible error: ln2 misses the factor 1/2."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-I06-basic",
+      "coverage": "C-I06",
+      "stage": "基础微积分",
+      "variant": "basic",
+      "split": "development",
+      "problem": "Find signed integral ∫₋₁¹x dx and total geometric area between y=x and x-axis.",
+      "expected_behavior": "interactive",
+      "reference_answer": "Signed integral=0; geometric area=1.",
+      "checks": [
+        "Returns the requested result: Signed integral=0; geometric area=1.",
+        "Shows this case-specific reasoning: Positive and negative triangles cancel in the integral but both count as area.",
+        "Rejects this plausible error: Zero signed area does not mean no region area."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-I06-transfer",
+      "coverage": "C-I06",
+      "stage": "基础微积分",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "求 ∫₀^πsin x dx，并判断是否等于几何面积。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "积分为 2；sin x≥0 全区间，几何面积也为 2。",
+      "checks": [
+        "Returns the requested result: 积分为 2；sin x≥0 全区间，几何面积也为 2。",
+        "Shows this case-specific reasoning: Check sign before identifying signed integral with area.",
+        "Rejects this plausible error: For functions crossing the axis, this equality would fail."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-I06-edge",
+      "coverage": "C-I06",
+      "stage": "基础微积分",
+      "variant": "edge",
+      "split": "development",
+      "problem": "For y=x−1 on [0,3], find the signed integral and the total geometric area between the graph and the x-axis.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Signed integral=[x²/2−x]₀³=3/2. The graph crosses at x=1: negative area on [0,1] is 1/2, positive area on [1,3] is 2, so total geometric area is 5/2.",
+      "checks": [
+        "Returns signed integral 3/2 and total area 5/2.",
+        "Splits the interval at the zero x=1 and takes absolute area on the negative portion.",
+        "Does not confuse the nonzero net area with total geometric area."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-I07-basic",
+      "coverage": "C-I07",
+      "stage": "基础微积分",
+      "variant": "basic",
+      "split": "development",
+      "problem": "求 y=x 与 y=x² 在 [0,1] 围成的面积。",
+      "expected_behavior": "interactive",
+      "reference_answer": "Intersections 0,1; area=∫₀¹(x−x²)dx=1/6。",
+      "checks": [
+        "Returns the requested result: Intersections 0,1; area=∫₀¹(x−x²)dx=1/6。",
+        "Shows this case-specific reasoning: Find intersections and integrate upper minus lower.",
+        "Rejects this plausible error: In (0,1), x² is below x."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-I07-transfer",
+      "coverage": "C-I07",
+      "stage": "基础微积分",
+      "variant": "transfer",
+      "split": "holdout",
+      "problem": "Find area enclosed by y=4−x² and x-axis.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Intersections x=±2; area=∫₋₂²(4−x²)dx=32/3.",
+      "checks": [
+        "Returns the requested result: Intersections x=±2; area=∫₋₂²(4−x²)dx=32/3.",
+        "Shows this case-specific reasoning: Integrate the nonnegative curve between roots.",
+        "Rejects this plausible error: Integrating only half the symmetric interval gives half the area."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-I07-edge",
+      "coverage": "C-I07",
+      "stage": "基础微积分",
+      "variant": "edge",
+      "split": "development",
+      "problem": "Find the total area enclosed between y=x and y=x³ from their intersections.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Intersections solve x=x³, giving x=−1,0,1. The curves switch order at 0. Area=∫₋₁⁰(x³−x)dx+∫₀¹(x−x³)dx=1/4+1/4=1/2.",
+      "checks": [
+        "Finds all three intersections −1,0,1.",
+        "Splits at x=0 because curve ordering changes there.",
+        "Returns total area 1/2 by integrating upper minus lower on each piece."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-I08-basic",
+      "coverage": "C-I08",
+      "stage": "基础微积分",
+      "variant": "basic",
+      "split": "development",
+      "problem": "A particle velocity is v=t−1 m/s on 0≤t≤2. Find displacement and total distance.",
+      "expected_behavior": "interactive",
+      "reference_answer": "Displacement=0 m; velocity changes sign at 1, so total distance=1 m.",
+      "checks": [
+        "Returns the requested result: Displacement=0 m; velocity changes sign at 1, so total distance=1 m.",
+        "Shows this case-specific reasoning: Integrate signed v for displacement and |v| split at its zero for distance.",
+        "Rejects this plausible error: Zero displacement does not imply zero distance."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-I08-transfer",
+      "coverage": "C-I08",
+      "stage": "基础微积分",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "速度 v=3t² 米/秒，0≤t≤2，求净位移和总路程。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "速度非负，两者均为 ∫₀²3t²dt=8 米。",
+      "checks": [
+        "Returns the requested result: 速度非负，两者均为 ∫₀²3t²dt=8 米。",
+        "Shows this case-specific reasoning: No direction reversal, so total distance equals signed accumulation.",
+        "Rejects this plausible error: 把总路程写成米/秒是单位错误。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-I08-edge",
+      "coverage": "C-I08",
+      "stage": "基础微积分",
+      "variant": "edge",
+      "split": "holdout",
+      "problem": "A particle velocity is cos t for 0≤t≤2π. Find net displacement and total distance.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Net displacement=0; total distance=∫₀²π|cos t|dt=4.",
+      "checks": [
+        "Returns the requested result: Net displacement=0; total distance=∫₀²π|cos t|dt=4.",
+        "Shows this case-specific reasoning: Split absolute velocity at π/2 and 3π/2; four quarter-wave areas total 4.",
+        "Rejects this plausible error: Signed cancellation gives displacement only."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-I09-basic",
+      "coverage": "C-I09",
+      "stage": "基础微积分",
+      "variant": "basic",
+      "split": "holdout",
+      "problem": "求 f(x)=x² 在 [0,2] 上的平均值。",
+      "expected_behavior": "interactive",
+      "reference_answer": "平均值=(1/2)∫₀²x²dx=4/3。",
+      "checks": [
+        "Returns the requested result: 平均值=(1/2)∫₀²x²dx=4/3。",
+        "Shows this case-specific reasoning: Divide integral by interval length 2.",
+        "Rejects this plausible error: Integral 8/3 is not the average."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-I09-transfer",
+      "coverage": "C-I09",
+      "stage": "基础微积分",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "For f=2x+1 on [1,4], find average value and a point attaining it.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Average=(1/3)∫₁⁴(2x+1)dx=6; f(c)=6 gives c=5/2.",
+      "checks": [
+        "Returns the requested result: Average=(1/3)∫₁⁴(2x+1)dx=6; f(c)=6 gives c=5/2.",
+        "Shows this case-specific reasoning: Compute the average, solve for c, and check c∈[1,4].",
+        "Rejects this plausible error: Dividing by 4 instead of interval length 3 is incorrect."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-I09-edge",
+      "coverage": "C-I09",
+      "stage": "基础微积分",
+      "variant": "edge",
+      "split": "development",
+      "problem": "f=0 on [−1,0), f=1 on [0,1]。求 [−1,1] 平均值，并说明连续版积分中值定理是否保证某点取到该值。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "平均值 1/2；f 只取 0 或 1，没有点取值 1/2。因在 0 不连续，连续版积分中值定理不适用。",
+      "checks": [
+        "Returns the requested result: 平均值 1/2；f 只取 0 或 1，没有点取值 1/2。因在 0 不连续，连续版积分中值定理不适用。",
+        "Shows this case-specific reasoning: Compute area over interval length and check range and continuity hypothesis.",
+        "Rejects this plausible error: 缺少连续性时不能套用该存在性结论。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-I10-basic",
+      "coverage": "C-I10",
+      "stage": "基础微积分",
+      "variant": "basic",
+      "split": "development",
+      "problem": "Square cross-sections perpendicular to x-axis fill 0≤x≤2; each square side is 2−x. Find volume.",
+      "expected_behavior": "interactive",
+      "reference_answer": "V=∫₀²(2−x)²dx=8/3 cubic units.",
+      "checks": [
+        "Returns the requested result: V=∫₀²(2−x)²dx=8/3 cubic units.",
+        "Shows this case-specific reasoning: Integrate cross-sectional area side².",
+        "Rejects this plausible error: Integrating side length alone yields area units."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-I10-transfer",
+      "coverage": "C-I10",
+      "stage": "基础微积分",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "将 y=x、0≤x≤1 下方区域绕 x 轴旋转，求圆盘体积。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "V=π∫₀¹x²dx=π/3。",
+      "checks": [
+        "Returns the requested result: V=π∫₀¹x²dx=π/3。",
+        "Shows this case-specific reasoning: Each cross-section is a disk of radius x.",
+        "Rejects this plausible error: The disk area is πx², not πx."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "C-I10-edge",
+      "coverage": "C-I10",
+      "stage": "基础微积分",
+      "variant": "edge",
+      "split": "development",
+      "problem": "Rotate the region between y=2 and y=x, 0≤x≤2, about the x-axis. Find washer-method volume.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Outer radius 2, inner radius x; V=π∫₀²(4−x²)dx=16π/3.",
+      "checks": [
+        "Returns the requested result: Outer radius 2, inner radius x; V=π∫₀²(4−x²)dx=16π/3.",
+        "Shows this case-specific reasoning: Subtract inner disk from outer disk at each x.",
+        "Rejects this plausible error: π∫x²dx computes the hole, not the washer material."
+      ],
+      "reference_status": "authored_unreviewed"
+    }
+  ]
+}

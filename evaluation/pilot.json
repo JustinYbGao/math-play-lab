@@ -1,0 +1,70 @@
+{
+  "status": "prepared_not_run",
+  "purpose": "First live-model pilot. Reference checks were written before generation; runtime success is not a mathematics pass.",
+  "cases": [
+    {
+      "id": "pilot-fractions",
+      "coverage": "E-F04",
+      "problem": "Add 5/6 and 1/4. Show why the result is correct using fraction pieces that refer to the same whole.",
+      "expected_behavior": "interactive",
+      "reference_answer": "13/12, equivalently 1 1/12",
+      "checks": ["Both quantities use the same whole.", "The combined value may exceed one whole.", "Equivalent representations are accepted.", "The operation participates in forming common parts and combining them."]
+    },
+    {
+      "id": "pilot-roots",
+      "coverage": "M-F04",
+      "problem": "Find all real solutions of x² + x − 6 = 0 and explain how they relate to the graph.",
+      "expected_behavior": "interactive",
+      "reference_answer": "x = -3 and x = 2",
+      "checks": ["Both roots are discoverable and required.", "The graph matches x²+x−6.", "Finding only one root does not complete the whole task.", "Both reported values satisfy the original equation."]
+    },
+    {
+      "id": "pilot-triangle",
+      "coverage": "M-G02",
+      "problem": "A triangle in the Euclidean plane has two interior angles of 35° and 80°. Find the third interior angle and explain the angle relationship.",
+      "expected_behavior": "interactive",
+      "reference_answer": "65°",
+      "checks": ["The two given angles remain fixed.", "All three interior angles sum to 180°.", "64° or 66° cannot pass an exact-answer check.", "The player can use the angle relationship through an operation."]
+    },
+    {
+      "id": "pilot-probability",
+      "coverage": "H-P07",
+      "problem": "A bag contains 4 red and 3 blue balls. Two balls are drawn without replacement. Find the probability that both are red.",
+      "expected_behavior": "interactive",
+      "reference_answer": "(4/7) × (3/6) = 2/7",
+      "checks": ["The second draw has six remaining balls.", "After a red first draw, three red balls remain.", "Simulated frequency is not presented as the exact theoretical probability.", "Equivalent exact fractions are accepted."]
+    },
+    {
+      "id": "pilot-limit",
+      "coverage": "C-L02",
+      "problem": "Determine whether lim as x approaches 2 of |x−2|/(x−2) exists. Compare the left and right sides.",
+      "expected_behavior": "interactive",
+      "reference_answer": "Left limit -1; right limit 1; the two-sided limit does not exist.",
+      "checks": ["x=2 is excluded from the function domain.", "Both sides can be explored.", "The limit is not reported as zero.", "Undefined at a point alone is not offered as the reason the limit does not exist."]
+    },
+    {
+      "id": "pilot-integral",
+      "coverage": "C-I06",
+      "problem": "For y=x on [-2,1], find the definite integral and the total geometric area between the graph and the x-axis. Explain why the answers differ.",
+      "expected_behavior": "interactive",
+      "reference_answer": "Integral -3/2; total area 5/2.",
+      "checks": ["The negative contribution is -2 and the positive contribution is 1/2.", "The total geometric area adds positive magnitudes.", "The two requested results remain separate.", "Approximate rectangles are not silently treated as an exact calculation."]
+    },
+    {
+      "id": "pilot-proof",
+      "coverage": "M-G08",
+      "problem": "Two straight lines intersect at a point in the Euclidean plane. Prove that opposite angles are equal.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Adjacent angles on either straight line sum to 180°. Subtracting the common adjacent angle from those equal sums proves that the opposite angles are equal.",
+      "checks": ["A valid relation and justification connect the statements.", "Measurements or successful dragging are labeled exploration, not proof.", "The original straight-line assumptions remain visible.", "Unverified free-text reasoning is not automatically certified."]
+    },
+    {
+      "id": "pilot-missing-diagram",
+      "coverage": "stress-input-ambiguity",
+      "problem": "Find angle x in the diagram.",
+      "expected_behavior": "clarification",
+      "reference_answer": "Ask for the missing diagram or the angle relationships and values.",
+      "checks": ["No invented triangle or angle values.", "No game generation before necessary information is supplied.", "This is counted as clarification handling, not a successful playable generation."]
+    }
+  ]
+}

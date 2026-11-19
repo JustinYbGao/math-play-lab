@@ -1,0 +1,1702 @@
+{
+  "status": "prepared_not_run",
+  "purpose": "Original elementary curriculum cases for all 35 registry IDs; prepared references are not generated activity results.",
+  "cases": [
+    {
+      "id": "E-N01-basic",
+      "coverage": "E-N01",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "holdout",
+      "problem": "A library has 38 fiction books and 27 science books. How many books are there altogether?",
+      "expected_behavior": "interactive",
+      "reference_answer": "38+27=65 books.",
+      "checks": [
+        "Returns the requested result: 38+27=65 books.",
+        "Shows this case-specific reasoning: Add the two disjoint counts: 38+27=65.",
+        "Rejects this plausible error: 56 books, which omits the regrouped ten."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-N01-transfer",
+      "coverage": "E-N01",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "有 84 张卡片，送出 29 张后又买来 17 张。现在有多少张？",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "84−29+17=72 张。",
+      "checks": [
+        "Returns the requested result: 84−29+17=72 张。",
+        "Shows this case-specific reasoning: 先减去送出的，再加上新买的：55+17=72。",
+        "Rejects this plausible error: 101 张；这把送出量也加进去了。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-N01-edge",
+      "coverage": "E-N01",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "development",
+      "problem": "A number is an integer from 20 through 40. It is greater than 31 and less than 36. List every possible number.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "32, 33, 34, 35.",
+      "checks": [
+        "Returns the requested result: 32, 33, 34, 35.",
+        "Shows this case-specific reasoning: Apply both strict bounds to the stated integer domain.",
+        "Rejects this plausible error: 31 or 36; the inequalities are strict."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-N02-basic",
+      "coverage": "E-N02",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "development",
+      "problem": "在数 5,307 中，数字 3 的数位和数值分别是什么？",
+      "expected_behavior": "interactive",
+      "reference_answer": "3 在百位，数值是 300。",
+      "checks": [
+        "Returns the requested result: 3 在百位，数值是 300。",
+        "Shows this case-specific reasoning: 按千、百、十、个位分解：5,307=5,000+300+7。",
+        "Rejects this plausible error: 把数值写成 3；题目问的是它在整个数中的贡献。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-N02-transfer",
+      "coverage": "E-N02",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "holdout",
+      "problem": "Write 4,082 in expanded form and state the value of the zero digit.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "4,000+80+2; the zero contributes 0 hundreds and holds the hundreds place.",
+      "checks": [
+        "Writes 4,082 as 4,000+80+2 and identifies the zero as the hundreds-place digit.",
+        "Matches 8 to tens (80) and 2 to ones (2).",
+        "Rejects “zero tens,” which would place the zero in the tens position."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-N02-edge",
+      "coverage": "E-N02",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "development",
+      "problem": "用数字 6、0、4、2 各一次组成最大的四位数和最小的四位数（首位不能为 0），并求两数之差。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "最大 6420，最小 2046；差 4374。",
+      "checks": [
+        "Returns the requested result: 最大 6420，最小 2046；差 4374。",
+        "Shows this case-specific reasoning: 降序得 6420；升序且首位非零得 2046；相减。",
+        "Rejects this plausible error: 0246 不是四位数，因此不能作最小数。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-N03-basic",
+      "coverage": "E-N03",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "development",
+      "problem": "Compute 468+257, showing the regrouping result.",
+      "expected_behavior": "interactive",
+      "reference_answer": "468+257=725.",
+      "checks": [
+        "Returns the requested result: 468+257=725.",
+        "Shows this case-specific reasoning: 8+7=15, carry 1; 6+5+1=12, carry 1; hundreds total 7.",
+        "Rejects this plausible error: 715, which drops one carried ten."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-N03-transfer",
+      "coverage": "E-N03",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "一条绳长 1,000 厘米，剪去 386 厘米，还剩多少厘米？",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "1000−386=614 厘米。",
+      "checks": [
+        "Returns the requested result: 1000−386=614 厘米。",
+        "Shows this case-specific reasoning: 借位计算：1000−300−80−6=700−80−6=614。",
+        "Rejects this plausible error: 714，常见原因是十位借位处理错误。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-N03-edge",
+      "coverage": "E-N03",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "holdout",
+      "problem": "Find the missing whole number n if n−248=175, and check it in the original equation.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "n=423; 423−248=175.",
+      "checks": [
+        "Returns the requested result: n=423; 423−248=175.",
+        "Shows this case-specific reasoning: Undo subtraction by adding 248 to both sides: 175+248=423.",
+        "Rejects this plausible error: n=−73 uses 175−248 and reverses the inverse operation."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-N04-basic",
+      "coverage": "E-N04",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "development",
+      "problem": "每盒有 8 支铅笔，6 盒共有多少支？",
+      "expected_behavior": "interactive",
+      "reference_answer": "8×6=48 支。",
+      "checks": [
+        "Returns the requested result: 8×6=48 支。",
+        "Shows this case-specific reasoning: 等量分组为 6 组、每组 8 支。",
+        "Rejects this plausible error: 14 支是把组数和每组数量相加。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-N04-transfer",
+      "coverage": "E-N04",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "A theater has 12 rows with 9 seats each. If 7 seats are blocked, how many seats can be used?",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "12×9−7=101 usable seats.",
+      "checks": [
+        "Returns the requested result: 12×9−7=101 usable seats.",
+        "Shows this case-specific reasoning: Count 108 total seats, then subtract the 7 blocked seats.",
+        "Rejects this plausible error: 108 usable seats ignores the blocked seats."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-N04-edge",
+      "coverage": "E-N04",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "development",
+      "problem": "Let a and b be real numbers with a×0=0 and b×1=9. Which values are determined? Give all possible pairs (a,b) and the value of a×0.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "b=9 is determined; a can be any real number. The possible pairs are (a,9) for every real a, and a×0=0 for all of them.",
+      "checks": [
+        "States b=9 and leaves a arbitrary over the stated real domain.",
+        "Describes the solution pairs as {(a,9): a∈ℝ}.",
+        "Returns a×0=0 for every allowed a and rejects the claim that a is uniquely determined."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-N05-basic",
+      "coverage": "E-N05",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "development",
+      "problem": "Share 56 stickers equally among 7 children. How many stickers does each child get?",
+      "expected_behavior": "interactive",
+      "reference_answer": "56÷7=8 stickers each.",
+      "checks": [
+        "Returns the requested result: 56÷7=8 stickers each.",
+        "Shows this case-specific reasoning: Use the inverse fact 7×8=56.",
+        "Rejects this plausible error: 49 because 56−7 does not divide into equal groups."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-N05-transfer",
+      "coverage": "E-N05",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "把 53 颗糖平均装进每袋 6 颗的袋子。能装满几袋，还剩几颗？",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "53÷6=8 余 5；装满 8 袋，余 5 颗。",
+      "checks": [
+        "Returns the requested result: 53÷6=8 余 5；装满 8 袋，余 5 颗。",
+        "Shows this case-specific reasoning: 6×8=48 and 53−48=5, with remainder less than divisor.",
+        "Rejects this plausible error: 余数 7 不合法，因为余数必须小于 6。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-N05-edge",
+      "coverage": "E-N05",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "development",
+      "problem": "A 97 cm ribbon is cut into pieces of exactly 8 cm. Can it be used with no leftover? If not, give the leftover.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "No; 97=8×12+1, so 1 cm remains.",
+      "checks": [
+        "Returns the requested result: No; 97=8×12+1, so 1 cm remains.",
+        "Shows this case-specific reasoning: Check divisibility: nearest lower multiple is 96.",
+        "Rejects this plausible error: 12 cm leftover exceeds the 8 cm piece length."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-N06-basic",
+      "coverage": "E-N06",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "development",
+      "problem": "计算 18−3×4，并说明先做哪一步。",
+      "expected_behavior": "interactive",
+      "reference_answer": "18−3×4=18−12=6。",
+      "checks": [
+        "Returns the requested result: 18−3×4=18−12=6。",
+        "Shows this case-specific reasoning: 乘法优先于加减法。",
+        "Rejects this plausible error: 60 来自错误地先算 18−3。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-N06-transfer",
+      "coverage": "E-N06",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "Evaluate (24−8)÷4+3.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "16÷4+3=7.",
+      "checks": [
+        "Returns the requested result: 16÷4+3=7.",
+        "Shows this case-specific reasoning: Parentheses first, then division, then addition.",
+        "Rejects this plausible error: 1 results from adding 3 before dividing."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-N06-edge",
+      "coverage": "E-N06",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "holdout",
+      "problem": "在 7+5×2−6 中只加一对括号，使结果等于 18。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "(7+5)×2−6=18。",
+      "checks": [
+        "Returns the requested result: (7+5)×2−6=18。",
+        "Shows this case-specific reasoning: 先括住 7+5，得到 12×2−6=18。",
+        "Rejects this plausible error: 7+(5×2−6)=11, not 18."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-N07-basic",
+      "coverage": "E-N07",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "holdout",
+      "problem": "Round 4,768 to the nearest hundred.",
+      "expected_behavior": "interactive",
+      "reference_answer": "4,768 rounds to 4,800.",
+      "checks": [
+        "Returns the requested result: 4,768 rounds to 4,800.",
+        "Shows this case-specific reasoning: The tens digit is 6, so raise the hundreds digit.",
+        "Rejects this plausible error: 4,700 rounds down despite tens digit 6."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-N07-transfer",
+      "coverage": "E-N07",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "估算 198×31；先把每个因数四舍五入到最接近的十。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "约 200×30=6,000。",
+      "checks": [
+        "Returns the requested result: 约 200×30=6,000。",
+        "Shows this case-specific reasoning: 198≈200 且 31≈30。",
+        "Rejects this plausible error: 约 2,000 忽略了数量级。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-N07-edge",
+      "coverage": "E-N07",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "development",
+      "problem": "A 2,947 m route is reported to the nearest kilometer. Give the reported value and the possible actual-distance interval (m), using ordinary nearest-km rounding.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "3 km; actual distance is at least 2,500 m and less than 3,500 m.",
+      "checks": [
+        "Returns the requested result: 3 km; actual distance is at least 2,500 m and less than 3,500 m.",
+        "Shows this case-specific reasoning: Values from 2.5 km up to but not including 3.5 km round to 3 km.",
+        "Rejects this plausible error: 2,947 m is not itself the reported nearest-km value."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-N08-basic",
+      "coverage": "E-N08",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "development",
+      "problem": "列出 18 的所有正因数。",
+      "expected_behavior": "interactive",
+      "reference_answer": "1, 2, 3, 6, 9, 18。",
+      "checks": [
+        "Returns the requested result: 1, 2, 3, 6, 9, 18。",
+        "Shows this case-specific reasoning: 成对检查因数乘积 18。",
+        "Rejects this plausible error: 漏掉 1 会遗漏每个正整数的因数集合边界。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-N08-transfer",
+      "coverage": "E-N08",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "holdout",
+      "problem": "Is 29 prime or composite? Justify with a sufficient divisibility check.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "29 is prime: no prime ≤√29 (2, 3, 5) divides it.",
+      "checks": [
+        "Returns the requested result: 29 is prime: no prime ≤√29 (2, 3, 5) divides it.",
+        "Shows this case-specific reasoning: A composite 29 would have a factor at most √29≈5.39.",
+        "Rejects this plausible error: Calling it composite because it is odd confuses parity with primality."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-N08-edge",
+      "coverage": "E-N08",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "development",
+      "problem": "判断 48 是否为 6 的倍数，并指出 48 与 6 的最大公因数。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "48=6×8，所以是；gcd(48,6)=6。",
+      "checks": [
+        "Returns the requested result: 48=6×8，所以是；gcd(48,6)=6。",
+        "Shows this case-specific reasoning: 验证商为整数，再因 6 整除 48 且整除自身，最大公因数是 6。",
+        "Rejects this plausible error: 最大公因数不是 48，因数不能大于较小数 6。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-N09-basic",
+      "coverage": "E-N09",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "development",
+      "problem": "Find gcd(18,30) by listing or factor pairs.",
+      "expected_behavior": "interactive",
+      "reference_answer": "gcd(18,30)=6.",
+      "checks": [
+        "Returns the requested result: gcd(18,30)=6.",
+        "Shows this case-specific reasoning: Common positive divisors are 1, 2, 3, 6; largest is 6.",
+        "Rejects this plausible error: 9 divides 18 but not 30."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-N09-transfer",
+      "coverage": "E-N09",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "两盏灯分别每 8 秒和 12 秒闪一次，现在同时闪。最少多少秒后再次同时闪？",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "lcm(8,12)=24 秒。",
+      "checks": [
+        "Returns the requested result: lcm(8,12)=24 秒。",
+        "Shows this case-specific reasoning: 共同倍数中最小的是 24。",
+        "Rejects this plausible error: 20 秒不是 8 的倍数。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-N09-edge",
+      "coverage": "E-N09",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "development",
+      "problem": "Two ribbons of 42 cm and 56 cm are cut into equal longest whole-centimeter pieces with no waste. What is each piece length and how many pieces result in total?",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "gcd(42,56)=14 cm; 3+4=7 pieces total.",
+      "checks": [
+        "Returns the requested result: gcd(42,56)=14 cm; 3+4=7 pieces total.",
+        "Shows this case-specific reasoning: Longest common length is gcd 14; piece counts are 42/14 and 56/14.",
+        "Rejects this plausible error: Using lcm 168 cm would exceed either ribbon."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-F01-basic",
+      "coverage": "E-F01",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "development",
+      "problem": "一张纸平均分成 8 份，涂色 3 份。涂色部分占整张纸的几分之几？",
+      "expected_behavior": "interactive",
+      "reference_answer": "3/8。",
+      "checks": [
+        "Returns the requested result: 3/8。",
+        "Shows this case-specific reasoning: 整体是一张纸，8 等份中的 3 份涂色。",
+        "Rejects this plausible error: 3/5 把未涂的 5 份误作分母。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-F01-transfer",
+      "coverage": "E-F01",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "A pan is cut into 12 equal slices; 5 are eaten. What fraction of the original pan remains?",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "7/12 remains.",
+      "checks": [
+        "Returns the requested result: 7/12 remains.",
+        "Shows this case-specific reasoning: Same whole pan: 12−5=7 of its 12 equal parts remain.",
+        "Rejects this plausible error: 7/5 compares remaining to eaten, not to the whole."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-F01-edge",
+      "coverage": "E-F01",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "development",
+      "problem": "甲饼的 1/2 和乙饼的 1/2 分别给小明；哪一个“一半”一定更多？",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "无法确定；两饼大小未说明，一半的绝对量取决于整体。",
+      "checks": [
+        "Returns the requested result: 无法确定；两饼大小未说明，一半的绝对量取决于整体。",
+        "Shows this case-specific reasoning: 分数相同只表示相同份额比例，不保证不同整体的实际大小相同。",
+        "Rejects this plausible error: 断言两者相同，暗中假设两个整体等大。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-F02-basic",
+      "coverage": "E-F02",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "development",
+      "problem": "Write 6/9 in lowest terms and give an equivalent fraction with denominator 12.",
+      "expected_behavior": "interactive",
+      "reference_answer": "6/9=2/3=8/12.",
+      "checks": [
+        "Returns the requested result: 6/9=2/3=8/12.",
+        "Shows this case-specific reasoning: Divide numerator and denominator by 3; then scale 2/3 by 4.",
+        "Rejects this plausible error: 6/9=2/6 divides only one part and changes the value."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-F02-transfer",
+      "coverage": "E-F02",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "holdout",
+      "problem": "把 3/4 和 5/6 通分为最小公分母，并写出等值分数。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "最小公分母 12；3/4=9/12，5/6=10/12。",
+      "checks": [
+        "Returns the requested result: 最小公分母 12；3/4=9/12，5/6=10/12。",
+        "Shows this case-specific reasoning: 12 是 4 和 6 的最小公倍数，分子分母同乘相应因数。",
+        "Rejects this plausible error: 写成 8/12 与 10/12 会把 3/4 的值改成 2/3。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-F02-edge",
+      "coverage": "E-F02",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "development",
+      "problem": "A student claims 14/21 is already simplest because 14 and 21 are different. Reduce it and explain.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "14/21=2/3 since gcd(14,21)=7.",
+      "checks": [
+        "Returns the requested result: 14/21=2/3 since gcd(14,21)=7.",
+        "Shows this case-specific reasoning: A fraction is reduced when numerator and denominator have no common factor >1.",
+        "Rejects this plausible error: Different integers can still share a factor; 14 and 21 both divide by 7."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-F03-basic",
+      "coverage": "E-F03",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "development",
+      "problem": "比较 3/7 和 4/7，并在 0 到 1 的数轴上说明位置顺序。",
+      "expected_behavior": "interactive",
+      "reference_answer": "3/7<4/7；顺序为 0<3/7<4/7<1。",
+      "checks": [
+        "Returns the requested result: 3/7<4/7；顺序为 0<3/7<4/7<1。",
+        "Shows this case-specific reasoning: 同分母比较分子，且二者都在 0 与 1 之间。",
+        "Rejects this plausible error: 4/7<3/7 错把分子大理解成分数小。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-F03-transfer",
+      "coverage": "E-F03",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "Which is larger, 5/8 or 2/3? Show an exact comparison.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "2/3 is larger: 5/8=15/24 and 2/3=16/24.",
+      "checks": [
+        "Returns the requested result: 2/3 is larger: 5/8=15/24 and 2/3=16/24.",
+        "Shows this case-specific reasoning: Use common denominator 24.",
+        "Rejects this plausible error: Comparing denominators alone does not decide values."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-F03-edge",
+      "coverage": "E-F03",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "holdout",
+      "problem": "把 −1/3、0、2/5、3/4 从小到大排列，并指出最接近 0 的数；再说明排除 0 后哪个非零数最接近 0。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "−1/3<0<2/5<3/4; the number closest to 0 among all four is 0; among the nonzero numbers it is −1/3.",
+      "checks": [
+        "Returns the order −1/3<0<2/5<3/4.",
+        "Identifies 0 as closest to 0 when it is included, and −1/3 as closest among nonzero values.",
+        "Compares absolute values 1/3<2/5<3/4 for the nonzero comparison."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-F04-basic",
+      "coverage": "E-F04",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "holdout",
+      "problem": "Compute 2/9+4/9.",
+      "expected_behavior": "interactive",
+      "reference_answer": "6/9=2/3.",
+      "checks": [
+        "Returns the requested result: 6/9=2/3.",
+        "Shows this case-specific reasoning: Same denominator: add numerators, then reduce.",
+        "Rejects this plausible error: 6/18 adds denominators, changing the operation."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-F04-transfer",
+      "coverage": "E-F04",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "计算 5/6−1/4，答案用最简分数表示。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "10/12−3/12=7/12。",
+      "checks": [
+        "Returns the requested result: 10/12−3/12=7/12。",
+        "Shows this case-specific reasoning: 最小公分母 12，分子作差。",
+        "Rejects this plausible error: 4/2 subtracts denominators directly."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-F04-edge",
+      "coverage": "E-F04",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "development",
+      "problem": "A tank is 7/10 full. After 3/8 of the tank’s capacity is drained, what fraction remains?",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "7/10−3/8=28/40−15/40=13/40.",
+      "checks": [
+        "Returns the requested result: 7/10−3/8=28/40−15/40=13/40.",
+        "Shows this case-specific reasoning: Both fractions refer to the same full tank; subtract exact capacities.",
+        "Rejects this plausible error: 4/2 subtracts denominators directly."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-F05-basic",
+      "coverage": "E-F05",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "development",
+      "problem": "求 2/3 的 3/5。",
+      "expected_behavior": "interactive",
+      "reference_answer": "(2/3)(3/5)=2/5。",
+      "checks": [
+        "Returns the requested result: (2/3)(3/5)=2/5。",
+        "Shows this case-specific reasoning: “的”表示乘法，乘分子和分母后约分。",
+        "Rejects this plausible error: 5/8 是把分子和分母分别相加。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-F05-transfer",
+      "coverage": "E-F05",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "A recipe uses 3/4 cup per batch. How much is needed for 2 1/2 batches?",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "(3/4)(5/2)=15/8=1 7/8 cups.",
+      "checks": [
+        "Returns the requested result: (3/4)(5/2)=15/8=1 7/8 cups.",
+        "Shows this case-specific reasoning: Convert mixed number to 5/2, then multiply; retain cup unit.",
+        "Rejects this plausible error: 3/10 cup uses division although batches are scaled up."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-F05-edge",
+      "coverage": "E-F05",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "development",
+      "problem": "有 3/4 米绳，每段长 1/8 米，最多能剪几段？",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "(3/4)÷(1/8)=6 段。",
+      "checks": [
+        "Returns the requested result: (3/4)÷(1/8)=6 段。",
+        "Shows this case-specific reasoning: 除以 1/8 等于乘 8；长度足够剪 6 段。",
+        "Rejects this plausible error: 3/32 米把“能剪几段”误作长度相乘。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-F06-basic",
+      "coverage": "E-F06",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "development",
+      "problem": "In 3.407, what is the value of the digit 4?",
+      "expected_behavior": "interactive",
+      "reference_answer": "0.4, or four tenths.",
+      "checks": [
+        "Returns the requested result: 0.4, or four tenths.",
+        "Shows this case-specific reasoning: The first digit right of the decimal is tenths.",
+        "Rejects this plausible error: 0.04 places the 4 in hundredths."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-F06-transfer",
+      "coverage": "E-F06",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "计算 2.4+0.35 和 2.4−0.35。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "2.4+0.35=2.75；2.4−0.35=2.05。",
+      "checks": [
+        "Returns 2.75 for the sum and 2.05 for the difference.",
+        "Aligns decimal places as 2.40±0.35.",
+        "Rejects 2.39 as the difference, which comes from misaligning decimal places."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-F06-edge",
+      "coverage": "E-F06",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "development",
+      "problem": "Compute 2.4×0.35.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "0.84.",
+      "checks": [
+        "Returns the requested result: 0.84.",
+        "Shows this case-specific reasoning: 24×35=840, then place 3 decimal digits total: 0.840=0.84.",
+        "Rejects this plausible error: 8.4 has one decimal place too few."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-F07-basic",
+      "coverage": "E-F07",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "holdout",
+      "problem": "把 0.25 化成最简分数和百分数。",
+      "expected_behavior": "interactive",
+      "reference_answer": "0.25=1/4=25%。",
+      "checks": [
+        "Returns the requested result: 0.25=1/4=25%。",
+        "Shows this case-specific reasoning: 0.25=25/100=1/4, and hundredths translate to percent.",
+        "Rejects this plausible error: 2.5% moves the decimal one place instead of two."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-F07-transfer",
+      "coverage": "E-F07",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "Convert 3/5 to a decimal and percent.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "3/5=0.6=60%.",
+      "checks": [
+        "Returns the requested result: 3/5=0.6=60%.",
+        "Shows this case-specific reasoning: Divide 3 by 5, then multiply decimal by 100%.",
+        "Rejects this plausible error: 0.06=6% is a factor of ten too small."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-F07-edge",
+      "coverage": "E-F07",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "development",
+      "problem": "某数的 40% 是 18。求这个数，并把 18 用该数的分数表示。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "该数 18÷0.4=45；18/45=2/5。",
+      "checks": [
+        "Returns the requested result: 该数 18÷0.4=45；18/45=2/5。",
+        "Shows this case-specific reasoning: 设总量 x，则 0.4x=18；求出 x 后约分。",
+        "Rejects this plausible error: 把 18×0.4=7.2 当成总量。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-F08-basic",
+      "coverage": "E-F08",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "development",
+      "problem": "What is 15% of 80?",
+      "expected_behavior": "interactive",
+      "reference_answer": "0.15×80=12.",
+      "checks": [
+        "Returns the requested result: 0.15×80=12.",
+        "Shows this case-specific reasoning: Convert percent to decimal and multiply.",
+        "Rejects this plausible error: 15 is not a percent of 80; it exceeds 80 only after scaling."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-F08-transfer",
+      "coverage": "E-F08",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "holdout",
+      "problem": "一件商品原价 200 元，先涨价 10%，再打九折。现价多少？",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "200×1.10×0.90=198 元。",
+      "checks": [
+        "Returns the requested result: 200×1.10×0.90=198 元。",
+        "Shows this case-specific reasoning: Sequential changes multiply; the two percentage changes do not cancel exactly.",
+        "Rejects this plausible error: 200 元错把 +10% 与 −10% 当作同一基数上的抵消。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-F08-edge",
+      "coverage": "E-F08",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "development",
+      "problem": "A town’s population rises from 400 to 460. Give the percent increase and the new population after a 10% decrease from 460.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Increase is 60/400=15%; after decrease: 460×0.90=414.",
+      "checks": [
+        "Returns the requested result: Increase is 60/400=15%; after decrease: 460×0.90=414.",
+        "Shows this case-specific reasoning: Percent change uses original 400 as denominator; second change uses 460.",
+        "Rejects this plausible error: 60/460≈13.0% uses the ending value as increase base."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-F09-basic",
+      "coverage": "E-F09",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "development",
+      "problem": "把 11/4 写成带分数。",
+      "expected_behavior": "interactive",
+      "reference_answer": "11/4=2 又 3/4。",
+      "checks": [
+        "Returns the requested result: 11/4=2 又 3/4。",
+        "Shows this case-specific reasoning: 11=4×2+3, so quotient 2 and remainder 3/4.",
+        "Rejects this plausible error: 3 又 2/4 reverses quotient and remainder."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-F09-transfer",
+      "coverage": "E-F09",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "A 5-liter jug is filled to 7/5 of its capacity. How many liters is that, and is the amount possible in this jug?",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "7/5×5=7 L; it exceeds the 5 L capacity, so it cannot be held by the jug.",
+      "checks": [
+        "Returns the requested result: 7/5×5=7 L; it exceeds the 5 L capacity, so it cannot be held by the jug.",
+        "Shows this case-specific reasoning: Multiply fraction of capacity by 5 L; compare with capacity.",
+        "Rejects this plausible error: 3.5 L treats 7/5 as a mixed number 1 2/5."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-F09-edge",
+      "coverage": "E-F09",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "holdout",
+      "problem": "把 2 又 1/3 个整块蛋糕平均分给 7 人，每人得多少个蛋糕？",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "(7/3)÷7=1/3 个。",
+      "checks": [
+        "Returns the requested result: (7/3)÷7=1/3 个。",
+        "Shows this case-specific reasoning: 把 2 又 1/3 写为 7/3，再除以 7。",
+        "Rejects this plausible error: 1 又 1/3 个忽略了平均分给 7 人。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-M01-basic",
+      "coverage": "E-M01",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "development",
+      "problem": "The ratio of red to blue beads is 2:3. If there are 10 red beads, how many blue beads are there?",
+      "expected_behavior": "interactive",
+      "reference_answer": "Scale factor is 5; blue beads=3×5=15.",
+      "checks": [
+        "Returns the requested result: Scale factor is 5; blue beads=3×5=15.",
+        "Shows this case-specific reasoning: 2 parts correspond to 10, so one part is 5.",
+        "Rejects this plausible error: 13 adds the ratio terms instead of scaling."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-M01-transfer",
+      "coverage": "E-M01",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "把 84 元按 3:4 分给甲乙两人，乙得多少元？",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "总份数 7；乙得 84×4/7=48 元。",
+      "checks": [
+        "Returns the requested result: 总份数 7；乙得 84×4/7=48 元。",
+        "Shows this case-specific reasoning: 每份 12 元，乙取 4 份。",
+        "Rejects this plausible error: 36 元对应甲的 3 份，不是乙。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-M01-edge",
+      "coverage": "E-M01",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "development",
+      "problem": "A map scale is 1:50,000. Two towns are 7.2 cm apart on the map. What is their straight-line distance in km?",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "7.2×50,000=360,000 cm=3.6 km.",
+      "checks": [
+        "Returns the requested result: 7.2×50,000=360,000 cm=3.6 km.",
+        "Shows this case-specific reasoning: Apply the same scale then convert 100,000 cm per km.",
+        "Rejects this plausible error: 360 km misses the cm-to-km factor of 100,000."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-M02-basic",
+      "coverage": "E-M02",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "development",
+      "problem": "5 千克苹果共 30 元，平均每千克多少钱？",
+      "expected_behavior": "interactive",
+      "reference_answer": "30÷5=6 元/千克。",
+      "checks": [
+        "Returns the requested result: 30÷5=6 元/千克。",
+        "Shows this case-specific reasoning: Unit price is total cost divided by kilograms.",
+        "Rejects this plausible error: 150 元/千克 multiplies rather than divides."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-M02-transfer",
+      "coverage": "E-M02",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "A printer makes 84 pages in 6 minutes at a constant rate. How many pages in 15 minutes?",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "14 pages/min; 14×15=210 pages.",
+      "checks": [
+        "Returns the requested result: 14 pages/min; 14×15=210 pages.",
+        "Shows this case-specific reasoning: Find unit rate and scale by elapsed minutes.",
+        "Rejects this plausible error: 90 pages multiplies 6-page chunks without using the rate."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-M02-edge",
+      "coverage": "E-M02",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "development",
+      "problem": "12 支笔卖 30 元，8 支同价笔卖多少钱？",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "单价 2.5 元/支，8 支为 20 元。",
+      "checks": [
+        "Returns the requested result: 单价 2.5 元/支，8 支为 20 元。",
+        "Shows this case-specific reasoning: 30÷12=2.5, then 2.5×8=20.",
+        "Rejects this plausible error: 30×8=240 ignores that 30 元 buys 12支."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-M03-basic",
+      "coverage": "E-M03",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "development",
+      "problem": "A car travels 150 km in 3 hours at constant speed. Find its speed.",
+      "expected_behavior": "interactive",
+      "reference_answer": "150÷3=50 km/h.",
+      "checks": [
+        "Returns the requested result: 150÷3=50 km/h.",
+        "Shows this case-specific reasoning: Speed equals distance divided by time.",
+        "Rejects this plausible error: 450 km/h multiplies distance and time."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-M03-transfer",
+      "coverage": "E-M03",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "骑车速度为 12 千米/小时，行驶 2.5 小时，路程多少千米？",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "12×2.5=30 千米。",
+      "checks": [
+        "Returns the requested result: 12×2.5=30 千米。",
+        "Shows this case-specific reasoning: Constant-speed distance is rate times time.",
+        "Rejects this plausible error: 4.8 千米 divides the rate by time."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-M03-edge",
+      "coverage": "E-M03",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "holdout",
+      "problem": "A 180 km trip is driven at 60 km/h for the first 2 hours; how long must the remaining distance take at 40 km/h?",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "First leg 120 km, remaining 60 km; 60/40=1.5 h.",
+      "checks": [
+        "Returns the requested result: First leg 120 km, remaining 60 km; 60/40=1.5 h.",
+        "Shows this case-specific reasoning: Compute each leg with its own speed, then divide remaining distance by 40.",
+        "Rejects this plausible error: 3 h uses the original full trip distance for the second leg."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-M04-basic",
+      "coverage": "E-M04",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "holdout",
+      "problem": "3.5 米等于多少厘米？",
+      "expected_behavior": "interactive",
+      "reference_answer": "3.5×100=350 厘米。",
+      "checks": [
+        "Returns the requested result: 3.5×100=350 厘米。",
+        "Shows this case-specific reasoning: 1 m=100 cm.",
+        "Rejects this plausible error: 35 cm is a factor of ten short."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-M04-transfer",
+      "coverage": "E-M04",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "Convert 2.4 L to milliliters and 750 g to kilograms.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "2.4 L=2,400 mL; 750 g=0.75 kg.",
+      "checks": [
+        "Returns the requested result: 2.4 L=2,400 mL; 750 g=0.75 kg.",
+        "Shows this case-specific reasoning: Use 1 L=1,000 mL and 1 kg=1,000 g.",
+        "Rejects this plausible error: 0.75 g confuses grams with kilograms."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-M04-edge",
+      "coverage": "E-M04",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "development",
+      "problem": "一个容器装 1.2 升水，倒出 350 毫升后还剩多少毫升？",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "1.2 L=1,200 mL; remainder 850 mL.",
+      "checks": [
+        "Returns the requested result: 1.2 L=1,200 mL; remainder 850 mL.",
+        "Shows this case-specific reasoning: Convert before subtracting so units match.",
+        "Rejects this plausible error: 1,200−350=850 liters mixes scales; final unit is mL."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-M05-basic",
+      "coverage": "E-M05",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "development",
+      "problem": "A class starts at 9:20 a.m. and lasts 45 minutes. When does it end?",
+      "expected_behavior": "interactive",
+      "reference_answer": "10:05 a.m.",
+      "checks": [
+        "Returns the requested result: 10:05 a.m.",
+        "Shows this case-specific reasoning: Add 40 minutes to 10:00, then 5 more minutes.",
+        "Rejects this plausible error: 9:65 a.m. is not a normalized clock time."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-M05-transfer",
+      "coverage": "E-M05",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "holdout",
+      "problem": "电影 14:35 开始，16:10 结束，持续多长时间？",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "1 小时 35 分钟。",
+      "checks": [
+        "Returns the requested result: 1 小时 35 分钟。",
+        "Shows this case-specific reasoning: 14:35→15:35 is 1 hour; →16:10 is 35 minutes.",
+        "Rejects this plausible error: 2 小时 25 分钟 reverses elapsed-time subtraction."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-M05-edge",
+      "coverage": "E-M05",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "development",
+      "problem": "A deadline is 3 days after March 29 in a non-leap year. What date is it?",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "April 1.",
+      "checks": [
+        "Returns the requested result: April 1.",
+        "Shows this case-specific reasoning: March has 31 days: Mar 30 (1), Mar 31 (2), Apr 1 (3).",
+        "Rejects this plausible error: March 32 is not a calendar date."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-M06-basic",
+      "coverage": "E-M06",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "development",
+      "problem": "买一个 18 元的本子，付 20 元，应找回多少元？",
+      "expected_behavior": "interactive",
+      "reference_answer": "20−18=2 元。",
+      "checks": [
+        "Returns the requested result: 20−18=2 元。",
+        "Shows this case-specific reasoning: Change is amount paid minus cost.",
+        "Rejects this plausible error: 38 元 adds payment and price."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-M06-transfer",
+      "coverage": "E-M06",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "Three notebooks cost $2.40 each and one pen costs $1.75. What is the total and the change from $10?",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "$7.20+$1.75=$8.95; change=$1.05.",
+      "checks": [
+        "Returns the requested result: $7.20+$1.75=$8.95; change=$1.05.",
+        "Shows this case-specific reasoning: Multiply notebook price, add pen, then subtract from 10.",
+        "Rejects this plausible error: $2.80 change subtracts only the notebooks."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-M06-edge",
+      "coverage": "E-M06",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "development",
+      "problem": "每支笔 3 元，买 4 支；每本本子 7 元，买 2 本。付 30 元够吗？差额多少？",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "总价 4×3+2×7=26 元；够，找零 4 元。",
+      "checks": [
+        "Returns the requested result: 总价 4×3+2×7=26 元；够，找零 4 元。",
+        "Shows this case-specific reasoning: 先分项计算再求和并与付款比较。",
+        "Rejects this plausible error: 34 元把支数与单价分别相加后错误相乘。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-M07-basic",
+      "coverage": "E-M07",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "development",
+      "problem": "A farmer packs 4 baskets with 8 apples each and then sells 9 apples. How many remain?",
+      "expected_behavior": "interactive",
+      "reference_answer": "4×8−9=23 apples.",
+      "checks": [
+        "Returns the requested result: 4×8−9=23 apples.",
+        "Shows this case-specific reasoning: Find total packed before subtracting sold apples.",
+        "Rejects this plausible error: 41 adds the sold apples back."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-M07-transfer",
+      "coverage": "E-M07",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "每张桌子坐 6 人，来了 41 人。至少需要几张桌子？",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "⌈41/6⌉=7 张。",
+      "checks": [
+        "Returns the requested result: ⌈41/6⌉=7 张。",
+        "Shows this case-specific reasoning: 6 张桌子坐 36 人，还需一张容纳余下 5 人。",
+        "Rejects this plausible error: 6 张只容纳 36 人，不足 41 人。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-M07-edge",
+      "coverage": "E-M07",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "development",
+      "problem": "A club has 24 members; 3/8 are beginners. Of the remaining members, 2/3 attend Saturday. How many attend Saturday?",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Beginners=9; remaining=15; (2/3)×15=10 members.",
+      "checks": [
+        "Returns the requested result: Beginners=9; remaining=15; (2/3)×15=10 members.",
+        "Shows this case-specific reasoning: Apply each fraction to its stated whole, not both to 24.",
+        "Rejects this plausible error: 6 attends Saturday applies 2/3 to all 24 rather than the remaining group."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-M08-basic",
+      "coverage": "E-M08",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "development",
+      "problem": "The sequence starts 4, 7, 10, 13 and is defined by adding 3 at every step. What is the next term?",
+      "expected_behavior": "interactive",
+      "reference_answer": "16, because 13+3=16.",
+      "checks": [
+        "Returns 16 as the next term.",
+        "Applies the stated constant difference of +3.",
+        "Does not claim the four-term prefix alone forces a unique continuation."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-M08-transfer",
+      "coverage": "E-M08",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "holdout",
+      "problem": "A sequence is defined by a_n=n²+1 for integer n≥1. Its first terms are 2, 5, 10, 17. Give the fifth term and verify it from the rule.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "a_5=5²+1=26.",
+      "checks": [
+        "Returns fifth term 26.",
+        "Substitutes n=5 into the explicitly stated rule a_n=n²+1.",
+        "Rejects 25, which omits the +1 in the rule."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-M08-edge",
+      "coverage": "E-M08",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "development",
+      "problem": "若 3x+5=26，求 x，并验证。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "x=7；3×7+5=26。",
+      "checks": [
+        "Returns the requested result: x=7；3×7+5=26。",
+        "Shows this case-specific reasoning: Subtract 5, then divide by 3.",
+        "Rejects this plausible error: x=31 follows by subtracting 5 but not dividing by 3."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-G01-basic",
+      "coverage": "E-G01",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "development",
+      "problem": "Classify a quadrilateral with exactly one pair of parallel sides as a trapezoid; may it also have a right angle?",
+      "expected_behavior": "interactive",
+      "reference_answer": "It is a trapezoid under the stated exactly-one-pair definition; yes, a right trapezoid can have right angles.",
+      "checks": [
+        "Classifies the quadrilateral as a trapezoid and answers yes.",
+        "Uses the stated exactly-one-parallel-pair definition and notes that a leg can be perpendicular to a base.",
+        "Rejects the claim that a trapezoid cannot have a right angle."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-G01-transfer",
+      "coverage": "E-G01",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "一个三角形中 AB=AC，按边分类；另一个三角形的三个角是 100°、40°、40°，按角分类。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "第一个三角形是等腰三角形；第二个三角形是钝角三角形，因为它有一个 100° 的角。",
+      "checks": [
+        "Classifies the first, separate triangle from AB=AC as isosceles.",
+        "Classifies the second, separate triangle from its 100° angle as obtuse.",
+        "Does not combine the data from the two distinct triangles."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-G01-edge",
+      "coverage": "E-G01",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "holdout",
+      "problem": "Can side lengths 2, 3, and 6 form a triangle? Explain using the triangle inequality.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "No; 2+3=5<6.",
+      "checks": [
+        "Returns the requested result: No; 2+3=5<6.",
+        "Shows this case-specific reasoning: The sum of any two sides must exceed the third.",
+        "Rejects this plausible error: Equality or a sum below 6 does not form a nondegenerate triangle."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-G02-basic",
+      "coverage": "E-G02",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "holdout",
+      "problem": "一个角是 90°，属于哪类角？",
+      "expected_behavior": "interactive",
+      "reference_answer": "直角。",
+      "checks": [
+        "Returns the requested result: 直角。",
+        "Shows this case-specific reasoning: A right angle measures exactly 90°.",
+        "Rejects this plausible error: 锐角必须小于 90°。"
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-G02-transfer",
+      "coverage": "E-G02",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "An angle measures 137°. Classify it and find its supplement.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Obtuse; supplement=180°−137°=43°.",
+      "checks": [
+        "Returns the requested result: Obtuse; supplement=180°−137°=43°.",
+        "Shows this case-specific reasoning: 137° lies between 90° and 180°; supplementary angles sum to 180°.",
+        "Rejects this plausible error: 53° uses 190° as the straight-angle total."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-G02-edge",
+      "coverage": "E-G02",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "development",
+      "problem": "两条直线相交，其中一个角是 62°。其余三个角分别是多少？",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "对顶角 62°；两个邻角各 118°。",
+      "checks": [
+        "Returns the requested result: 对顶角 62°；两个邻角各 118°。",
+        "Shows this case-specific reasoning: Vertical angles are equal; each linear pair sums to 180°.",
+        "Rejects this plausible error: 邻角 62° would make a linear pair total only 124°."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-G03-basic",
+      "coverage": "E-G03",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "development",
+      "problem": "Find the perimeter of a rectangle with length 8 cm and width 3 cm.",
+      "expected_behavior": "interactive",
+      "reference_answer": "2(8+3)=22 cm.",
+      "checks": [
+        "Returns the requested result: 2(8+3)=22 cm.",
+        "Shows this case-specific reasoning: Perimeter adds all four sides.",
+        "Rejects this plausible error: 24 cm is the area value, with wrong units for perimeter."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-G03-transfer",
+      "coverage": "E-G03",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "正方形边长 5 米，面积是多少平方米？",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "5×5=25 平方米。",
+      "checks": [
+        "Returns the requested result: 5×5=25 平方米。",
+        "Shows this case-specific reasoning: Area is side×side and units are squared.",
+        "Rejects this plausible error: 20 米 is perimeter, not area."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-G03-edge",
+      "coverage": "E-G03",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "development",
+      "problem": "A 6 m by 4 m rectangular garden has a 1 m wide gate in its fence. How many meters of fencing are needed?",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Perimeter 20 m minus 1 m gate=19 m.",
+      "checks": [
+        "Returns the requested result: Perimeter 20 m minus 1 m gate=19 m.",
+        "Shows this case-specific reasoning: Compute full boundary and omit only the gate segment.",
+        "Rejects this plausible error: 24 m is the area and has square-meter units."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-G04-basic",
+      "coverage": "E-G04",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "development",
+      "problem": "长方形长 9 厘米、宽 4 厘米，面积是多少？",
+      "expected_behavior": "interactive",
+      "reference_answer": "9×4=36 平方厘米。",
+      "checks": [
+        "Returns the requested result: 9×4=36 平方厘米。",
+        "Shows this case-specific reasoning: Rectangle area is length times width.",
+        "Rejects this plausible error: 26 平方厘米 adds dimensions as if perimeter."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-G04-transfer",
+      "coverage": "E-G04",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "A right triangle has perpendicular legs 6 cm and 10 cm. Find its area.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "(1/2)×6×10=30 cm².",
+      "checks": [
+        "Returns the requested result: (1/2)×6×10=30 cm².",
+        "Shows this case-specific reasoning: Use the perpendicular legs as base and height.",
+        "Rejects this plausible error: 60 cm² omits the triangle factor 1/2."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-G04-edge",
+      "coverage": "E-G04",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "development",
+      "problem": "一个 10×6 的长方形去掉角上的 2×3 小长方形（边与原边平行），求剩余面积。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "60−6=54 平方单位。",
+      "checks": [
+        "Returns the requested result: 60−6=54 平方单位。",
+        "Shows this case-specific reasoning: Subtract the removed rectangle area from 10×6.",
+        "Rejects this plausible error: 48 subtracts 2+3 rather than removed area 6."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-G05-basic",
+      "coverage": "E-G05",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "holdout",
+      "problem": "A cube has side length 3 cm. Find its volume.",
+      "expected_behavior": "interactive",
+      "reference_answer": "3³=27 cm³.",
+      "checks": [
+        "Returns the requested result: 3³=27 cm³.",
+        "Shows this case-specific reasoning: Volume is length×width×height.",
+        "Rejects this plausible error: 9 cm² gives face area, not volume."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-G05-transfer",
+      "coverage": "E-G05",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "一个长方体尺寸为 2 厘米、3 厘米、5 厘米，体积是多少？",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "2×3×5=30 立方厘米。",
+      "checks": [
+        "Returns the requested result: 2×3×5=30 立方厘米。",
+        "Shows this case-specific reasoning: Multiply all three perpendicular dimensions.",
+        "Rejects this plausible error: 10 平方厘米 adds dimensions and omits one dimension."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-G05-edge",
+      "coverage": "E-G05",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "development",
+      "problem": "Each square has side 2 cm. Layout A has four squares in one horizontal row, with one square attached above the second square and one below the second square. Layout B has six squares in one horizontal row. Which layout folds to a cube? Give that cube’s volume.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Layout A folds to a cube; its volume is 2³=8 cm³. Layout B does not: the row of four wraps around the side faces, and the fifth and sixth faces would overlap rather than close two distinct remaining faces.",
+      "checks": [
+        "Identifies Layout A as the cube net and gives volume 8 cm³.",
+        "Tracks the four-square strip as the four side faces, with the two squares at the second face closing the top and bottom.",
+        "Rejects Layout B because folding the six-in-a-row strip makes faces overlap."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-G06-basic",
+      "coverage": "E-G06",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "development",
+      "problem": "点 A(2,1) 关于 y 轴对称后的坐标是什么？",
+      "expected_behavior": "interactive",
+      "reference_answer": "(−2,1)。",
+      "checks": [
+        "Returns the requested result: (−2,1)。",
+        "Shows this case-specific reasoning: Reflection across y-axis changes x sign and preserves y.",
+        "Rejects this plausible error: (2,−1) reflects over x-axis instead."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-G06-transfer",
+      "coverage": "E-G06",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "holdout",
+      "problem": "Translate point (−1,3) by vector (4,−2).",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "(3,1).",
+      "checks": [
+        "Returns the requested result: (3,1).",
+        "Shows this case-specific reasoning: Add vector components: (−1+4, 3−2).",
+        "Rejects this plausible error: (−5,5) subtracts the translation."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-G06-edge",
+      "coverage": "E-G06",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "development",
+      "problem": "点 (1,0) 绕原点逆时针旋转 90° 后在哪里？",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "(0,1)。",
+      "checks": [
+        "Returns the requested result: (0,1)。",
+        "Shows this case-specific reasoning: A 90° counterclockwise rotation maps (x,y) to (−y,x).",
+        "Rejects this plausible error: (0,−1) is the clockwise image."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-G07-basic",
+      "coverage": "E-G07",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "development",
+      "problem": "Starting at (0,0), move 3 units right and 2 units up. What coordinate do you reach?",
+      "expected_behavior": "interactive",
+      "reference_answer": "(3,2).",
+      "checks": [
+        "Returns the requested result: (3,2).",
+        "Shows this case-specific reasoning: Right changes x positively; up changes y positively.",
+        "Rejects this plausible error: (2,3) reverses the coordinate order."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-G07-transfer",
+      "coverage": "E-G07",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "从 (−2,1) 沿网格先向右 5 格、再向下 3 格，终点坐标是什么？",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "(3,−2)。",
+      "checks": [
+        "Returns the requested result: (3,−2)。",
+        "Shows this case-specific reasoning: x increases by 5 and y decreases by 3.",
+        "Rejects this plausible error: (−7,4) moves in opposite directions."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-G07-edge",
+      "coverage": "E-G07",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "holdout",
+      "problem": "On a square grid, a route goes from (1,2) to (1,7) to (5,7). Give the total grid distance and displacement vector.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Distance=5+4=9 units; displacement=(4,5).",
+      "checks": [
+        "Returns the requested result: Distance=5+4=9 units; displacement=(4,5).",
+        "Shows this case-specific reasoning: Manhattan route length sums segments; endpoint minus start gives vector.",
+        "Rejects this plausible error: Displacement magnitude alone is √41, not the traveled grid distance."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-G08-basic",
+      "coverage": "E-G08",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "development",
+      "problem": "数据表记录 2, 4, 6 三天的读书页数，平均每天读多少页？",
+      "expected_behavior": "interactive",
+      "reference_answer": "(2+4+6)/3=4 页。",
+      "checks": [
+        "Returns the requested result: (2+4+6)/3=4 页。",
+        "Shows this case-specific reasoning: Arithmetic mean is total divided by three days.",
+        "Rejects this plausible error: 12 页 is the total, not daily average."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-G08-transfer",
+      "coverage": "E-G08",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "A bar chart has values 3, 5, and 8 for three categories. Which is largest and what is the total?",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "The third category (8) is largest; total=16.",
+      "checks": [
+        "Returns the requested result: The third category (8) is largest; total=16.",
+        "Shows this case-specific reasoning: Compare bar heights and add all values.",
+        "Rejects this plausible error: 13 omits the value 3."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-G08-edge",
+      "coverage": "E-G08",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "development",
+      "problem": "折线图连续四天的气温为 10、12、9、13°C。最高值、最低值和平均值是多少？",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "最高 13°C，最低 9°C，平均 (10+12+9+13)/4=11°C。",
+      "checks": [
+        "Returns the requested result: 最高 13°C，最低 9°C，平均 (10+12+9+13)/4=11°C。",
+        "Shows this case-specific reasoning: Compare all four readings; total 44 divided by 4.",
+        "Rejects this plausible error: 11°C is not the maximum because two readings exceed it."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-G09-basic",
+      "coverage": "E-G09",
+      "stage": "小学",
+      "variant": "basic",
+      "split": "development",
+      "problem": "A circle has radius 3 cm. Give its circumference exactly in terms of π and approximately to the nearest hundredth.",
+      "expected_behavior": "interactive",
+      "reference_answer": "C=2πr=6π cm≈18.85 cm.",
+      "checks": [
+        "Returns the requested result: C=2πr=6π cm≈18.85 cm.",
+        "Shows this case-specific reasoning: Use circumference formula and retain exact form before approximation.",
+        "Rejects this plausible error: 9π cm uses area formula πr²."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-G09-transfer",
+      "coverage": "E-G09",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "圆的直径为 10 米，取 π=3.14，求周长。",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "C=πd=3.14×10=31.4 米。",
+      "checks": [
+        "Returns the requested result: C=πd=3.14×10=31.4 米。",
+        "Shows this case-specific reasoning: Use diameter form; do not halve diameter again.",
+        "Rejects this plausible error: 15.7 米 is half the circumference."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-G09-edge",
+      "coverage": "E-G09",
+      "stage": "小学",
+      "variant": "edge",
+      "split": "development",
+      "problem": "A circular pond has radius 4 m. Find its area and the area of a 1 m-wide circular path outside it, in terms of π.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "Pond area=16π m²; path area=π(5²−4²)=9π m².",
+      "checks": [
+        "Returns the requested result: Pond area=16π m²; path area=π(5²−4²)=9π m².",
+        "Shows this case-specific reasoning: Outer radius is 5 m; subtract inner disk area from outer disk.",
+        "Rejects this plausible error: 25π m² is the whole disk through the path outer edge, not path alone."
+      ],
+      "reference_status": "authored_unreviewed"
+    },
+    {
+      "id": "E-F06-transfer-division",
+      "coverage": "E-F06",
+      "stage": "小学",
+      "variant": "transfer",
+      "split": "development",
+      "problem": "Compute 4.2÷0.6 and explain the equivalent whole-number division.",
+      "expected_behavior": "interactive_reasoning",
+      "reference_answer": "4.2÷0.6=42÷6=7. Multiplying both dividend and divisor by 10 preserves the quotient.",
+      "checks": [
+        "Returns quotient 7.",
+        "Shows that scaling both numbers by 10 gives 42÷6.",
+        "Rejects 0.7, which results from moving the decimal in only one operand."
+      ],
+      "reference_status": "authored_unreviewed"
+    }
+  ]
+}

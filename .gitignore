@@ -1,0 +1,12 @@
+node_modules/
+.data/
+.env
+.env.*
+!.env.example
+.work/
+evaluation/runs/
+.DS_Store
+submission/*.zip
+submission/accessed-2026-11-18/
+submission/accessed-2026-11-18-v2/
+submission/**/entrant-status.json
